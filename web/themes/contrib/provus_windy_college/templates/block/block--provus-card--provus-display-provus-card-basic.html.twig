@@ -46,7 +46,7 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {% embed 'provus_blocks:card_text' with {
+    {% embed '@provus_windy_college/components/card/card_text/card_text.twig' with {
       content_attributes: content_attributes,
       title: content.field_provus_title|render,
       body: content.field_provus_body|render,

@@ -1,5 +1,5 @@
 <div class="testimonial-wrapper image-location-{{ display_type }}">
-  <div{% if content_attributes is defined and content_attributes %}{{ content_attributes.addClass('card card-testimonial') }}{% else %} class="card card-testimonial"{% endif %}>
+  <div class="card card-testimonial">
     <div class="row">
       {% if image_url %}
         <div class="col-lg-6">
@@ -25,8 +25,11 @@
       {% if image_url %}
         <div class="col-lg-6">
             <div class="testimonial-image">
-              {% set styled_media = image_url|provus_apply_image_style('testimonial_image_style')|default({}) %}
-              {% include 'canvas:image' with styled_media only %}
+              {% include 'canvas:image' ignore missing with {
+                src: image_url.src,
+                alt: image_url.alt,
+                class: 'img-fluid w-100 h-100 object-fit-cover'
+              } only %}
             </div>
         </div>
       {% endif %}

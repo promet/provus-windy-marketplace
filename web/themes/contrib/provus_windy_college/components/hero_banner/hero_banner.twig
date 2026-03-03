@@ -50,8 +50,28 @@
             {% endif %}
               <div class="banner-links">
               {% block hero_banner_buttons %}
-                {{ include('provus_blocks:button', { text: 'Button 1', url: 'https://example.com', variant: 'primary' }) }}
-                {{ include('provus_blocks:button', { text: 'Button 2', url: '/page/1', variant: 'secondary' }) }}
+                {{
+                  include(
+                    '@provus_windy_college/components/button/button.twig',
+                    {
+                      text: 'Button 1',
+                      url: 'https://example.com',
+                      variant: 'primary'
+                    },
+                    with_context: false
+                  )
+                }}
+                {{
+                  include(
+                    '@provus_windy_college/components/button/button.twig',
+                    {
+                      text: 'Button 2',
+                      url: '/page/1',
+                      variant: 'secondary'
+                    },
+                    with_context: false
+                  )
+                }}
               {% endblock %}
               </div>
             </div>

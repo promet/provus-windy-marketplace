@@ -41,7 +41,7 @@
 
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-    {% embed 'provus_blocks:card_icon' with {
+    {% embed '@provus_windy_college/components/card/card_icon/card_icon.twig' with {
       title: content.field_provus_title|render,
       body: content.field_provus_body|render,
       image: content.field_provus_media_image|render,
