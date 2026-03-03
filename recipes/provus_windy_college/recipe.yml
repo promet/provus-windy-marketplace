@@ -1,4 +1,4 @@
-name: 'My Drupal CMS site'
+name: 'Provus Windy College'
 type: Site
 install:
   - announcements_feed
