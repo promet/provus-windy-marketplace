@@ -5,8 +5,8 @@ core_version_requirement: ^11
 base theme: provus_base_theme
 
 libraries:
-  - provus_college/global-styling
-  - provus_college/fontawesome
+  - provus_windy_college/global-styling
+  - provus_windy_college/fontawesome
 libraries-override:
   provus_base_theme/global-styling:
     css:

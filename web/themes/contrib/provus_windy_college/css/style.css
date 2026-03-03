@@ -25818,7 +25818,7 @@ footer.site-footer p {
   right: 0;
   width: 12px;
   height: 12px;
-  background-image: url("/themes/custom/provus_college/images/arrow_up.svg");
+  background-image: url("/themes/custom/provus_windy_college/images/arrow_up.svg");
   -webkit-background-size: contain;
           background-size: contain;
   background-repeat: no-repeat;
@@ -26265,7 +26265,7 @@ body.scrolled #navbar-main {
 #navbar-main.navbar .desktop-nav .nav-item > .dropdown-cor-menu.level-1 > li.dropdown-item > .nav-link:hover,
 #navbar-main.navbar .desktop-nav .nav-item > .dropdown-cor-menu.level-1 > li.dropdown-item > .nav-link:focus {
   background-color: rgba(173, 26, 22, 0.1019607843);
-  background-image: url(/themes/custom/provus_college/images/chevron-primary.svg) !important;
+  background-image: url(/themes/custom/provus_windy_college/images/chevron-primary.svg) !important;
 }
 
 #navbar-main.navbar .nav-item .dropdown-cor-menu.level-1 > li.dropdown-item .field--name-field-provus-menu-icon,
@@ -26431,7 +26431,7 @@ body.scrolled #navbar-main {
   top: 3px;
   width: 20px;
   height: 20px;
-  background: url("/themes/custom/provus_college/images/calendar_month.svg") no-repeat center center;
+  background: url("/themes/custom/provus_windy_college/images/calendar_month.svg") no-repeat center center;
   -webkit-background-size: contain;
           background-size: contain;
 }
@@ -26446,7 +26446,7 @@ body.scrolled #navbar-main {
   top: 3px;
   width: 20px;
   height: 20px;
-  background: url("/themes/custom/provus_college/images/schedule.svg") no-repeat center center;
+  background: url("/themes/custom/provus_windy_college/images/schedule.svg") no-repeat center center;
   -webkit-background-size: contain;
           background-size: contain;
 }
@@ -26703,7 +26703,7 @@ body.scrolled #navbar-main {
 }
 .provus-card .field--name-field-provus-links a:not(.btn):after {
   content: "";
-  background-image: url("/themes/custom/provus_college/images/arrow-right.svg");
+  background-image: url("/themes/custom/provus_windy_college/images/arrow-right.svg");
   -webkit-background-size: contain;
           background-size: contain;
   background-repeat: no-repeat;
@@ -27287,7 +27287,7 @@ table {
   border: none;
   position: relative;
   padding-right: 1.5rem;
-  background-image: url("/themes/custom/provus_college/images/reset.svg");
+  background-image: url("/themes/custom/provus_windy_college/images/reset.svg");
   -webkit-background-size: 16px 16px;
           background-size: 16px;
   background-repeat: no-repeat;
@@ -27513,7 +27513,7 @@ table {
 }
 
 .bg-plus {
-  background: url("/themes/custom/provus_college/images/bg-plus.png") no-repeat center center;
+  background: url("/themes/custom/provus_windy_college/images/bg-plus.png") no-repeat center center;
   -webkit-background-size: cover;
           background-size: cover;
 }
@@ -27613,7 +27613,7 @@ hr {
 }
 
 .subscription-form {
-  background: url("/themes/custom/provus_college/images/bg-plus.png") no-repeat center center;
+  background: url("/themes/custom/provus_windy_college/images/bg-plus.png") no-repeat center center;
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center center;
