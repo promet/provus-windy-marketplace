@@ -1,0 +1,27 @@
+uuid: 812acb20-f7a2-46cd-ae77-fe798543255f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Provus Components'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.provus_windy_college.accordion_canvas
+  - sdc.provus_windy_college.accordion_item
+  - sdc.provus_windy_college.button
+  - sdc.provus_windy_college.card_icon
+  - sdc.provus_windy_college.card_image_background
+  - sdc.provus_windy_college.card_image_side
+  - sdc.provus_windy_college.card_image_top
+  - sdc.provus_windy_college.card_tall
+  - sdc.provus_windy_college.card_text
+  - sdc.provus_windy_college.cta
+  - sdc.provus_windy_college.heading
+  - sdc.provus_windy_college.hero_banner
+  - sdc.provus_windy_college.image
+  - sdc.provus_windy_college.list_canvas
+  - sdc.provus_windy_college.list_canvas_item
+  - sdc.provus_windy_college.list_style
+  - sdc.provus_windy_college.list_style_item
+  - sdc.provus_windy_college.paragraph
+  - sdc.provus_windy_college.testimonial

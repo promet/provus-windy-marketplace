@@ -1,0 +1,13 @@
+uuid: 5477b0fb-a57a-48ec-bc2d-e42b34867850
+langcode: en
+status: true
+dependencies: {  }
+name: 'Provus Layouts'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.provus_windy_college.four_column
+  - sdc.provus_windy_college.one_column
+  - sdc.provus_windy_college.three_column
+  - sdc.provus_windy_college.two_column
+  - sdc.provus_windy_college.wrapper

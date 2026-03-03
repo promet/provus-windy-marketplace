@@ -1,0 +1,13 @@
+uuid: aebdc988-a8f7-4694-bf9c-7fec81ca66b1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Provus Stat Components'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.provus_windy_college.stat_canvas_item
+  - sdc.provus_windy_college.stat_four_column
+  - sdc.provus_windy_college.stat_six_column
+  - sdc.provus_windy_college.stat_three_column
+  - sdc.provus_windy_college.stat_two_column
