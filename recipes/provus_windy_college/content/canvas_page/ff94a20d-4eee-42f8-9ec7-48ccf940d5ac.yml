@@ -16,6 +16,47 @@ default:
   title:
     -
       value: Home
+  components:
+    -
+      uuid: 1006039d-6da7-4102-b699-7e8e3f653708
+      component_id: sdc.provus_windy_college.hero_banner
+      inputs:
+        subtitle: 'Get Started'
+        title: 'Welcome to Our Site'
+        body:
+          value: |
+            <p>We provide exceptional services tailored to your needs.</p>
+            <p>Get started today!</p>
+          format: canvas_html_block
+        image_url:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/400x300'
+            alt: Image
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_windy_college.hero_banner
+        is_short_banner: false
+        image_position: full
+        background_color: primary
+        text_container_width: col-lg-6
+        text_alignment: left
   path:
     -
       alias: /home
