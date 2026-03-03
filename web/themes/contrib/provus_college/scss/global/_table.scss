@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+  border-radius: $images-border-radius-radius-md;
+  margin-bottom: $padding-padding-xxlg;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+.fc {
+  table {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid $table-body-border-color;
+    border-radius: 0;
+    margin-bottom: 0;
+    
+    thead {
+      th {
+        background-color: white;
+      }
+    }
+    tr {
+      background-color: #fff;
+      &:nth-child(even) {
+        background-color: white;
+      }
+    }
+
+    td {
+      
+    }
+  }
+}

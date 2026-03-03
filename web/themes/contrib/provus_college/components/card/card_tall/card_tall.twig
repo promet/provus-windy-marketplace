@@ -1,0 +1,30 @@
+<div class="card-wrapper provus-card-tall">
+  {% if link %}
+  <a href="{{ link }}" rel="bookmark">
+  {% endif %}
+  <div{% if content_attributes is defined and content_attributes %}{{ content_attributes.addClass('card') }}{% else %} class="card"{% endif %}>
+    <div class="card-wrapper">
+      {% if image_url %}
+        <div class="card-img-top">
+        {% set styled_media = image_url|provus_apply_image_style('provus_card_tall')|default({}) %}
+        {% include 'canvas:image' with styled_media only %}
+        </div>
+      {% endif %}
+      <div class="card-body">
+        {% if header|render %}
+          <div class="card-date">{{ header }}</div>
+        {% endif %}
+        {% if title|render %}
+          <h3 class="card-title">
+            <div class="field field--name-field-provus-title">
+            {{ title }}
+            </div>
+          </h3>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if link %}
+  </a>
+  {% endif %}
+</div>

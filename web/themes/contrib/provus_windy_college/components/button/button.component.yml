@@ -1,0 +1,46 @@
+$schema: 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+name: Button
+description: Button component with variant, outline, and size options.
+status: stable
+group: Provus Components
+
+variants:
+  default:
+    title: Default
+    description: Standard accordion item with collapsible content section
+
+props:
+  type: object
+  required:
+    - text
+    - url
+  properties:
+    text:
+      type: string
+      title: Button text
+      description: The text displayed inside the button
+      examples:
+        - Click me
+    url:
+      type: string
+      format: uri-reference
+      title: 'URL'
+      description: 'URL for the link button'
+      examples:
+        - '/contact'
+      default: ''
+    variant:
+      type: string
+      title: Style variant
+      description: Bootstrap button variant
+      default: primary
+      enum:
+        - default
+        - primary
+        - secondary
+      meta:enum:
+        default: Default
+        primary: Primary
+        secondary: Secondary
+      examples:
+        - primary

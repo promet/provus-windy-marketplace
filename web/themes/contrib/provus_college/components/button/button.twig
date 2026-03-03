@@ -1,0 +1,8 @@
+{# Normalize props #}
+{% set button_variant = variant|default('') %}
+{% set button_size = size|default('normal') %}
+{% set href = url|default('#') %}
+
+<a href="{{ href }}" class="btn btn-{{ button_variant }}">
+  {{ text }}
+</a>

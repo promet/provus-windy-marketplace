@@ -1,0 +1,41 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Provus Blocks Tabs
+status: stable
+noUi: true
+description: Tabs component that displays content in a tabbed interface with configurable orientation
+group: Provus Components
+
+variants:
+  default:
+    title: Default
+    description: Standard tabs component with horizontal or vertical orientation
+
+props:
+  type: object
+  properties:
+    id:
+      type: string
+      title: 'ID'
+      description: 'Unique identifier for the tabs component. Used for accessibility and JavaScript functionality.'
+      examples:
+        - 'main-tabs'
+        - 'content-tabs'
+        - 'product-tabs'
+      default: ''
+    orientation:
+      type: string
+      title: 'Orientation'
+      description: 'Tab orientation: "horizontal" for tabs at the top, "vertical" for tabs on the side'
+      examples:
+        - 'horizontal'
+        - 'vertical'
+      default: 'horizontal'
+    items:
+      type: array
+      title: 'Items'
+      description: 'Array of tab items, each containing tab label and content'
+      default: []
+  required:
+    - id
+    - orientation
+    - items

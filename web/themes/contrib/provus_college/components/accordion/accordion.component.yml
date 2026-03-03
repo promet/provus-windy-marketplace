@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Accordion
+status: stable
+description: Accordion component that displays collapsible content sections with optional first item open
+group: Provus Components
+
+variants:
+  default:
+    title: Default
+    description: Standard accordion with collapsible content sections
+
+props:
+  type: object
+  properties:
+    group_id:
+      type: string
+      title: 'Unique Identifier'
+      description: 'Unique identifier for the accordion component. Used for accessibility and JavaScript functionality. Will be auto-generated if not provided.'
+      examples:
+        - 'faq-accordion'
+        - 'content-accordion'
+        - 'product-details'
+      default: ''
+    items:
+      type: array
+      title: 'Accordion Items'
+      description: 'Array of accordion items, each containing a title and content section'
+      default: []
+    openfirst:
+      type: boolean
+      title: 'Open First Item'
+      description: 'Determines if the first accordion item should be open by default. Set to "true" to enable, "false" to disable.'
+      examples:
+        - true
+        - false
+      default: false
+      enum:
+        - true
+        - false
+  required:
+    - items
+    - group_id

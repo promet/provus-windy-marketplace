@@ -12,7 +12,10 @@
 /libraries
 /modules/contrib
 /profiles/contrib
-/themes/contrib
+/themes/contrib/mercury
+/themes/contrib/byte_theme
+/themes/contrib/easy_email_theme
+/themes/contrib/gin
 
 # PHP scripts scaffolded into the web root by Drupal core.
 /*.php
