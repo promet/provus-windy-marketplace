@@ -1,0 +1,98 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - text
+  theme:
+    - provus_base_theme
+active_version: 17dbcb35f8724261
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        start_date:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: JAN
+          expression: ℹ︎string␟value
+        end_date:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '01'
+          expression: ℹ︎string␟value
+        full_dates:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'March 15-17, 2024'
+          expression: ℹ︎string␟value
+        url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /events/annual-conference-2024
+              options: {  }
+          expression: ℹ︎link␟url
+        event_title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Annual Conference 2024'
+          expression: ℹ︎string␟value
+        summary:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Join us for an exciting event featuring keynote speakers and networking opportunities.'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: custom-class
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Event List View'
+id: sdc.provus_base_theme.list_item
+provider: provus_base_theme
+source: sdc
+source_local_id: 'provus_base_theme:list_item'

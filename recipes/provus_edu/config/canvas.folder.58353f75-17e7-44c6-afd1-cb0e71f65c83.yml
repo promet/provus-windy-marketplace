@@ -16,13 +16,16 @@ items:
   - sdc.provus_base_theme.card_tall
   - sdc.provus_base_theme.card_text
   - sdc.provus_base_theme.cta
+  - sdc.provus_base_theme.event
   - sdc.provus_base_theme.heading
   - sdc.provus_base_theme.hero_banner
   - sdc.provus_base_theme.image
   - sdc.provus_base_theme.list_canvas_item
   - sdc.provus_base_theme.list_div
+  - sdc.provus_base_theme.list_item
   - sdc.provus_base_theme.list_style
   - sdc.provus_base_theme.list_style_item
+  - sdc.provus_base_theme.mini
   - sdc.provus_base_theme.paragraph
   - sdc.provus_base_theme.spacer
   - sdc.provus_base_theme.testimonial

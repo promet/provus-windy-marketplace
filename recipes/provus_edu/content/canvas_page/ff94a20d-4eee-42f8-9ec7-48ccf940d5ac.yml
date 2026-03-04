@@ -8,6 +8,38 @@ _meta:
     9b05d50f-b745-485a-80ff-e4cd615add31: media
     5d04cccc-230e-4501-baf9-70102785b8c9: file
     2cac259f-0710-407b-837f-37f2a543d778: media
+    0016a239-9cba-4b12-a138-f0ea82d9b0b3: file
+    1fb73729-8724-45c1-a291-fda4b7a25af2: media
+    0f46c413-1423-4fe9-9aa9-bc669613e59c: file
+    16bc3f5e-7495-42ae-b536-84df56892752: media
+    b5221242-7a3f-40c3-8691-eda9bab721c5: file
+    67915c7d-eed4-410c-8ec2-01cc14ab8e26: media
+    0897233c-81f6-4679-b04d-4c99d0f8abaa: file
+    981e0a80-285d-4873-a025-f0e50093da87: media
+    76ffa334-4ef6-4ce1-abbf-970997d8a4fa: file
+    947a3f46-f3f7-4913-ba3d-cfa6b7c01e4d: media
+    18977ccf-ff71-47e0-8441-22ff144eeb3c: file
+    a8107cfd-9acb-4add-84e2-4aa3580fe4b8: media
+    e4f1c7cc-79c2-409c-9a84-55d5d4dc1120: file
+    69739c7d-277b-459b-b465-964273379e44: media
+    48e2e062-7c22-4f23-b373-71c2a8aa798e: file
+    705f6f49-398a-4e90-ba1b-377149af2eb7: media
+    68e29c25-39e2-4d88-9804-866486f2f3e7: file
+    077145c6-2f44-40b1-8b51-429b1d18688a: media
+    81d2fbca-01d6-4606-b775-25fd9ed65a06: file
+    88334f1c-f03b-4189-bd9d-64d79bc0bbcf: media
+    689ea4f9-2d0c-4e04-bb6d-e4978cadf234: file
+    c181cbbb-04ed-4691-8af1-b515cff32f44: media
+    7ffb4622-7fe1-4871-af66-3ed70ee1e285: file
+    e626bef7-8042-4f9f-8c5a-22c8126ad8bf: media
+    49d94a1c-aac9-4e6f-ac7d-8152c1a6f8a6: file
+    b21f518b-e2db-4fd9-b8bd-39fad7ccc9f7: media
+    ac94bcb9-077d-4aec-a297-df6daf88114c: file
+    62e3a477-9ac8-499a-b8d9-1b571eca0e12: media
+    b25854c1-b621-4c55-b65c-455a0dae9ba9: file
+    7bb7f66a-d568-4baf-bce5-ab0a264bfcfd: media
+    714a6a16-42bb-44c0-b02a-140b2b895136: file
+    b02964f3-83ae-425d-9ace-e25e65d2dcfb: media
 default:
   revision_user:
     -
@@ -241,29 +273,9 @@ default:
       inputs:
         title: 'Associate Degrees'
         bg_image_path:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/400x300'
-            alt: 'Background image'
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.card_image_background
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 1fb73729-8724-45c1-a291-fda4b7a25af2
+            target_type: media
         link:
           uri: 'internal:/'
           options: {  }
@@ -275,29 +287,9 @@ default:
       inputs:
         title: "Bachelor's Degree"
         bg_image_path:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/400x300'
-            alt: 'Background image'
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.card_image_background
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 16bc3f5e-7495-42ae-b536-84df56892752
+            target_type: media
         link:
           uri: 'internal:/'
           options: {  }
@@ -309,29 +301,9 @@ default:
       inputs:
         title: Certificates
         bg_image_path:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/400x300'
-            alt: 'Background image'
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.card_image_background
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 67915c7d-eed4-410c-8ec2-01cc14ab8e26
+            target_type: media
         link:
           uri: 'internal:/'
           options: {  }
@@ -352,29 +324,9 @@ default:
       inputs:
         title: 'Continuing Education'
         bg_image_path:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/400x300'
-            alt: 'Background image'
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.card_image_background
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 981e0a80-285d-4873-a025-f0e50093da87
+            target_type: media
         link:
           uri: 'internal:/about'
           options: {  }
@@ -386,29 +338,9 @@ default:
       inputs:
         title: 'Online Learning'
         bg_image_path:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/400x300'
-            alt: 'Background image'
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.card_image_background
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 947a3f46-f3f7-4913-ba3d-cfa6b7c01e4d
+            target_type: media
         link:
           uri: 'internal:/about'
           options: {  }
@@ -420,29 +352,9 @@ default:
       inputs:
         title: Atheletics
         bg_image_path:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/400x300'
-            alt: 'Background image'
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.card_image_background
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: a8107cfd-9acb-4add-84e2-4aa3580fe4b8
+            target_type: media
         link:
           uri: 'internal:/about'
           options: {  }
@@ -477,11 +389,11 @@ default:
               - src
           componentId: sdc.provus_base_theme.container
         html_tag: div
-        custom_class: bg-grey
         flex_enabled: false
         padding_top: pt-5
         padding_bottom: pb-5
         container_type: container
+        align_items: align-items-center
     -
       parent_uuid: 60af13ed-f5e3-4340-b83f-ba8c07d31ed0
       slot: content
@@ -498,31 +410,9 @@ default:
       component_id: sdc.provus_base_theme.image
       inputs:
         media:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/1920x1014'
-            alt: 'Image alt text'
-            width: 1920
-            height: 1014
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.image
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 69739c7d-277b-459b-b465-964273379e44
+            target_type: media
         size: '4:3'
         radius: rounded-0
         margin_bottom: mb-0
@@ -556,6 +446,361 @@ default:
           uri: 'internal:/'
           options: {  }
         variant: primary
+    -
+      uuid: d3f16a92-6734-4406-a9f5-53bf376b365a
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: false
+        custom_class: bg-grey
+    -
+      parent_uuid: d3f16a92-6734-4406-a9f5-53bf376b365a
+      slot: content
+      uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      component_id: sdc.provus_base_theme.three_column
+      inputs:
+        desktop_width: 25-25-50
+        tablet_width: 25-25-50
+        mobile_width: 100-100-100
+    -
+      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      slot: column_1
+      uuid: 289f6fb3-460e-4144-aef7-0bcc03f9f091
+      component_id: sdc.provus_base_theme.card_tall
+      inputs:
+        title: 'Stay Safe Windy City Community College: Essential Safety Tips and Resources from Windy City Community College Officials'
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 705f6f49-398a-4e90-ba1b-377149af2eb7
+            target_type: media
+        header: 'October 1, 2025'
+        link:
+          uri: 'internal:/contact'
+          options: {  }
+    -
+      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      slot: column_2
+      uuid: a8e4bc87-f88d-4a1d-b759-4c504fcc6a12
+      component_id: sdc.provus_base_theme.card_tall
+      inputs:
+        title: Scholarships!
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 077145c6-2f44-40b1-8b51-429b1d18688a
+            target_type: media
+        header: 'January 1, 2024'
+        link:
+          uri: 'internal:/contact'
+          options: {  }
+    -
+      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      slot: column_3
+      uuid: 25ddce83-2150-40c4-9a8d-e0b136e001a2
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h3
+        title: 'Upcoming Events'
+        decorative_line: false
+        alignment: left
+    -
+      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      slot: column_3
+      uuid: e855a26c-534d-47f8-b76a-5b714285a16a
+      component_id: sdc.provus_base_theme.mini
+      inputs:
+        start_date: MAR
+        end_date: '26'
+        full_dates: '1pm - 3pm'
+        url:
+          uri: 'internal:/events/annual-conference-2024'
+          options: {  }
+        event_title: 'Student Government Meeting'
+    -
+      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      slot: column_3
+      uuid: df4ac7d9-3ac6-447a-8945-644d9005ac06
+      component_id: sdc.provus_base_theme.mini
+      inputs:
+        start_date: APR
+        end_date: '02'
+        full_dates: '10am to 8pm'
+        url:
+          uri: 'internal:/events/annual-conference-2024'
+          options: {  }
+        event_title: 'Campus Sustainability Fair'
+    -
+      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      slot: column_3
+      uuid: 94606e34-0019-4f0b-afb0-563083627164
+      component_id: sdc.provus_base_theme.mini
+      inputs:
+        start_date: MAY
+        end_date: '15'
+        full_dates: '10am to 12pm'
+        url:
+          uri: 'internal:/events/annual-conference-2024'
+          options: {  }
+        event_title: 'Outdoor Movie Night on Campus'
+    -
+      uuid: 9422b500-c7b9-4bb9-9f08-599f0f1d659b
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: false
+        padding_bottom: pb-5
+        padding_top: pt-5
+    -
+      parent_uuid: 9422b500-c7b9-4bb9-9f08-599f0f1d659b
+      slot: content
+      uuid: 9d718053-5458-4b2f-abc8-a2f406223627
+      component_id: sdc.provus_base_theme.one_column
+      inputs: {  }
+    -
+      parent_uuid: 9d718053-5458-4b2f-abc8-a2f406223627
+      slot: column_1
+      uuid: ce72a76f-69d5-4406-af37-20cd597d78f9
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h2
+        title: 'Support Every Step of the Way'
+        decorative_line: true
+        alignment: center
+    -
+      parent_uuid: 9d718053-5458-4b2f-abc8-a2f406223627
+      slot: column_1
+      uuid: 24fbf408-cfe1-45f8-9b09-435c6f9fe671
+      component_id: sdc.provus_base_theme.four_column
+      inputs:
+        desktop_width: 25-25-25-25
+        tablet_width: 25-25-25-25
+        mobile_width: 100-100-100-100
+    -
+      parent_uuid: 24fbf408-cfe1-45f8-9b09-435c6f9fe671
+      slot: column_1
+      uuid: a0a728a6-9a8e-43f6-b6da-2d5a33b48ad9
+      component_id: sdc.provus_base_theme.card_icon
+      inputs:
+        title: 'TUTORING CENTER'
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 88334f1c-f03b-4189-bd9d-64d79bc0bbcf
+            target_type: media
+        link_style: default
+    -
+      parent_uuid: 24fbf408-cfe1-45f8-9b09-435c6f9fe671
+      slot: column_2
+      uuid: 299e6cd4-ea3e-46be-ad56-7dec95a3c86f
+      component_id: sdc.provus_base_theme.card_icon
+      inputs:
+        title: 'Career Counseling'
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: c181cbbb-04ed-4691-8af1-b515cff32f44
+            target_type: media
+        link_style: default
+    -
+      parent_uuid: 24fbf408-cfe1-45f8-9b09-435c6f9fe671
+      slot: column_3
+      uuid: 1a01ade5-94dc-436d-9658-465762853b42
+      component_id: sdc.provus_base_theme.card_icon
+      inputs:
+        title: 'IT Help Desk'
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e626bef7-8042-4f9f-8c5a-22c8126ad8bf
+            target_type: media
+        link_style: default
+    -
+      parent_uuid: 24fbf408-cfe1-45f8-9b09-435c6f9fe671
+      slot: column_4
+      uuid: b219ef4e-18f5-45df-9071-e13017ab15ad
+      component_id: sdc.provus_base_theme.card_icon
+      inputs:
+        title: 'Library Services'
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b21f518b-e2db-4fd9-b8bd-39fad7ccc9f7
+            target_type: media
+        link_style: default
+    -
+      parent_uuid: 9d718053-5458-4b2f-abc8-a2f406223627
+      slot: column_1
+      uuid: a3ab2f63-18c0-4a9c-becc-f8ba709883bf
+      component_id: sdc.provus_base_theme.one_column
+      inputs: {  }
+    -
+      parent_uuid: a3ab2f63-18c0-4a9c-becc-f8ba709883bf
+      slot: column_1
+      uuid: 19534842-2aac-496b-a60c-ddc2e77772e3
+      component_id: sdc.provus_base_theme.button
+      inputs:
+        text: 'Explore Resources'
+        url:
+          uri: 'internal:/'
+          options: {  }
+        variant: primary
+    -
+      uuid: 6830f452-5cba-4ad9-9dfb-0d124c9f430e
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: false
+        padding_bottom: pb-5
+        padding_top: pt-5
+    -
+      parent_uuid: 6830f452-5cba-4ad9-9dfb-0d124c9f430e
+      slot: content
+      uuid: 00d79939-856f-4c21-923f-0047c12b984b
+      component_id: sdc.provus_base_theme.one_column
+      inputs: {  }
+    -
+      parent_uuid: 00d79939-856f-4c21-923f-0047c12b984b
+      slot: column_1
+      uuid: e38f34ad-360b-4cfb-ac64-635beb036e83
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h2
+        title: 'Get Involve on Campus'
+        decorative_line: false
+        alignment: center
+    -
+      parent_uuid: 6830f452-5cba-4ad9-9dfb-0d124c9f430e
+      slot: content
+      uuid: 47c73561-726f-4ed9-b8c2-8850fe1962ca
+      component_id: sdc.provus_base_theme.three_column
+      inputs:
+        desktop_width: 33-33-33
+        tablet_width: 33-33-33
+        mobile_width: 100-100-100
+    -
+      parent_uuid: 47c73561-726f-4ed9-b8c2-8850fe1962ca
+      slot: column_1
+      uuid: c1802e1d-eb4b-4a0f-b8e8-7ce2a63696f5
+      component_id: sdc.provus_base_theme.card_image_top
+      inputs:
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 62e3a477-9ac8-499a-b8d9-1b571eca0e12
+            target_type: media
+        is_image_circle: false
+        link_text: 'Clubs & Organizations'
+        link_url:
+          uri: 'internal:/'
+          options: {  }
+        link_style: default
+    -
+      parent_uuid: 47c73561-726f-4ed9-b8c2-8850fe1962ca
+      slot: column_2
+      uuid: 43fe22b8-a075-4558-97d3-a0a17920c5e8
+      component_id: sdc.provus_base_theme.card_image_top
+      inputs:
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7bb7f66a-d568-4baf-bce5-ab0a264bfcfd
+            target_type: media
+        is_image_circle: false
+        link_text: 'Sports & Fitness'
+        link_url:
+          uri: 'internal:/'
+          options: {  }
+        link_style: default
+    -
+      parent_uuid: 47c73561-726f-4ed9-b8c2-8850fe1962ca
+      slot: column_3
+      uuid: 3df993ca-f2f9-46a4-8525-bb966f18f515
+      component_id: sdc.provus_base_theme.card_image_top
+      inputs:
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b02964f3-83ae-425d-9ace-e25e65d2dcfb
+            target_type: media
+        is_image_circle: false
+        link_text: 'Volunteer Opportunities'
+        link_url:
+          uri: 'internal:/'
+          options: {  }
+        link_style: default
   path:
     -
       alias: /home

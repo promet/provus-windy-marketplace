@@ -35,9 +35,7 @@
 {% endif %}
 
 <{{ html_tag }}{{ attributes.addClass(classes|filter(v => v)) }}>
-  <div class="row">
   {% block content %}{% endblock %}
-  </div>
 </{{ html_tag }}>
 
 {% if custom_class %}
