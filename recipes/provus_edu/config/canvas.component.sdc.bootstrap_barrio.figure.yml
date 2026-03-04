@@ -3,6 +3,11 @@ status: true
 dependencies:
   theme:
     - bootstrap_barrio
+label: Figure
+id: sdc.bootstrap_barrio.figure
+source: sdc
+source_local_id: 'bootstrap_barrio:figure'
+provider: bootstrap_barrio
 active_version: 7b5535ad9998976a
 versioned_properties:
   active:
@@ -36,8 +41,3 @@ versioned_properties:
       slot_definitions:
         image:
           title: Image
-label: Figure
-id: sdc.bootstrap_barrio.figure
-provider: bootstrap_barrio
-source: sdc
-source_local_id: 'bootstrap_barrio:figure'

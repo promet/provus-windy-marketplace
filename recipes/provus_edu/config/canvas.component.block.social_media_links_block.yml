@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+label: 'Social Media Links'
+id: block.social_media_links_block
+source: block
+source_local_id: social_media_links_block
+provider: social_media_links
+active_version: 5144e7466c0c9e0e
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: social_media_links_block
+        label: 'Social Media Links'
+        label_display: '0'
+        provider: social_media_links
+    fallback_metadata:
+      slot_definitions: null

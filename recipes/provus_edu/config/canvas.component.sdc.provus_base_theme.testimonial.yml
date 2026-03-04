@@ -14,6 +14,11 @@ dependencies:
     - options
   theme:
     - provus_base_theme
+label: Testimonial
+id: sdc.provus_base_theme.testimonial
+source: sdc
+source_local_id: 'provus_base_theme:testimonial'
+provider: provus_base_theme
 active_version: cd3b49ef28da759d
 versioned_properties:
   active:
@@ -86,8 +91,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Testimonial
-id: sdc.provus_base_theme.testimonial
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:testimonial'

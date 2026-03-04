@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8894c921f458191c0d7b17437ef698bb",
+    "content-hash": "d2ae393772c46ef3b82d6c11252fda5a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4523,6 +4523,54 @@
             }
         },
         {
+            "name": "drupal/google_translator",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_translator.git",
+                "reference": "2.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_translator-2.3.0.zip",
+                "reference": "2.3.0",
+                "shasum": "306d8277b0e112749f88a9289f5d73f46652804b"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.3.0",
+                    "datestamp": "1729724286",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jenna.tollerson",
+                    "homepage": "https://www.drupal.org/user/147099"
+                },
+                {
+                    "name": "jenna.tollerson",
+                    "homepage": "https://www.drupal.org/user/147099"
+                }
+            ],
+            "description": "Provides a block for Google Translate's Website translator.",
+            "homepage": "https://www.drupal.org/project/google_translator",
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_translator"
+            }
+        },
+        {
             "name": "drupal/honeypot",
             "version": "2.2.2",
             "source": {
@@ -6380,6 +6428,61 @@
                 "source": "https://git.drupalcode.org/project/site_template_helper/-/tree/1.0.1"
             },
             "time": "2026-02-14T08:48:40+00:00"
+        },
+        {
+            "name": "drupal/social_media_links",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/social_media_links.git",
+                "reference": "8.x-2.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.10.zip",
+                "reference": "8.x-2.10",
+                "shasum": "dd329d44f88112d2fe83f54331502738c5f2810b"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.10",
+                    "datestamp": "1724736719",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Christian Beier",
+                    "homepage": "https://www.drupal.org/u/cbeier",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "neslee canil pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                }
+            ],
+            "description": "The module provides a block that display links (icons) to your profiles on various social networking sites.",
+            "homepage": "https://www.drupal.org/project/social_media_links",
+            "support": {
+                "source": "https://git.drupalcode.org/project/social_media_links",
+                "issues": "https://www.drupal.org/project/issues/social_media_links"
+            }
         },
         {
             "name": "drupal/svg_image",
@@ -13574,7 +13677,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "drupal/drupal_cms_site_template_base": 20,
+        "drupal/project_browser": 10,
         "drupal/webform": 10
     },
     "prefer-stable": true,

@@ -16,6 +16,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Hero Banner'
+id: sdc.provus_base_theme.hero_banner
+source: sdc
+source_local_id: 'provus_base_theme:hero_banner'
+provider: provus_base_theme
 active_version: f2f5cf9029b1168d
 versioned_properties:
   active:
@@ -137,8 +142,3 @@ versioned_properties:
         hero_banner_buttons:
           title: Buttons
           description: 'Buttons components placed inside the Hero Banner container'
-label: 'Hero Banner'
-id: sdc.provus_base_theme.hero_banner
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:hero_banner'

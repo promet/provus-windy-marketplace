@@ -4,7 +4,6 @@
 {% set container_class = container_type != 'none' ? container_type : '' %}
 {% set classes = [
   container_class,
-  custom_class,
   width_class != 'none' ? width_class : '',
   height_class != 'none' ? height_class : '',
   margin_for_all,
@@ -12,15 +11,11 @@
   margin_bottom,
   margin_start,
   margin_end,
-  margin_x,
-  margin_y,
   padding_all,
   padding_top,
   padding_bottom,
   padding_start,
   padding_end,
-  padding_x,
-  padding_y,
 ] %}
 
 {% if flex_enabled %}
@@ -35,6 +30,16 @@
   {% set classes = classes|merge(flex_classes) %}
 {% endif %}
 
+{% if custom_class %}
+<div class="{{ custom_class }}">
+{% endif %}
+
 <{{ html_tag }}{{ attributes.addClass(classes|filter(v => v)) }}>
+  <div class="row">
   {% block content %}{% endblock %}
+  </div>
 </{{ html_tag }}>
+
+{% if custom_class %}
+</div>
+{% endif %}

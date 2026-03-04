@@ -1,0 +1,176 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - provus_edu
+id: provus_edu_socialmedialinks
+theme: provus_edu
+region: footer_first
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: social_media_links
+  platforms:
+    facebook:
+      value: prometsource
+      description: ''
+      weight: '-46'
+    instagram:
+      value: promet.source
+      description: ''
+      weight: '-45'
+    linkedin:
+      value: company/promet-source/mycompany
+      description: ''
+      weight: '-44'
+    twitter:
+      value: prometsource
+      description: ''
+      weight: '-43'
+    youtube:
+      value: prometsource
+      description: ''
+      weight: '-42'
+    behance:
+      value: ''
+      description: ''
+      weight: '-41'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-40'
+    yandex_zen:
+      value: ''
+      description: ''
+      weight: '-39'
+    whatsapp_channel:
+      value: ''
+      description: ''
+      weight: '-38'
+    meetup:
+      value: ''
+      description: ''
+      weight: '-37'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '-36'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-35'
+    telegram:
+      value: ''
+      description: ''
+      weight: '-34'
+    email:
+      value: ''
+      description: ''
+      weight: '-33'
+    website:
+      value: ''
+      description: ''
+      weight: '-32'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-31'
+    rss:
+      value: ''
+      description: ''
+      weight: '-30'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '-29'
+    mastodon:
+      value: ''
+      description: ''
+      weight: '-28'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-27'
+    contact:
+      value: ''
+      description: ''
+      weight: '-26'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '-25'
+    xing:
+      value: ''
+      description: ''
+      weight: '-24'
+    patreon:
+      value: ''
+      description: ''
+      weight: '-23'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-22'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-21'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '-20'
+    soundcloud:
+      value: ''
+      description: ''
+      weight: '-19'
+    amazon:
+      value: ''
+      description: ''
+      weight: '-18'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-17'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-16'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-15'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '-14'
+    github:
+      value: ''
+      description: ''
+      weight: '-13'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-12'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

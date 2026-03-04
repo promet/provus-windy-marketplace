@@ -17,6 +17,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Card Default'
+id: sdc.provus_base_theme.card_image_top
+source: sdc
+source_local_id: 'provus_base_theme:card_image_top'
+provider: provus_base_theme
 active_version: cdf4a867f64eec96
 versioned_properties:
   active:
@@ -136,8 +141,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Card Default'
-id: sdc.provus_base_theme.card_image_top
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:card_image_top'

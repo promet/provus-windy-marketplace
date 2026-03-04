@@ -3,6 +3,11 @@ status: false
 dependencies:
   module:
     - navigation
+label: User
+id: block.navigation_user
+source: block
+source_local_id: navigation_user
+provider: navigation
 active_version: b1e17ec4885768e0
 versioned_properties:
   active:
@@ -14,8 +19,3 @@ versioned_properties:
         provider: navigation
     fallback_metadata:
       slot_definitions: null
-label: User
-id: block.navigation_user
-provider: navigation
-source: block
-source_local_id: navigation_user

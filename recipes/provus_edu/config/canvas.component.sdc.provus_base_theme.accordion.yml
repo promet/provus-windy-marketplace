@@ -3,6 +3,11 @@ status: true
 dependencies:
   theme:
     - provus_base_theme
+label: 'Accordion Container'
+id: sdc.provus_base_theme.accordion
+source: sdc
+source_local_id: 'provus_base_theme:accordion'
+provider: provus_base_theme
 active_version: b235e771578f5fe2
 versioned_properties:
   active:
@@ -33,8 +38,3 @@ versioned_properties:
         accordion_body:
           title: 'Accordion items'
           description: 'Accordion item components placed inside the accordion container'
-label: 'Accordion Container'
-id: sdc.provus_base_theme.accordion
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:accordion'

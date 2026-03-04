@@ -3,6 +3,11 @@ status: true
 dependencies:
   theme:
     - provus_base_theme
+label: 'Stat Six Column'
+id: sdc.provus_base_theme.stat_six_column
+source: sdc
+source_local_id: 'provus_base_theme:stat_six_column'
+provider: provus_base_theme
 active_version: 554b35a426646b33
 versioned_properties:
   active:
@@ -38,8 +43,3 @@ versioned_properties:
         stat_item_6:
           title: 'Stat Item 6'
           description: 'Sixth stat item'
-label: 'Stat Six Column'
-id: sdc.provus_base_theme.stat_six_column
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:stat_six_column'

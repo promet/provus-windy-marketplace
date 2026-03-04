@@ -13,6 +13,11 @@ dependencies:
     - media_library
   theme:
     - provus_base_theme
+label: 'Stat item'
+id: sdc.provus_base_theme.stat_item
+source: sdc
+source_local_id: 'provus_base_theme:stat_item'
+provider: provus_base_theme
 active_version: 065910bab436f4d7
 versioned_properties:
   active:
@@ -54,8 +59,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Stat item'
-id: sdc.provus_base_theme.stat_item
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:stat_item'

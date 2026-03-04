@@ -1,6 +1,11 @@
 langcode: en
 status: false
 dependencies: {  }
+label: Tabs
+id: block.local_tasks_block
+source: block
+source_local_id: local_tasks_block
+provider: core
 active_version: 429966cebad152ba
 versioned_properties:
   active:
@@ -14,8 +19,3 @@ versioned_properties:
         secondary: true
     fallback_metadata:
       slot_definitions: null
-label: Tabs
-id: block.local_tasks_block
-provider: core
-source: block
-source_local_id: local_tasks_block

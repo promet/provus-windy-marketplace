@@ -5,6 +5,11 @@ dependencies:
     - views.view.publishing_content
   module:
     - views
+label: 'My drafts'
+id: block.views_block.publishing_content-block_drafts
+source: block
+source_local_id: 'views_block:publishing_content-block_drafts'
+provider: views
 active_version: ae4a8e761b90f388
 versioned_properties:
   active:
@@ -18,8 +23,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'My drafts'
-id: block.views_block.publishing_content-block_drafts
-provider: views
-source: block
-source_local_id: 'views_block:publishing_content-block_drafts'

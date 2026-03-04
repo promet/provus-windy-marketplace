@@ -14,6 +14,11 @@ dependencies:
     - media_library
   theme:
     - provus_base_theme
+label: 'Card Tall'
+id: sdc.provus_base_theme.card_tall
+source: sdc
+source_local_id: 'provus_base_theme:card_tall'
+provider: provus_base_theme
 active_version: bf2f2d4dfefb0b6c
 versioned_properties:
   active:
@@ -76,8 +81,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Card Tall'
-id: sdc.provus_base_theme.card_tall
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:card_tall'

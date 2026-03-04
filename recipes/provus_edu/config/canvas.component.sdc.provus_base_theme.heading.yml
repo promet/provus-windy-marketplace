@@ -5,6 +5,11 @@ dependencies:
     - options
   theme:
     - provus_base_theme
+label: 'Heading Title'
+id: sdc.provus_base_theme.heading
+source: sdc
+source_local_id: 'provus_base_theme:heading'
+provider: provus_base_theme
 active_version: 36bbad1db0e633f7
 versioned_properties:
   active:
@@ -64,8 +69,3 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Heading Title'
-id: sdc.provus_base_theme.heading
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:heading'

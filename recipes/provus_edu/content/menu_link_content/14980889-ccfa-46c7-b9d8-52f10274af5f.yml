@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 14980889-ccfa-46c7-b9d8-52f10274af5f
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Tuition & Fees'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/tuition-fees'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -48
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:3380185b-4fb6-4613-a67c-1e3019803438'
+  revision_translation_affected:
+    -
+      value: true

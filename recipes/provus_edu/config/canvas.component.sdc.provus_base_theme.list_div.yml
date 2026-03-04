@@ -5,6 +5,11 @@ dependencies:
     - options
   theme:
     - provus_base_theme
+label: 'List (Div) Container'
+id: sdc.provus_base_theme.list_div
+source: sdc
+source_local_id: 'provus_base_theme:list_div'
+provider: provus_base_theme
 active_version: b88afa86786a6783
 versioned_properties:
   active:
@@ -45,8 +50,3 @@ versioned_properties:
         list_items:
           title: 'List items'
           description: 'List item components placed inside the list container'
-label: 'List (Div) Container'
-id: sdc.provus_base_theme.list_div
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:list_div'

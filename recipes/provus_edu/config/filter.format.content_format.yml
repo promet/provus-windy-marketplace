@@ -1,6 +1,19 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.16_9_medium
+    - core.entity_view_mode.media.16_9_small
+    - core.entity_view_mode.media.1_1_square_medium
+    - core.entity_view_mode.media.1_1_square_small
+    - core.entity_view_mode.media.3_4_medium
+    - core.entity_view_mode.media.3_4_small
+    - core.entity_view_mode.media.4_3_medium
+    - core.entity_view_mode.media.4_3_small
+    - core.entity_view_mode.media.9_16_medium
+    - core.entity_view_mode.media.9_16_small
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
   module:
     - linkit
     - media

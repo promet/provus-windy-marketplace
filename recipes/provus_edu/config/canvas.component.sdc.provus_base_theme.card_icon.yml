@@ -17,6 +17,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Card Icon'
+id: sdc.provus_base_theme.card_icon
+source: sdc
+source_local_id: 'provus_base_theme:card_icon'
+provider: provus_base_theme
 active_version: 7980685ba1c708f4
 versioned_properties:
   active:
@@ -108,8 +113,3 @@ versioned_properties:
           expression: ℹ︎text_long␟processed
     fallback_metadata:
       slot_definitions: {  }
-label: 'Card Icon'
-id: sdc.provus_base_theme.card_icon
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:card_icon'

@@ -24,4 +24,5 @@ items:
   - sdc.provus_base_theme.list_style
   - sdc.provus_base_theme.list_style_item
   - sdc.provus_base_theme.paragraph
+  - sdc.provus_base_theme.spacer
   - sdc.provus_base_theme.testimonial

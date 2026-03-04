@@ -3,6 +3,11 @@ status: true
 dependencies:
   theme:
     - bootstrap_barrio
+label: Button
+id: sdc.bootstrap_barrio.button
+source: sdc
+source_local_id: 'bootstrap_barrio:button'
+provider: bootstrap_barrio
 active_version: 423fc3f3df206914
 versioned_properties:
   active:
@@ -26,8 +31,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Button
-id: sdc.bootstrap_barrio.button
-provider: bootstrap_barrio
-source: sdc
-source_local_id: 'bootstrap_barrio:button'

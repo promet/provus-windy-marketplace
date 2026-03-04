@@ -256,44 +256,6 @@ props:
         mt-5: "Mt-5"
       title: Margin top
       type: string
-    margin_x:
-      default: mx-0
-      description: Bootstrap horizontal margin class.
-      enum:
-        - mx-0
-        - mx-1
-        - mx-2
-        - mx-3
-        - mx-4
-        - mx-5
-      meta:enum:
-        mx-0: "Mx-0"
-        mx-1: "Mx-1"
-        mx-2: "Mx-2"
-        mx-3: "Mx-3"
-        mx-4: "Mx-4"
-        mx-5: "Mx-5"
-      title: Margin X
-      type: string
-    margin_y:
-      default: my-0
-      description: Bootstrap vertical margin class.
-      enum:
-        - my-0
-        - my-1
-        - my-2
-        - my-3
-        - my-4
-        - my-5
-      meta:enum:
-        my-0: "My-0"
-        my-1: "My-1"
-        my-2: "My-2"
-        my-3: "My-3"
-        my-4: "My-4"
-        my-5: "My-5"
-      title: Margin Y
-      type: string
     padding_all:
       default: p-0
       description: Bootstrap padding class.
@@ -388,44 +350,6 @@ props:
         pt-4: "Pt-4"
         pt-5: "Pt-5"
       title: Padding top
-      type: string
-    padding_x:
-      default: px-0
-      description: Bootstrap horizontal padding class.
-      enum:
-        - px-0
-        - px-1
-        - px-2
-        - px-3
-        - px-4
-        - px-5
-      meta:enum:
-        px-0: "Px-0"
-        px-1: "Px-1"
-        px-2: "Px-2"
-        px-3: "Px-3"
-        px-4: "Px-4"
-        px-5: "Px-5"
-      title: Padding X
-      type: string
-    padding_y:
-      default: py-0
-      description: Bootstrap vertical padding class.
-      enum:
-        - py-0
-        - py-1
-        - py-2
-        - py-3
-        - py-4
-        - py-5
-      meta:enum:
-        py-0: "Py-0"
-        py-1: "Py-1"
-        py-2: "Py-2"
-        py-3: "Py-3"
-        py-4: "Py-4"
-        py-5: "Py-5"
-      title: Padding Y
       type: string
   type: object
 slots:

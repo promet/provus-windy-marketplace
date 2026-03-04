@@ -3,6 +3,11 @@ status: true
 dependencies:
   theme:
     - provus_base_theme
+label: 'Stat Three Column'
+id: sdc.provus_base_theme.stat_three_column
+source: sdc
+source_local_id: 'provus_base_theme:stat_three_column'
+provider: provus_base_theme
 active_version: a3f390fbf86eafc2
 versioned_properties:
   active:
@@ -29,8 +34,3 @@ versioned_properties:
         stat_item_3:
           title: 'Stat Item 3'
           description: 'Third stat item'
-label: 'Stat Three Column'
-id: sdc.provus_base_theme.stat_three_column
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:stat_three_column'

@@ -10,7 +10,10 @@ items:
   - block.system_menu_block.admin
   - block.system_menu_block.content
   - block.system_menu_block.footer
+  - block.system_menu_block.footer-1
+  - block.system_menu_block.footer-2
   - block.system_menu_block.main
   - block.system_menu_block.navigation-user-links
+  - block.system_menu_block.secondary-navigation
   - block.system_menu_block.tools
   - block.system_menu_block.top-tasks

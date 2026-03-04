@@ -3,6 +3,11 @@ status: true
 dependencies:
   module:
     - system
+label: 'Powered by Drupal'
+id: block.system_powered_by_block
+source: block
+source_local_id: system_powered_by_block
+provider: system
 active_version: fcc4b9a4f6d6de35
 versioned_properties:
   active:
@@ -14,8 +19,3 @@ versioned_properties:
         provider: system
     fallback_metadata:
       slot_definitions: null
-label: 'Powered by Drupal'
-id: block.system_powered_by_block
-provider: system
-source: block
-source_local_id: system_powered_by_block

@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: b586c801-57b5-40bf-9209-d35b03618446
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Campus Locations'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/about'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:a69bd6ca-6021-4e92-8d5a-a64e0f3d1f5f'
+  revision_translation_affected:
+    -
+      value: true

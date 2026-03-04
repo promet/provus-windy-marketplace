@@ -1,0 +1,9 @@
+uuid: 73bb0a1e-cbcc-4c78-a900-4ab71a172fa4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Social Media Links Block'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.social_media_links_block

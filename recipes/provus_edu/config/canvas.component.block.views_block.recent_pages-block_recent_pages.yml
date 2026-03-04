@@ -5,6 +5,11 @@ dependencies:
     - views.view.recent_pages
   module:
     - views
+label: 'Recent pages'
+id: block.views_block.recent_pages-block_recent_pages
+source: block
+source_local_id: 'views_block:recent_pages-block_recent_pages'
+provider: views
 active_version: 62434fb4a6aaf4b1
 versioned_properties:
   active:
@@ -18,8 +23,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'Recent pages'
-id: block.views_block.recent_pages-block_recent_pages
-provider: views
-source: block
-source_local_id: 'views_block:recent_pages-block_recent_pages'

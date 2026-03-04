@@ -6,6 +6,11 @@ dependencies:
     - options
   theme:
     - provus_base_theme
+label: Button
+id: sdc.provus_base_theme.button
+source: sdc
+source_local_id: 'provus_base_theme:button'
+provider: provus_base_theme
 active_version: ebad9747b59be9b8
 versioned_properties:
   active:
@@ -47,8 +52,3 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Button
-id: sdc.provus_base_theme.button
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:button'

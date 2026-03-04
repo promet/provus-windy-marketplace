@@ -3,6 +3,11 @@ status: true
 dependencies:
   theme:
     - provus_base_theme
+label: 'Stat Two Column'
+id: sdc.provus_base_theme.stat_two_column
+source: sdc
+source_local_id: 'provus_base_theme:stat_two_column'
+provider: provus_base_theme
 active_version: 78e46ad3297cb3ce
 versioned_properties:
   active:
@@ -26,8 +31,3 @@ versioned_properties:
         stat_item_2:
           title: 'Stat Item 2'
           description: 'Second stat item'
-label: 'Stat Two Column'
-id: sdc.provus_base_theme.stat_two_column
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:stat_two_column'

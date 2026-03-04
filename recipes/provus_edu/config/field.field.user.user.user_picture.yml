@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.user.user_picture
+    - image.style.canvas_parametrized_width
   module:
     - image
     - user
