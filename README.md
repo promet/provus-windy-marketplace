@@ -2,8 +2,7 @@
 
 This is a testing ground for creating provus_edu recipe.
 
-Demo site: https://windy.provusdemo.com/ (D10)
-By: Promet Source
+Refer to this site: https://windy.provusdemo.com/ (D10)
 
 # Installation
 ```
@@ -21,3 +20,7 @@ ddev drush site:export --destination=./recipes/provus_edu
 mv ./recipes/provus_edu to ../recipes
 ddev drush si recipes/provus_edu -y
 ```
+
+Credit:
+
+Promet Source
