@@ -44,8 +44,7 @@
         "drupal/trash": "^3.0.25",
         "drupal/view_password": "^6.0.5",
         "drupal/easy_email_theme": "^1.1.0",
-        "drupal/gin": "^5.0.12",
-        "drupal/social_media_links": "^2.10.0"
+        "drupal/gin": "^5.0.12"
     },
     "type": "drupal-recipe",
     "name": "drupal/provus_edu",
