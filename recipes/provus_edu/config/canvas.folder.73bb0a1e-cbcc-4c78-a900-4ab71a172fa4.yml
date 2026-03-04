@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Social Media Links Block'
 configEntityTypeId: component
 weight: 0
-items:
-  - block.social_media_links_block
+items: {  }

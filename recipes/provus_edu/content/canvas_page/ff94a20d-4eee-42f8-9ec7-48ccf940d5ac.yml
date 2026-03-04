@@ -4,6 +4,8 @@ _meta:
   uuid: ff94a20d-4eee-42f8-9ec7-48ccf940d5ac
   default_langcode: en
   depends:
+    f21313d4-c7fd-42f8-a57c-6d1e1077aeaa: file
+    9b05d50f-b745-485a-80ff-e4cd615add31: media
     5d04cccc-230e-4501-baf9-70102785b8c9: file
     2cac259f-0710-407b-837f-37f2a543d778: media
 default:
@@ -29,29 +31,9 @@ default:
           value: '<p><strong>Explore over 100 programs designed to help you succeed in academics, careers, and beyond.</strong></p>'
           format: canvas_html_block
         image_url:
-          sourceType: default-relative-url
-          value:
-            src: 'https://placehold.co/400x300'
-            alt: Image
-          jsonSchema:
-            type: object
-            properties:
-              src:
-                type: string
-                contentMediaType: 'image/*'
-                format: uri-reference
-                x-allowed-schemes:
-                  - http
-                  - https
-              alt:
-                type: string
-              width:
-                type: integer
-              height:
-                type: integer
-            required:
-              - src
-          componentId: sdc.provus_base_theme.hero_banner
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 9b05d50f-b745-485a-80ff-e4cd615add31
+            target_type: media
         is_short_banner: true
         image_position: full
         background_color: primary

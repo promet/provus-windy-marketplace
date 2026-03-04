@@ -10,7 +10,7 @@ dependencies:
 id: provus_edu_useraccountmenu
 theme: provus_edu
 region: secondary_menu
-weight: -3
+weight: -7
 provider: null
 plugin: 'system_menu_block:account'
 settings:

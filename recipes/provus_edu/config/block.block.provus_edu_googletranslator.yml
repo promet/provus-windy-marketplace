@@ -8,7 +8,7 @@ dependencies:
 id: provus_edu_googletranslator
 theme: provus_edu
 region: secondary_menu
-weight: -2
+weight: -6
 provider: null
 plugin: google_translator
 settings:

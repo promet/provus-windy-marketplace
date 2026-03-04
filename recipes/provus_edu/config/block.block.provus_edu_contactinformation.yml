@@ -1,6 +1,10 @@
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic_text:48a481d0-a0a7-41f0-8cee-984af5bef275'
+  module:
+    - block_content
   theme:
     - provus_edu
 id: provus_edu_contactinformation
