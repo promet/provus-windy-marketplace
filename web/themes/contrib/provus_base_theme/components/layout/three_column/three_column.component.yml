@@ -8,9 +8,64 @@ group: Provus Layouts
 props:
   type: object
   properties:
+    desktop_width:
+      type: string
+      title: Desktop column width
+      description: Desktop column width.
+      enum:
+        - 33-33-33
+        - 50-25-25
+        - 25-25-50
+        - 25-50-25
+      meta:enum:
+        33-33-33: "33%/33%/33%"
+        50-25-25: "50%/25%/25%"
+        25-25-50: "25%/25%/50%"
+        25-50-25: "25%/50%/25%"
+      default: 33-33-33
+      examples:
+        - "33-33-33"
+    tablet_width:
+      type: string
+      title: Tablet column width
+      description: Tablet column width.
+      enum:
+        - 33-33-33
+        - 50-25-25
+        - 25-25-50
+        - 25-50-25
+        - 100-100-100
+      meta:enum:
+        33-33-33: "33%/33%/33%"
+        50-25-25: "50%/25%/25%"
+        25-25-50: "25%/25%/50%"
+        25-50-25: "25%/50%/25%"
+        100-100-100: "100%"
+      default: 33-33-33
+      examples:
+        - "33-33-33"
+    mobile_width:
+      type: string
+      title: Mobile column width
+      description: Mobile column width.
+      enum:
+        - 33-33-33
+        - 50-25-25
+        - 25-25-50
+        - 25-50-25
+        - 100-100-100
+      meta:enum:
+        33-33-33: "33%/33%/33%"
+        50-25-25: "50%/25%/25%"
+        25-25-50: "25%/25%/50%"
+        25-50-25: "25%/50%/25%"
+        100-100-100: "100%"
+      default: 100-0
+      examples:
+        - "100-100-100"
     gap:
       type: string
-      title: Gap
+      title: Gap between columns
       description: Bootstrap gap utility for the row.
       enum:
         - g-0
