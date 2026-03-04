@@ -1,6 +1,7 @@
 <?php
 
-use Drupal\Core\Render\Markup;
+use Drupal\Core\Extension\ExtensionPathResolver;
+
 
 /**
  * @file
@@ -8,13 +9,23 @@ use Drupal\Core\Render\Markup;
  */
 
 /**
- * Implements hook_preprocess_region().
+ * Implements hook_preprocess_block().
  */
-function provus_edu_preprocess_region(&$variables) {
-  if ($variables['region'] == 'footer_first') {
-    $content = $variables['content'];
-    $variables['content'] = Markup::create(str_replace('logo.png', 'logo-inverse.png', $content));
+function provus_edu_preprocess_block(array &$variables): void {
+
+  $block_id = $variables['elements']['#id'] ?? '';
+
+  if ($block_id !== 'provus_edu_sitebranding_2') {
+    return;
   }
+
+  $theme_path = \Drupal::service('extension.path.resolver')
+    ->getPath('theme', 'provus_edu');
+
+  $variables['footer_branding_logo_url'] =
+    base_path() . $theme_path . '/logo-inverse.png';
+
+  $variables['footer_branding_logo_alt'] = t('Home');
 }
 
 /**
