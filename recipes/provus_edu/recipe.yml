@@ -105,8 +105,6 @@ install:
   - provus_edu
   - google_translator
   - block_content
-  - social_media_links_field
-  - social_media_links
   - search
 config:
   actions:
