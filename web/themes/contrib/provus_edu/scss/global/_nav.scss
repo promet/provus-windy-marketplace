@@ -117,6 +117,30 @@ footer.site-footer p {
   margin-top: 0;
 }
 
+//styled because before it was as menu
+.region-footer-fourth ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: rem-calc(12);
+
+    a {
+      font-size: 16px;
+      line-height: 24px;
+      display: block;
+      color: $footer-link;
+      padding: 0;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 body.scrolled {
   #navbar-top {
     z-index: 9;
@@ -142,7 +166,7 @@ body.scrolled {
   background-color: $background-colors-background-white;
 }
 
-.block-provus-tabs .horizontal-tabs .horizontal-tabs__menu .horizontal-tabs__menu-item .nav-link.active, 
+.block-provus-tabs .horizontal-tabs .horizontal-tabs__menu .horizontal-tabs__menu-item .nav-link.active,
 .block-provus-tabs .horizontal-tabs .horizontal-tabs__menu .horizontal-tabs__menu-item a.active {
   background-color: $background-colors-background-light;
 }
@@ -508,7 +532,7 @@ body.scrolled {
 
 }
 
-@media only screen and (max-width: 1439px) {  
+@media only screen and (max-width: 1439px) {
   .navbar-expand-lg .navbar-toggler {
     order: 99;
   }
