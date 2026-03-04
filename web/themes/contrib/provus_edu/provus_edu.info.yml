@@ -1,11 +1,12 @@
-name: Provus Subtheme
+name: Provus EDU Theme
 type: theme
-description: 'SASS starter kit for a Provus SubTheme. This is an experimental version. You may use at your own risk.'
+description: 'SASS starter kit for a Provus EDU Theme.'
 core_version_requirement: ^11
 base theme: provus_base_theme
 
 libraries:
-  - provus_subtheme/global-styling
+  - provus_edu/global-styling
+  - provus_edu/fontawesome
 libraries-override:
   provus_base_theme/global-styling:
     css:

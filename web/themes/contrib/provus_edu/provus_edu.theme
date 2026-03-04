@@ -1,0 +1,53 @@
+<?php
+
+use Drupal\Core\Render\Markup;
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+/**
+ * Implements hook_preprocess_region().
+ */
+function provus_edu_preprocess_region(&$variables) {
+  if ($variables['region'] == 'footer_first') {
+    $content = $variables['content'];
+    $variables['content'] = Markup::create(str_replace('logo.png', 'logo-inverse.png', $content));
+  }
+}
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ */
+function provus_edu_preprocess_html(array &$variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+    $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
+  }
+
+   // Add body class called "layout-builder-active" in admin manage display page.
+  if (str_contains($path, '/admin/structure/types/manage') && (str_contains($path, '/display/default/layout') || str_contains($path, '/display/full/layout'))) {
+    $variables['attributes']['class'][] = 'layout-builder-active';
+  }
+
+  // Add body class called "layout-builder-active" and load custom CSS file if
+  // layout builder is current page.
+  if (isset($path_args[1]) && isset($path_args[2]) && isset($path_args[3]) && ($path_args[1] == 'node') && (is_numeric($path_args[2])) && ($path_args[3] == 'layout')) {
+    $variables['attributes']['class'][] = 'layout-builder-active';
+  }
+
+  // Add internal_path classes.
+  $internal_path = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+
+  $trimmed_internal_path = ltrim($internal_path, '/');
+
+  $trimmed_internal_path = 'path-' . $trimmed_internal_path;
+  $replaced_internal_path = str_replace("/", "-", $trimmed_internal_path);
+  // Add the new variable to the theme.
+  $variables['attributes']['class'][] = $replaced_internal_path;
+}
