@@ -1,0 +1,66 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: ff94a20d-4eee-42f8-9ec7-48ccf940d5ac
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Home
+  components:
+    -
+      uuid: 7513a117-d924-4b32-ae83-19da29933431
+      component_id: sdc.provus_base_theme.hero_banner
+      inputs:
+        subtitle: 'Get Started'
+        title: 'Welcome to Our Site'
+        body:
+          value: |
+            <p>We provide exceptional services tailored to your needs.</p>
+            <p>Get started today!</p>
+          format: canvas_html_block
+        image_url:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/400x300'
+            alt: Image
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.hero_banner
+        is_short_banner: false
+        image_position: full
+        background_color: primary
+        text_container_width: col-lg-6
+        text_alignment: left
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

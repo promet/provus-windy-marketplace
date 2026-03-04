@@ -1,0 +1,270 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
+  module:
+    - file
+    - media
+    - media_library
+    - options
+  theme:
+    - provus_base_theme
+active_version: 6a9bc166b044a2b6
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        background_image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+        html_tag:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: div
+          expression: ℹ︎list_string␟value
+        align_items:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        container_type:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        custom_class:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        width_class:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        height_class:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        flex_direction:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        flex_enabled:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        flex_gap:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        flex_width:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        justify_content:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_for_all:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_end:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_start:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_x:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_y:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_all:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_end:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_start:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_x:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_y:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'The content'
+label: Container
+id: sdc.provus_base_theme.container
+provider: provus_base_theme
+source: sdc
+source_local_id: 'provus_base_theme:container'
