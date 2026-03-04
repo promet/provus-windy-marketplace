@@ -4,4 +4,9 @@ Run the following commands
 ddev config --project-type=drupal11 --docroot=web
 ddev composer install
 ddev start
-ddev drush si recipes/provus_windy_college
+ddev drush si recipes/provus_edu
+
+# Importing work
+ddev drush site:export --destination=./recipes/provus_edu
+mv ./recipes/provus_edu to ../recipes
+ddev drush si recipes/provus_edu
