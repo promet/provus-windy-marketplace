@@ -2,7 +2,20 @@
 {% set button_variant = variant|default('') %}
 {% set button_size = size|default('normal') %}
 {% set href = url|default('#') %}
+{% set wrapper_tag = wrapper|default('') %}
+{% set alignment_class = alignment ? 'btn-alignment-' ~ alignment : '' %}
+{% set size_class = button_size != 'normal' ? 'btn-' ~ button_size : '' %}
+{% set width_class = width == 'full' ? 'btn-width-full' : '' %}
+{% set button_classes = ['btn', 'btn-' ~ button_variant, size_class, width_class]|join(' ')|trim %}
 
-<a href="{{ href }}" class="btn btn-{{ button_variant }}">
-  {{ text }}
-</a>
+{% if wrapper_tag %}
+  <{{ wrapper_tag }}{% if alignment_class %} class="{{ alignment_class }}"{% endif %}>
+    <a href="{{ href }}"{% if id %} id="{{ id }}"{% endif %} class="{{ button_classes }}">
+      {{ text }}
+    </a>
+  </{{ wrapper_tag }}>
+{% else %}
+  <a href="{{ href }}"{% if id %} id="{{ id }}"{% endif %} class="{{ button_classes }}{% if alignment_class %} {{ alignment_class }}{% endif %}">
+    {{ text }}
+  </a>
+{% endif %}

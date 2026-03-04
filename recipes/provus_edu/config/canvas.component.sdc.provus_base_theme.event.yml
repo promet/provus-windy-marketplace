@@ -15,6 +15,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Event Full Content'
+id: sdc.provus_base_theme.event
+source: sdc
+source_local_id: 'provus_base_theme:event'
+provider: provus_base_theme
 active_version: 6ffcb2fd6a52f8c6
 versioned_properties:
   active:
@@ -113,8 +118,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Event Full Content'
-id: sdc.provus_base_theme.event
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:event'

@@ -8,6 +8,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Event List View'
+id: sdc.provus_base_theme.list_item
+source: sdc
+source_local_id: 'provus_base_theme:list_item'
+provider: provus_base_theme
 active_version: 17dbcb35f8724261
 versioned_properties:
   active:
@@ -91,8 +96,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Event List View'
-id: sdc.provus_base_theme.list_item
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:list_item'

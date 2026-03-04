@@ -44,3 +44,66 @@ props:
         secondary: Secondary
       examples:
         - primary
+    id:
+      type: string
+      title: ID
+      description: HTML id attribute for the button element
+      examples:
+        - my-button
+    size:
+      type: string
+      title: Size
+      description: Button size
+      default: normal
+      enum:
+        - small
+        - normal
+        - large
+      meta:enum:
+        small: Small
+        normal: Normal
+        large: Large
+      examples:
+        - normal
+    width:
+      type: string
+      title: Width
+      description: Button width
+      default: auto
+      enum:
+        - auto
+        - full
+      meta:enum:
+        auto: Auto
+        full: Full
+      examples:
+        - auto
+    wrapper:
+      title: Wrapper
+      description: Wrap the button in a span or div
+      type: string
+      default: ''
+      enum:
+        - span
+        - div
+      meta:enum:
+        span: Span
+        div: Div
+    alignment:
+      type: string
+      title: 'Alignment'
+      description: 'Align the heading'
+      default: 'left'
+      enum:
+        - 'left'
+        - 'center'
+        - 'right'
+      meta:enum:
+        left: Left
+        center: Center
+        right: Right
+
+libraryOverrides:
+  css:
+    component:
+      button.css: {}

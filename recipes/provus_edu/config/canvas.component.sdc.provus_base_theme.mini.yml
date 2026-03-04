@@ -8,6 +8,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Event Mini View'
+id: sdc.provus_base_theme.mini
+source: sdc
+source_local_id: 'provus_base_theme:mini'
+provider: provus_base_theme
 active_version: 4f0ea408556b4e11
 versioned_properties:
   active:
@@ -81,8 +86,3 @@ versioned_properties:
           expression: ℹ︎text_long␟processed
     fallback_metadata:
       slot_definitions: {  }
-label: 'Event Mini View'
-id: sdc.provus_base_theme.mini
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:mini'

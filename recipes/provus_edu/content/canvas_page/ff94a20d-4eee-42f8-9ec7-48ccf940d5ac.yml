@@ -685,6 +685,13 @@ default:
     -
       parent_uuid: a3ab2f63-18c0-4a9c-becc-f8ba709883bf
       slot: column_1
+      uuid: c906eb0e-52c7-46d2-b14e-abcb2a6228e9
+      component_id: sdc.provus_base_theme.spacer
+      inputs:
+        padding_all: p-3
+    -
+      parent_uuid: a3ab2f63-18c0-4a9c-becc-f8ba709883bf
+      slot: column_1
       uuid: 19534842-2aac-496b-a60c-ddc2e77772e3
       component_id: sdc.provus_base_theme.button
       inputs:
@@ -693,6 +700,9 @@ default:
           uri: 'internal:/'
           options: {  }
         variant: primary
+        alignment: center
+        size: normal
+        wrapper: div
     -
       uuid: 6830f452-5cba-4ad9-9dfb-0d124c9f430e
       component_id: sdc.provus_base_theme.container
