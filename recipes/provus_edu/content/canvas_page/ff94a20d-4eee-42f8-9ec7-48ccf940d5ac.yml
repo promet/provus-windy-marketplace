@@ -20,8 +20,8 @@ _meta:
     947a3f46-f3f7-4913-ba3d-cfa6b7c01e4d: media
     18977ccf-ff71-47e0-8441-22ff144eeb3c: file
     a8107cfd-9acb-4add-84e2-4aa3580fe4b8: media
-    e4f1c7cc-79c2-409c-9a84-55d5d4dc1120: file
-    69739c7d-277b-459b-b465-964273379e44: media
+    3ce7c9f4-91af-4920-aa5e-bb2f03d0fe9b: file
+    04a9c678-180e-4a36-920b-af0a29af2c54: media
     48e2e062-7c22-4f23-b373-71c2a8aa798e: file
     705f6f49-398a-4e90-ba1b-377149af2eb7: media
     68e29c25-39e2-4d88-9804-866486f2f3e7: file
@@ -411,7 +411,7 @@ default:
       inputs:
         media:
           CANVAS_ENTITY_REFERENCE:
-            target_uuid: 69739c7d-277b-459b-b465-964273379e44
+            target_uuid: 04a9c678-180e-4a36-920b-af0a29af2c54
             target_type: media
         size: '4:3'
         radius: rounded-0
@@ -806,7 +806,7 @@ default:
             target_uuid: b02964f3-83ae-425d-9ace-e25e65d2dcfb
             target_type: media
         is_image_circle: false
-        link_text: 'Volunteer Opportunities'
+        link_text: Volunteer
         link_url:
           uri: 'internal:/'
           options: {  }
