@@ -3,6 +3,7 @@
         "drupal/core": "^11.3.3",
         "drupal/automatic_updates": "^4.1.0",
         "drupal/autosave_form": "^1.10.0",
+        "drupal/better_exposed_filters": "^7.1.1",
         "drupal/bpmn_io": "^3.0.4",
         "drupal/canvas": "^1.2.0",
         "drupal/captcha": "^2.0.10",
@@ -14,6 +15,7 @@
         "drupal/easy_breadcrumb": "^2.0.9",
         "drupal/easy_email": "^3.0.7",
         "drupal/eca": "^3.0.10",
+        "drupal/entityreference_filter": "^2.0.0-beta5",
         "drupal/focal_point": "^2.1.2",
         "drupal/friendlycaptcha": "^1.1.4",
         "drupal/gin_login": "^2.1.4",
@@ -43,6 +45,7 @@
         "drupal/token": "^1.17.0",
         "drupal/trash": "^3.0.25",
         "drupal/view_password": "^6.0.5",
+        "drupal/views_bootstrap": "^5.5.0-rc3",
         "drupal/easy_email_theme": "^1.1.0",
         "drupal/gin": "^5.0.12"
     },

@@ -6,4 +6,6 @@ name: 'Lists (Views)'
 configEntityTypeId: component
 weight: 0
 items:
+  - block.views_block.academic_courses-block_1
+  - block.views_block.academic_programs-block_1
   - block.views_block.recent_pages-block_recent_pages

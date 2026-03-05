@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.academic_courses
+  module:
+    - views
+active_version: f19be42473100774
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:academic_courses-block_1'
+        label: 'Academic Courses'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Academic Courses'
+id: block.views_block.academic_courses-block_1
+provider: views
+source: block
+source_local_id: 'views_block:academic_courses-block_1'
