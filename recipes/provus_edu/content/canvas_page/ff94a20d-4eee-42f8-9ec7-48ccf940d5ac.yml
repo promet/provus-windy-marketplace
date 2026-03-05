@@ -20,8 +20,8 @@ _meta:
     947a3f46-f3f7-4913-ba3d-cfa6b7c01e4d: media
     18977ccf-ff71-47e0-8441-22ff144eeb3c: file
     a8107cfd-9acb-4add-84e2-4aa3580fe4b8: media
-    3ce7c9f4-91af-4920-aa5e-bb2f03d0fe9b: file
-    04a9c678-180e-4a36-920b-af0a29af2c54: media
+    b52d8a59-4f97-4b77-8435-850e7ffe425e: file
+    24c7ee02-b08e-472b-9ecd-30c9a3591645: media
     48e2e062-7c22-4f23-b373-71c2a8aa798e: file
     705f6f49-398a-4e90-ba1b-377149af2eb7: media
     68e29c25-39e2-4d88-9804-866486f2f3e7: file
@@ -411,7 +411,7 @@ default:
       inputs:
         media:
           CANVAS_ENTITY_REFERENCE:
-            target_uuid: 04a9c678-180e-4a36-920b-af0a29af2c54
+            target_uuid: 24c7ee02-b08e-472b-9ecd-30c9a3591645
             target_type: media
         size: '4:3'
         radius: rounded-0
