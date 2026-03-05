@@ -51,6 +51,9 @@
 
 /* Account menu */
 .menu--account {
+  //fix for provus_edu
+  width: auto;
+
   ul {
     list-style: none;
     display: flex;

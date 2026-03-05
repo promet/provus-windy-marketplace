@@ -15,8 +15,9 @@
     justify-content: flex-end;
     color: $text-colors-text-primary;
 
+    //fix for provus_edu
     @include media-breakpoint-down(lg) {
-      padding: 0 $padding-padding-sm $padding-padding-xxlg;
+      padding: $padding-padding-sm;
     }
 
     .card-text {
@@ -26,10 +27,15 @@
 
 
   .card-extra {
+    //fix for provus_edu
+    .field--name-field-provus-links {
+      padding-top: 0;
+    }
+
     .btn {
       @include button-outlined;
-      margin-top: $padding-padding-xlg;
 
+      //fix for provus_edu
       @include media-breakpoint-down(lg) {
         font-size: $font-size-sub2-headline;
         padding: $padding-padding-sm;
