@@ -5,6 +5,11 @@ dependencies:
     - views.view.academic_programs
   module:
     - views
+label: 'Academic Programs'
+id: block.views_block.academic_programs-block_1
+source: block
+source_local_id: 'views_block:academic_programs-block_1'
+provider: views
 active_version: 1aa7d176cb924c88
 versioned_properties:
   active:
@@ -18,8 +23,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'Academic Programs'
-id: block.views_block.academic_programs-block_1
-provider: views
-source: block
-source_local_id: 'views_block:academic_programs-block_1'

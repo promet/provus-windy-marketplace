@@ -12,7 +12,7 @@ default:
       value: image-(4)_0.png
   uri:
     -
-      value: 'public://2026-03/image-%252525284%25252529_0.png'
+      value: 'public://2026-03/image-%25252525284%2525252529_0.png'
   filemime:
     -
       value: image/png

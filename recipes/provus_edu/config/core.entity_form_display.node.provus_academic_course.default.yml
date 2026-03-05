@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.provus_academic_course.field_provus_ac_year_level
     - node.type.provus_academic_course
   module:
-    - content_moderation
     - path
     - text
 id: node.provus_academic_course.default

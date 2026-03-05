@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.provus_academic_program.field_provus_ap_summary
     - node.type.provus_academic_program
   module:
-    - content_moderation
     - path
     - text
 id: node.provus_academic_program.default

@@ -5,6 +5,11 @@ dependencies:
     - views.view.academic_courses
   module:
     - views
+label: 'Academic Courses'
+id: block.views_block.academic_courses-block_1
+source: block
+source_local_id: 'views_block:academic_courses-block_1'
+provider: views
 active_version: f19be42473100774
 versioned_properties:
   active:
@@ -18,8 +23,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'Academic Courses'
-id: block.views_block.academic_courses-block_1
-provider: views
-source: block
-source_local_id: 'views_block:academic_courses-block_1'
