@@ -13,6 +13,11 @@
   }
 }
 
+//fix for provus_edu
+[data-component-id="provus_base_theme:container"]:has(.block-provus-media):has(.block-provus-heading) > .row > div:has(.block-provus-heading) {
+  align-self: center;
+}
+
 .block-provus-heading {
   margin-bottom: $padding-padding-xlg;
 
