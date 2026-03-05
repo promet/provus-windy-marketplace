@@ -1,5 +1,8 @@
 # Dependencies managed by Composer.
-/recipes
+# Dependencies managed by Composer.
+/recipes/drupal*
+/recipes/byte
+/recipes/easy*
 /vendor
 
 # macOS
@@ -15,3 +18,4 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+.DS_Store
