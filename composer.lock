@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2ae393772c46ef3b82d6c11252fda5a",
+    "content-hash": "5df3f98d19c14e7e77b29889d1b2eb4b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4041,6 +4041,67 @@
             }
         },
         {
+            "name": "drupal/entityreference_filter",
+            "version": "2.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entityreference_filter.git",
+                "reference": "2.0.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entityreference_filter-2.0.0-beta5.zip",
+                "reference": "2.0.0-beta5",
+                "shasum": "66ff254d55e363d11cd0d41a2fa91b6fd9b701c1"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/better_exposed_filters": "^6 || ^7",
+                "drupal/search_api": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta5",
+                    "datestamp": "1734283509",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11 || ^12"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Podorov",
+                    "homepage": "https://www.drupal.org/user/2463262",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Maxim Kashuba",
+                    "homepage": "https://www.drupal.org/user/515310",
+                    "email": "mkashuba85@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides views-based filter for entity reference and entity id fields in views.",
+            "homepage": "https://drupal.org/project/entityreference_filter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entityreference_filter",
+                "issues": "https://www.drupal.org/project/issues/entityreference_filter"
+            }
+        },
+        {
             "name": "drupal/field_group",
             "version": "4.0.0",
             "source": {
@@ -6430,61 +6491,6 @@
             "time": "2026-02-14T08:48:40+00:00"
         },
         {
-            "name": "drupal/social_media_links",
-            "version": "2.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/social_media_links.git",
-                "reference": "8.x-2.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.10.zip",
-                "reference": "8.x-2.10",
-                "shasum": "dd329d44f88112d2fe83f54331502738c5f2810b"
-            },
-            "require": {
-                "drupal/core": "^9.5 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.10",
-                    "datestamp": "1724736719",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Christian Beier",
-                    "homepage": "https://www.drupal.org/u/cbeier",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "neslee canil pinto",
-                    "homepage": "https://www.drupal.org/user/3580850"
-                }
-            ],
-            "description": "The module provides a block that display links (icons) to your profiles on various social networking sites.",
-            "homepage": "https://www.drupal.org/project/social_media_links",
-            "support": {
-                "source": "https://git.drupalcode.org/project/social_media_links",
-                "issues": "https://www.drupal.org/project/issues/social_media_links"
-            }
-        },
-        {
             "name": "drupal/svg_image",
             "version": "3.2.2",
             "source": {
@@ -6943,6 +6949,66 @@
             "homepage": "https://www.drupal.org/project/view_password",
             "support": {
                 "source": "https://git.drupalcode.org/project/view_password"
+            }
+        },
+        {
+            "name": "drupal/views_bootstrap",
+            "version": "5.5.0-rc3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_bootstrap.git",
+                "reference": "5.5.0-rc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_bootstrap-5.5.0-rc3.zip",
+                "reference": "5.5.0-rc3",
+                "shasum": "c50177c4b8ec56640ed99d0533774233d0583518"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.5.0-rc3",
+                    "datestamp": "1728259899",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aburrows",
+                    "homepage": "https://www.drupal.org/user/577844"
+                },
+                {
+                    "name": "ericpugh",
+                    "homepage": "https://www.drupal.org/user/130084"
+                },
+                {
+                    "name": "ikeigenwijs",
+                    "homepage": "https://www.drupal.org/user/583238"
+                },
+                {
+                    "name": "mrded",
+                    "homepage": "https://www.drupal.org/user/556088"
+                },
+                {
+                    "name": "shelane",
+                    "homepage": "https://www.drupal.org/user/2674989"
+                }
+            ],
+            "description": "Allows for different styles to be used in views to work with Bootstrap 5 components.",
+            "homepage": "https://www.drupal.org/project/views_bootstrap",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_bootstrap"
             }
         },
         {
@@ -13677,7 +13743,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/entityreference_filter": 10,
         "drupal/project_browser": 10,
+        "drupal/views_bootstrap": 5,
         "drupal/webform": 10
     },
     "prefer-stable": true,
