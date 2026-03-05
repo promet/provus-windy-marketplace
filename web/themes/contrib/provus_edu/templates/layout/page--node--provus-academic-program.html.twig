@@ -108,7 +108,7 @@
                   <div class="offcanvas-body">
                 {% endif %}
                 {{ page.primary_menu }}
-                
+
                 {% if navbar_offcanvas %}
                   </div>
                 {% endif %}
@@ -117,7 +117,7 @@
             {% if sidebar_collapse %}
               <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
             {% endif %}
-            
+
             {% if page.header_form %}
               <div class="form-inline navbar-form justify-content-end">
                 <a class="nav-link" title="Toggle Search Bar" data-bs-toggle="collapse" href="#searchCollapse" role="button" aria-expanded="false" aria-controls="searchCollapse">
@@ -161,10 +161,10 @@
           {% endif %}
           <div class="row row-offcanvas row-offcanvas-left clearfix">
               <main{{ content_attributes }}>
-                <section class="section">
+                <section class="section container">
                   <a id="main-content" tabindex="-1"></a>
                   {% if page.title %}
-                    <div class="title-container container">
+                    <div class="title-container">
                       {{ page.title }}
                     </div>
                   {% endif %}
