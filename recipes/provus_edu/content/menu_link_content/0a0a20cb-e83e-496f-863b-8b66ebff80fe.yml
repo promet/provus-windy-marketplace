@@ -2,7 +2,7 @@ _meta:
   version: '1.0'
   entity_type: menu_link_content
   uuid: 0a0a20cb-e83e-496f-863b-8b66ebff80fe
-  bundle: menu_link_content
+  bundle: footer
   default_langcode: en
 default:
   enabled:

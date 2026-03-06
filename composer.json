@@ -63,6 +63,7 @@
         "drupal/mailsystem": "^4",
         "drupal/media_file_delete": "^1",
         "drupal/media_library_bulk_upload": "^1",
+        "drupal/menu_item_extras": "^3.1",
         "drupal/menu_link_attributes": "^1.5",
         "drupal/mercury": "^1",
         "drupal/metatag": "^2",

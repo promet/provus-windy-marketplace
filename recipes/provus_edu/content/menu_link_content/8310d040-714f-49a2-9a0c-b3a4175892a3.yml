@@ -2,7 +2,7 @@ _meta:
   version: '1.0'
   entity_type: menu_link_content
   uuid: 8310d040-714f-49a2-9a0c-b3a4175892a3
-  bundle: menu_link_content
+  bundle: main
   default_langcode: en
   depends:
     e38ddaac-e248-4a4c-977b-9dcad65cb4b3: canvas_page

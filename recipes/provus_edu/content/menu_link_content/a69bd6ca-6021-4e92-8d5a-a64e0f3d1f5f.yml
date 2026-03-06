@@ -2,8 +2,10 @@ _meta:
   version: '1.0'
   entity_type: menu_link_content
   uuid: a69bd6ca-6021-4e92-8d5a-a64e0f3d1f5f
-  bundle: menu_link_content
+  bundle: main
   default_langcode: en
+  depends:
+    705f6f49-398a-4e90-ba1b-377149af2eb7: media
 default:
   enabled:
     -
@@ -30,7 +32,18 @@ default:
       value: -47
   expanded:
     -
-      value: false
+      value: true
   revision_translation_affected:
     -
       value: true
+  view_mode:
+    -
+      value: default
+  field_provus_menu_callout_image:
+    -
+      entity: 705f6f49-398a-4e90-ba1b-377149af2eb7
+  field_provus_menu_callout_link:
+    -
+      uri: 'internal:/'
+      title: 'Windy City Community College!'
+      options: {  }
