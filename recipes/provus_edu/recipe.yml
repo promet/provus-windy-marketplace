@@ -111,6 +111,7 @@ install:
   - views_bootstrap
   - menu_item_extras
   - provus_mega_menu
+  - toastify
 config:
   actions:
     core.date_format.fallback:
