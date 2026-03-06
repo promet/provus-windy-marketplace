@@ -541,7 +541,22 @@ body.scrolled {
   }
 }
 
+//fix for provus_edu
 .social-media-links--platforms a svg {
   width: 24px;
 }
 
+.navbar-form {
+  .region-header-form {
+    margin: 0;
+  }
+
+  .search-block-form {
+    padding: 0;
+  }
+}
+
+//fix for provus_edu
+header #search-block-form {
+  padding: 0;
+}
