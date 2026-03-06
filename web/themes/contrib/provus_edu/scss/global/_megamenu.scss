@@ -63,6 +63,7 @@
   @include text-style-body-body-1;
   font-weight: 600;
   color: $header-navigation-link;
+  text-transform: none;
 }
 
 #navbar-top .nav-link {

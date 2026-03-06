@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: e4f1c7cc-79c2-409c-9a84-55d5d4dc1120
+  uuid: 29c3b6e7-d715-4254-b643-f03a431be960
   default_langcode: en
 default:
   uid:
@@ -9,16 +9,16 @@ default:
       target_id: 1
   filename:
     -
-      value: image-(4)_0.png
+      value: handshake.png
   uri:
     -
-      value: 'public://2026-03/image-%25252525284%2525252529_0.png'
+      value: 'public://2026-03/handshake.png'
   filemime:
     -
       value: image/png
   filesize:
     -
-      value: 2507720
+      value: 254124
   status:
     -
       value: true

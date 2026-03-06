@@ -6,6 +6,13 @@ global-styling:
     component:
       css/style.css: { weight: 100  }
 
+provus_mega_menu:
+  js:
+    js/provus-mega-menu.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
 fontawesome:
   version: 6.x
   js:
