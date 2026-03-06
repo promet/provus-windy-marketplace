@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: 04a9c678-180e-4a36-920b-af0a29af2c54
+  uuid: 6a55fb5c-bd78-412e-9217-ceb31e0d2e5a
   bundle: image
   default_langcode: en
   depends:
-    3ce7c9f4-91af-4920-aa5e-bb2f03d0fe9b: file
+    29c3b6e7-d715-4254-b643-f03a431be960: file
 default:
   status:
     -
@@ -15,7 +15,7 @@ default:
       target_id: 1
   name:
     -
-      value: image-(4)_0.png
+      value: handshake.png
   revision_translation_affected:
     -
       value: true
@@ -25,8 +25,8 @@ default:
       alias: null
   field_media_image:
     -
-      alt: media
+      alt: handshake
       title: ''
-      width: 1400
-      height: 1055
-      entity: 3ce7c9f4-91af-4920-aa5e-bb2f03d0fe9b
+      width: 522
+      height: 374
+      entity: 29c3b6e7-d715-4254-b643-f03a431be960

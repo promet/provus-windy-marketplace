@@ -16,6 +16,7 @@ items:
   - sdc.provus_base_theme.card_tall
   - sdc.provus_base_theme.card_text
   - sdc.provus_base_theme.cta
+  - sdc.provus_base_theme.dynamic_field
   - sdc.provus_base_theme.event
   - sdc.provus_base_theme.heading
   - sdc.provus_base_theme.hero_banner

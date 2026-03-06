@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: 69739c7d-277b-459b-b465-964273379e44
+  uuid: e4aa0ecb-b26f-4e13-a384-f081b0c31288
   bundle: image
   default_langcode: en
   depends:
-    e4f1c7cc-79c2-409c-9a84-55d5d4dc1120: file
+    6a1a6757-a9b2-4f2a-abe0-0806711640f0: file
 default:
   status:
     -
@@ -15,7 +15,7 @@ default:
       target_id: 1
   name:
     -
-      value: image-(4)_0.png
+      value: program_photo1.png
   revision_translation_affected:
     -
       value: true
@@ -25,8 +25,8 @@ default:
       alias: null
   field_media_image:
     -
-      alt: image
+      alt: 'program photo'
       title: ''
       width: 1400
-      height: 1055
-      entity: e4f1c7cc-79c2-409c-9a84-55d5d4dc1120
+      height: 525
+      entity: 6a1a6757-a9b2-4f2a-abe0-0806711640f0
