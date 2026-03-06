@@ -1,0 +1,8 @@
+name: 'Provus Mega Menu'
+type: module
+description: 'This feature is for Provus Gov with the following features: Mega menu full width, Re-ordered columns based on children. and Flexible columns width.'
+core_version_requirement: ^11
+package: 'Provus'
+version: 1.x
+dependencies:
+  - drupal:menu_item_extras
