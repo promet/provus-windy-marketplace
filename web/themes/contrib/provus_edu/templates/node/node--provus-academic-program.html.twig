@@ -62,8 +62,30 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
-  <div{{ content_attributes }}>
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <header>
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+  </header>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
     {{ content }}
   </div>
 </article>
