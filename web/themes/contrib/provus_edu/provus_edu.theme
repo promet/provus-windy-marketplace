@@ -62,10 +62,3 @@ function provus_edu_preprocess_html(array &$variables) {
   // Add the new variable to the theme.
   $variables['attributes']['class'][] = $replaced_internal_path;
 }
-
-/**
- * Implements hook_preprocess_page().
- */
-function provus_edu_preprocess_page(array &$variables) {
-  $variables['#attached']['library'][] = 'provus_edu/provus_mega_menu';
-}
