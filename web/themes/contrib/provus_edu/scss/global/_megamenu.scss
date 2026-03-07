@@ -1,6 +1,6 @@
 #navbar-main.navbar {
   height: auto;
-  padding: $padding-padding-xxs 0 !important; 
+  padding: $padding-padding-xxs 0 !important;
 }
 #navbar-main.navbar .desktop-nav .nav-item > .dropdown-cor-menu.level-1 {
   min-height: 22.25rem;
@@ -35,7 +35,7 @@
   }
 }
 
-#navbar-main.navbar .desktop-nav .nav-item > .dropdown-cor-menu.level-1 > li.dropdown-item > .nav-link:hover, 
+#navbar-main.navbar .desktop-nav .nav-item > .dropdown-cor-menu.level-1 > li.dropdown-item > .nav-link:hover,
 #navbar-main.navbar .desktop-nav .nav-item > .dropdown-cor-menu.level-1 > li.dropdown-item > .nav-link:focus {
   background-color: #AD1A161A;
   background-image: url(/themes/contrib/provus_edu/images/chevron-primary.svg) !important;
@@ -47,8 +47,8 @@
 }
 
 #navbar-main.navbar .desktop-nav > .nav-item.active::after {
-  display: none;
-}  
+  display: none !important;
+}
 
 #navbar-main.navbar .desktop-nav > li.nav-item:hover::after,
 #navbar-main.navbar .desktop-nav > li.nav-item a.nav-link:hover::after {
@@ -68,7 +68,7 @@
 
 #navbar-top .nav-link {
   @include text-style-subheadline-sub-2;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 #navbar-main .navbar-toggler:not(.collapsed) {
