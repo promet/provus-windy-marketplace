@@ -108,7 +108,7 @@
                   <div class="offcanvas-body">
                 {% endif %}
                 {{ page.primary_menu }}
-                
+
                 {% if navbar_offcanvas %}
                   </div>
                 {% endif %}
@@ -161,43 +161,24 @@
           {% endif %}
           <div class="row row-offcanvas row-offcanvas-left clearfix">
               <main{{ content_attributes }}>
-                <section class="section">
+                <section class="section container">
                   <a id="main-content" tabindex="-1"></a>
                   {% if page.title %}
                     <div class="title-container">
-                      <div class="container">
                       {{ page.title }}
-                      </div>
                     </div>
                   {% endif %}
                   {{ page.content }}
                   <div class="divider-events _none">
-                    <div class="container">
-                      <div class="layout row layout-builder__layout">
-                        <div class="col-12">
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="_none">
-                    <div class="container">
-                      <div class="layout row layout-builder__layout">
-                        <div class="col-12">
-                          
-                        </div>
-                      </div>
-                    </div>
+                    <hr>
                   </div>
                   <div class="section-upcoming-events _none bs-mb-4">
-                    <div class="container">
-                      <div class="layout row layout-builder__layout">
-                        <div class="col-lg-6 col-md-6 col-12">
-                          
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                          {{ drupal_view('provus_events', 'block_events_upcoming') }}
-                        </div>
+                    <div class="layout row layout-builder__layout">
+                      <div class="col-lg-6 col-md-6 col-12">
+
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        {{ drupal_view('provus_events', 'block_events_upcoming') }}
                       </div>
                     </div>
                   </div>
