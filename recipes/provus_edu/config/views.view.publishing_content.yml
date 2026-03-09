@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
   module:
     - node
+    - smart_date
     - user
 id: publishing_content
 label: 'Publishing content'

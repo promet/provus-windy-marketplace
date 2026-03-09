@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.provus_event.field_provus_smartdate
+    - node.type.provus_event
+  module:
+    - user
+id: node.provus_event.teaser
+targetEntityType: node
+bundle: provus_event
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_provus_smartdate: true

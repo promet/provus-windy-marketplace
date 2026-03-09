@@ -5,6 +5,7 @@ dependencies:
     - system.menu.admin
   module:
     - media
+    - smart_date
     - user
   enforced:
     module:

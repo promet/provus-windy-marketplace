@@ -109,11 +109,21 @@ install:
   - better_exposed_filters
   - entityreference_filter
   - views_bootstrap
+  - provus_academic_course
+  - provus_academic_department
+  - provus_academic_program
   - menu_item_extras
   - provus_mega_menu
-  - toastify
+  - rest
+  - serialization
+  - fullcalendar_block
   - search_api_db
   - search_api
+  - smart_date_recur
+  - smart_date
+  - toastify
+  - provus_events
+  - twig_tweak
 config:
   actions:
     core.date_format.fallback:
@@ -333,7 +343,17 @@ config:
         page:
           0: ''
           1: /user/login
-          front: /home
+          front: /page/2
+          2: ''
+          3: /user/login
+          4: ''
+          5: /user/login
+          6: ''
+          7: /user/login
+          8: ''
+          9: /user/login
+          10: ''
+          11: /user/login
         admin_compact_mode: false
         weight_select_max: 100
         default_langcode: en
@@ -490,6 +510,26 @@ config:
           - 'search content'
           - 'use klaro'
           - 'view media'
+          - 'access content'
+          - 'search content'
+          - 'use klaro'
+          - 'view media'
+          - 'access content'
+          - 'search content'
+          - 'use klaro'
+          - 'view media'
+          - 'access content'
+          - 'access content'
+          - 'access content'
+          - 'search content'
+          - 'search content'
+          - 'search content'
+          - 'use klaro'
+          - 'use klaro'
+          - 'use klaro'
+          - 'view media'
+          - 'view media'
+          - 'view media'
     user.role.authenticated:
       setProperties:
         status: true
@@ -504,6 +544,56 @@ config:
           - 'skip CAPTCHA'
           - 'view own unpublished content'
           - 'view the administration theme'
+          - 'view welcome dashboard'
+          - 'access administration pages'
+          - 'access coffee'
+          - 'access contextual links'
+          - 'access navigation'
+          - 'bypass honeypot protection'
+          - 'delete own files'
+          - 'skip CAPTCHA'
+          - 'view own unpublished content'
+          - 'view the administration theme'
+          - 'view welcome dashboard'
+          - 'access administration pages'
+          - 'access coffee'
+          - 'access contextual links'
+          - 'access navigation'
+          - 'bypass honeypot protection'
+          - 'delete own files'
+          - 'skip CAPTCHA'
+          - 'view own unpublished content'
+          - 'view the administration theme'
+          - 'view welcome dashboard'
+          - 'access administration pages'
+          - 'access administration pages'
+          - 'access administration pages'
+          - 'access coffee'
+          - 'access coffee'
+          - 'access coffee'
+          - 'access contextual links'
+          - 'access contextual links'
+          - 'access contextual links'
+          - 'access navigation'
+          - 'access navigation'
+          - 'access navigation'
+          - 'bypass honeypot protection'
+          - 'bypass honeypot protection'
+          - 'bypass honeypot protection'
+          - 'delete own files'
+          - 'delete own files'
+          - 'delete own files'
+          - 'skip CAPTCHA'
+          - 'skip CAPTCHA'
+          - 'skip CAPTCHA'
+          - 'view own unpublished content'
+          - 'view own unpublished content'
+          - 'view own unpublished content'
+          - 'view the administration theme'
+          - 'view the administration theme'
+          - 'view the administration theme'
+          - 'view welcome dashboard'
+          - 'view welcome dashboard'
           - 'view welcome dashboard'
     user.settings:
       simpleConfigUpdate:
