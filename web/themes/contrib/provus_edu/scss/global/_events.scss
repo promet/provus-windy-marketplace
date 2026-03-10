@@ -24,7 +24,7 @@
         font-weight: medium;
         color: $text-colors-text-primary;
         margin-bottom: .5rem;
-    
+
         &:before {
             display: none;
         }
@@ -71,7 +71,7 @@
             }
         }
 
-        
+
     }
 }
 
@@ -171,4 +171,29 @@
 .fc .fc-daygrid-day.fc-day-sun,
 .fc .fc-daygrid-day.fc-day-sat {
     background-color: $background-colors-background-light
+}
+
+//fix styles produs_edu
+.section-upcoming-events {
+  margin-bottom: 64px;
+
+  > .layout.row > div:first-child {
+    border-right: 1px solid $primary-colors-primary;
+    padding-right: $padding-padding-xlg;
+  }
+}
+
+//fix styles produs_edu
+.node--type-provus-event .main-content .title-container h1.title {
+  margin-left: 0;
+}
+
+//fix styles produs_edu
+.node--view-mode-full.node--type-provus-event {
+  margin-bottom: 104px;
+}
+
+//fix styles produs_edu
+.divider-events {
+  margin-bottom: 120px;
 }
