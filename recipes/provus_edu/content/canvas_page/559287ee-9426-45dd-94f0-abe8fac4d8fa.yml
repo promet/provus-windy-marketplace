@@ -1,0 +1,181 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 559287ee-9426-45dd-94f0-abe8fac4d8fa
+  default_langcode: en
+  depends:
+    103288a5-b703-42d5-b9d0-05250a8a001b: file
+    3133db7f-fc9f-40b2-9509-ae9b3eab5733: media
+    fd45b1c0-e153-4e76-9c55-a60cd06a5134: file
+    ea5eb5b1-a175-417b-a72f-ac25db9240f6: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Contact
+  components:
+    -
+      uuid: 98401a53-9929-44df-87ac-80ba18da0f6f
+      component_id: sdc.provus_base_theme.hero_banner
+      inputs:
+        title: 'Get in Touch with Windy City Community College'
+        body:
+          value: '<p><strong>Whether you have questions about admissions, programs, or campus life, we’re here to help.</strong></p>'
+          format: canvas_html_block
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 3133db7f-fc9f-40b2-9509-ae9b3eab5733
+            target_type: media
+        is_short_banner: true
+        image_position: full
+        background_color: primary
+        text_container_width: col-lg-6
+        text_alignment: left
+    -
+      uuid: c6935018-32df-4c30-8738-8830a4bcb46c
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: false
+        padding_top: pt-5
+        padding_bottom: pb-5
+    -
+      parent_uuid: c6935018-32df-4c30-8738-8830a4bcb46c
+      slot: content
+      uuid: 6633bc53-e3ec-46a6-aca4-c93066354fc5
+      component_id: sdc.provus_base_theme.two_column
+      inputs:
+        desktop_width: 50-50
+        tablet_width: 50-50
+        mobile_width: 100-100
+    -
+      parent_uuid: 6633bc53-e3ec-46a6-aca4-c93066354fc5
+      slot: column_1
+      uuid: 6a285f96-7e8e-4d57-8d95-a6c3cb2b8bdd
+      component_id: sdc.provus_base_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: ea5eb5b1-a175-417b-a72f-ac25db9240f6
+            target_type: media
+        size: '4:3'
+        radius: rounded-0
+        margin_bottom: mb-0
+    -
+      parent_uuid: 6633bc53-e3ec-46a6-aca4-c93066354fc5
+      slot: column_2
+      uuid: fb779580-ad19-4768-bd2d-7f2e0b3eccd4
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h2
+        title: 'Contact Information'
+        subtitle: 'Get Started'
+        decorative_line: false
+        alignment: left
+    -
+      parent_uuid: 6633bc53-e3ec-46a6-aca4-c93066354fc5
+      slot: column_2
+      uuid: fd350a56-14b3-482e-b9cf-562a41ed7d31
+      component_id: sdc.provus_base_theme.paragraph
+      inputs:
+        text:
+          value: '<p>📍 Address:<br>4809 N. Ravenswood Ave. Suite 126,&nbsp;<br>Chicago, IL 60640<br><br>📞 Phone:<br>(773)-525-8255<br><br>✉️ Email:<br>ignite@prometsource.com&nbsp;<br><br>🕒 Hours of Operation:<br>Monday–Friday: 8:00 AM – 5:00 PM CT<br>Saturday: 9:00 AM – 2:00 PM CT</p>'
+          format: canvas_html_block
+    -
+      uuid: 1ceef973-053a-4d0d-bbf8-9b8b4d3ecaca
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        custom_class: bg-grey
+        flex_enabled: false
+        container_type: container
+    -
+      parent_uuid: 1ceef973-053a-4d0d-bbf8-9b8b4d3ecaca
+      slot: content
+      uuid: c898ad95-501f-49e1-858f-298681178794
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h2
+        title: 'Have a Question? Let Us Know!'
+        decorative_line: true
+        alignment: center
+    -
+      parent_uuid: 1ceef973-053a-4d0d-bbf8-9b8b4d3ecaca
+      slot: content
+      uuid: d45bf535-0918-4e6c-a6b8-439b98c16514
+      component_id: block.webform_block
+      inputs:
+        label: Webform
+        label_display: '0'
+        webform_id: contact
+        default_data: ''
+        redirect: true
+        lazy: true
+  path:
+    -
+      alias: /contact
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

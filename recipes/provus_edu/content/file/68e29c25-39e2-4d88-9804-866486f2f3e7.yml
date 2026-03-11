@@ -12,13 +12,13 @@ default:
       value: image_homepage_1.png
   uri:
     -
-      value: 'public://2026-03/image_homepage_1.png'
+      value: 'public://2026-03/image_homepage_1_4.png'
   filemime:
     -
       value: image/png
   filesize:
     -
-      value: 280472
+      value: 749379
   status:
     -
       value: true

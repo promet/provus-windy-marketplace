@@ -5,6 +5,7 @@ _meta:
   bundle: main
   default_langcode: en
   depends:
+    559287ee-9426-45dd-94f0-abe8fac4d8fa: canvas_page
     705f6f49-398a-4e90-ba1b-377149af2eb7: media
 default:
   enabled:
@@ -18,9 +19,9 @@ default:
       value: main
   link:
     -
-      uri: 'internal:/contact'
       title: ''
       options: {  }
+      target_uuid: 559287ee-9426-45dd-94f0-abe8fac4d8fa
   external:
     -
       value: false
