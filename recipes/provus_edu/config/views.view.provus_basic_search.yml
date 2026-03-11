@@ -402,9 +402,9 @@ display:
           operator: or
           value:
             page: page
-            provus_academic_course: provus_academic_course
-            provus_academic_department: provus_academic_department
-            provus_academic_program: provus_academic_program
+            provus_blog: provus_blog
+            provus_event: provus_event
+            provus_news: provus_news
           group: 1
           exposed: true
           expose:
