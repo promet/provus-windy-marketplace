@@ -111,16 +111,16 @@ install:
   - views_bootstrap
   - provus_events
   - provus_mega_menu
-  - claro
-  - stable9
   - stark
+  - stable9
+  - claro
   - canvas_stark
-  - blank
-  - bootstrap_barrio
   - easy_email_theme
+  - bootstrap_barrio
+  - blank
   - gin
-  - provus_base_theme
   - provus_edu
+  - provus_base_theme
 config:
   actions:
     core.date_format.fallback:
