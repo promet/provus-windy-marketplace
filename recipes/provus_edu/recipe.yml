@@ -123,6 +123,7 @@ install:
   - gin
   - provus_edu
   - provus_base_theme
+  - addtoany
 config:
   actions:
     core.date_format.fallback:

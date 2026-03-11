@@ -18,14 +18,14 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_content:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
   field_featured_image:
     type: entity_reference_entity_view
@@ -34,9 +34,10 @@ content:
       view_mode: hero
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
+  addtoany: true
   field_description: true
   field_tags: true
   links: true

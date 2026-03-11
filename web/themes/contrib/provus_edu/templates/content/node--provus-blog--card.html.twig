@@ -1,14 +1,21 @@
 {#
 /**
  * @file
- * Bootstrap Barrio's theme implementation to display a node.
+ * Default theme implementation to display a node.
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
-     Only "getter" methods (method names starting with "get", "has", or "is")
-     and a few common methods such as "id" and "label" are available. Calling
-     other methods (such as node.delete) will result in an exception.
- * - label: The title of the node.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: (optional) The title of the node.
  * - content: All node items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
  *   {{ content|without('field_example') }} to temporarily suppress the printing
@@ -16,8 +23,8 @@
  * - author_picture: The node author user entity, rendered using the "compact"
  *   view mode.
  * - metadata: Metadata for this node.
- * - date: Themed creation date field.
- * - author_name: Themed author name field.
+ * - date: (optional) Themed creation date field.
+ * - author_name: (optional) Themed author name field.
  * - url: Direct URL of the current node.
  * - display_submitted: Whether submission information should be displayed.
  * - attributes: HTML attributes for the containing element.
@@ -59,26 +66,44 @@
  * @see template_preprocess_node()
  */
 #}
-{{ attach_library('bootstrap_barrio/node') }}
-
 {%
   set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'clearfix',
-  ]
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'card-wrapper',
+  'provus-card',
+  'node--view-mode-provus-card'
+]
 %}
-<article{{ attributes.addClass(classes) }}>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    <div class = "blog-image">
-    {{ content.field_featured_image }}
-    </div>
-    <div class="blog-text">
-    {{ content|without('field_featured_image') }}
-    </div>
-  </div>
-</article>
+
+{% set more_content %}
+  <a class="btn btn-primary" href="{{ url }}">Read more</a>
+{% endset %}
+
+
+{% set media_image = content.field_featured_image[0]['#media'] is defined ? content.field_featured_image[0]['#media'] : null %}
+{% set image_url = (media_image and media_image.field_media_image.entity.uri.value) ? {
+  src: file_url(media_image.field_media_image.entity.uri.value),
+  alt: media_image.field_media_image.entity.alt ? media_image.field_media_image.entity.alt : 'Image',
+} : '' %}
+{% set body = node.field_content.value|striptags|trim %}
+
+
+<div{{ attributes.addClass(classes) }}>
+  {% block content %}
+    {% embed 'provus_base_theme:card_image_top' with {
+      content_attributes: content_attributes,
+      title: link(label, 'internal:' ~ url, { attributes: { rel: 'bookmark' } }),
+      body: body|length > 300 ? body|slice(0,300) ~ '...' : body,
+      image: content.image,
+      is_image_circle: false,
+      image_url: image_url,
+      more_content: more_content|raw,
+    } only %}
+    {% endembed %}
+  {% endblock %}
+</div>

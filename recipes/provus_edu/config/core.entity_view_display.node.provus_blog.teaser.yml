@@ -30,6 +30,7 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_content: true
   field_provus_publish_date: true
   field_tags: true

@@ -19,5 +19,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: '<front>'
+    negate: false
+    pages: "/search\r\n/events/*\r\n/blog\r\n/blog/*\r\n/academics/*"

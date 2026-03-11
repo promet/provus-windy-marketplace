@@ -29,6 +29,7 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_content: true
   field_provus_smartdate: true
   search_api_excerpt: true

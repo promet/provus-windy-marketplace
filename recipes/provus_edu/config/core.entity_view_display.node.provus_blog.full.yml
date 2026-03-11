@@ -2,20 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card
+    - core.entity_view_mode.node.full
     - field.field.node.provus_blog.field_content
     - field.field.node.provus_blog.field_featured_image
     - field.field.node.provus_blog.field_provus_publish_date
     - field.field.node.provus_blog.field_tags
     - node.type.provus_blog
   module:
+    - datetime
+    - layout_builder
     - text
     - user
-id: node.provus_blog.card
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.provus_blog.full
 targetEntityType: node
 bundle: provus_blog
-mode: card
+mode: full
 content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_content:
     type: text_default
     label: hidden
@@ -27,10 +38,27 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: 16_9_medium
+      view_mode: hero
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_provus_publish_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
     region: content
   links:
     settings: {  }
@@ -38,7 +66,4 @@ content:
     weight: 2
     region: content
 hidden:
-  addtoany: true
-  field_provus_publish_date: true
-  field_tags: true
   search_api_excerpt: true

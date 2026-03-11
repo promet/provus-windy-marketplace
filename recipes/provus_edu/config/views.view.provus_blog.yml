@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card
     - node.type.provus_blog
   module:
     - datetime
@@ -175,15 +176,18 @@ display:
           row_class: ''
           default_row_class: true
           uses_fields: false
+          grid_class: ''
           col_xs: none
           col_sm: col-sm-12
-          col_md: col-md-4
-          col_lg: none
+          col_md: col-md-6
+          col_lg: col-lg-4
           col_xl: none
+          col_xxl: none
       row:
         type: 'entity:node'
         options:
-          view_mode: provus_card
+          relationship: none
+          view_mode: card
       query:
         type: views_query
         options:
