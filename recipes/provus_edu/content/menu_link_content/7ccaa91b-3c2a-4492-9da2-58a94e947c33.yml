@@ -5,6 +5,7 @@ _meta:
   bundle: main
   default_langcode: en
   depends:
+    cae25fb3-bab9-462f-a180-c2222ca05991: canvas_page
     705f6f49-398a-4e90-ba1b-377149af2eb7: media
 default:
   enabled:
@@ -18,9 +19,9 @@ default:
       value: main
   link:
     -
-      uri: 'internal:/student-life'
       title: ''
       options: {  }
+      target_uuid: cae25fb3-bab9-462f-a180-c2222ca05991
   external:
     -
       value: false
