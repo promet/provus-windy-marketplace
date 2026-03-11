@@ -111,18 +111,19 @@ install:
   - twig_tweak
   - view_password
   - views_bootstrap
+  - webform
   - provus_events
   - provus_mega_menu
-  - stark
-  - stable9
   - claro
+  - stable9
+  - stark
   - canvas_stark
-  - easy_email_theme
-  - bootstrap_barrio
   - blank
+  - bootstrap_barrio
+  - easy_email_theme
   - gin
-  - provus_edu
   - provus_base_theme
+  - provus_edu
 config:
   actions:
     core.date_format.fallback:
@@ -576,6 +577,7 @@ config:
           - 'skip CAPTCHA'
           - 'skip CAPTCHA'
           - 'skip CAPTCHA'
+          - 'use text format webform_default'
           - 'view own unpublished content'
           - 'view own unpublished content'
           - 'view own unpublished content'
