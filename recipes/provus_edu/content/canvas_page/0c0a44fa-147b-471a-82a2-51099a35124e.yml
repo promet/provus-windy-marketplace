@@ -39,6 +39,67 @@ default:
         text_container_width: col-lg-6
         text_alignment: left
     -
+      uuid: 6e74e9f2-cc62-4909-87d8-5c31c3c363ee
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: false
+        padding_top: pt-5
+        padding_bottom: pb-5
+    -
+      parent_uuid: 6e74e9f2-cc62-4909-87d8-5c31c3c363ee
+      slot: content
+      uuid: 7712fc48-ac73-4753-9ccb-bda23ef694dc
+      component_id: sdc.provus_base_theme.one_column
+      inputs: {  }
+    -
+      parent_uuid: 7712fc48-ac73-4753-9ccb-bda23ef694dc
+      slot: column_1
+      uuid: 4304e084-9753-47b0-89de-628c9efab564
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h2
+        title: 'Latest News'
+        decorative_line: true
+        alignment: center
+    -
+      parent_uuid: 7712fc48-ac73-4753-9ccb-bda23ef694dc
+      slot: column_1
+      uuid: da0f5882-4f26-40b4-8413-efe8b025e728
+      component_id: block.views_block.provus_news-block_news_listing
+      inputs:
+        label: 'News: Block for page'
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
       uuid: ec9b01fd-d85d-4e24-a9b6-eaaefd3356fc
       component_id: sdc.provus_base_theme.container
       inputs:
