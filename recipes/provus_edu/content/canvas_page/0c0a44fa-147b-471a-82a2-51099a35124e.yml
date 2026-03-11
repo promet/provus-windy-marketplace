@@ -1,0 +1,107 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 0c0a44fa-147b-471a-82a2-51099a35124e
+  default_langcode: en
+  depends:
+    a122bd25-46fa-4bbe-8d83-4c5fe70bff4c: file
+    e03c5670-c10e-4d72-9680-3a3254f1b09a: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'News and Events'
+  components:
+    -
+      uuid: 2120206d-5c27-419f-8187-2995b82db846
+      component_id: sdc.provus_base_theme.hero_banner
+      inputs:
+        subtitle: 'Get Started'
+        title: 'Stay Informed, Stay Engaged'
+        body:
+          value: '<p><strong>Discover the latest news, upcoming events, and achievements happening at Windy City Community College.</strong></p>'
+          format: canvas_html_block
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e03c5670-c10e-4d72-9680-3a3254f1b09a
+            target_type: media
+        is_short_banner: false
+        image_position: full
+        background_color: primary
+        text_container_width: col-lg-6
+        text_alignment: left
+    -
+      uuid: ec9b01fd-d85d-4e24-a9b6-eaaefd3356fc
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: false
+        custom_class: bg-grey
+    -
+      parent_uuid: ec9b01fd-d85d-4e24-a9b6-eaaefd3356fc
+      slot: content
+      uuid: 625a157c-92ac-4ab5-90c9-25bcc56a729a
+      component_id: sdc.provus_base_theme.one_column
+      inputs: {  }
+    -
+      parent_uuid: 625a157c-92ac-4ab5-90c9-25bcc56a729a
+      slot: column_1
+      uuid: 8d1f8631-2d19-4a14-9cfc-52ade808848a
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h2
+        title: 'Mark Your Calendar'
+        decorative_line: false
+        alignment: center
+    -
+      parent_uuid: 625a157c-92ac-4ab5-90c9-25bcc56a729a
+      slot: column_1
+      uuid: 4134ac99-d97a-447b-8b39-75e719f69715
+      component_id: block.views_block.provus_events-block_events_list
+      inputs:
+        label: 'Provus Events: All Events List'
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+  path:
+    -
+      alias: /news-and-events
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

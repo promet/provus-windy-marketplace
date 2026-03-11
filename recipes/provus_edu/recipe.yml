@@ -8,6 +8,7 @@ install:
   - block_content
   - breakpoint
   - ckeditor5
+  - config
   - content_moderation
   - contextual
   - datetime
@@ -97,6 +98,7 @@ install:
   - scheduler_content_moderation_integration
   - search_api_db
   - search_api
+  - simple_sitemap
   - smart_date_recur
   - smart_date
   - svg_image

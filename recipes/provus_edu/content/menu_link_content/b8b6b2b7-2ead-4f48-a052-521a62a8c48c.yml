@@ -6,6 +6,7 @@ _meta:
   default_langcode: en
   depends:
     7ccaa91b-3c2a-4492-9da2-58a94e947c33: menu_link_content
+    0c0a44fa-147b-471a-82a2-51099a35124e: canvas_page
 default:
   enabled:
     -
@@ -18,15 +19,15 @@ default:
       value: main
   link:
     -
-      uri: 'internal:/news-and-events'
       title: ''
       options: {  }
+      target_uuid: 0c0a44fa-147b-471a-82a2-51099a35124e
   external:
     -
       value: false
   rediscover:
     -
-      value: true
+      value: false
   weight:
     -
       value: -48

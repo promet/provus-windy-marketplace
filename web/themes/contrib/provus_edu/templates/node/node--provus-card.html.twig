@@ -84,15 +84,21 @@
 {% endset %}
 
 
+{% set media_image = content.field_featured_image[0]['#media'] is defined ? content.field_featured_image[0]['#media'] : null %}
+{% set image_url = (media_image and media_image.field_media_image.entity.uri.value) ? {
+  src: file_url(media_image.field_media_image.entity.uri.value),
+  alt: media_image.field_media_image.entity.alt ? media_image.field_media_image.entity.alt : 'Image',
+} : '' %}
+
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-    {% embed 'provus_core:card_image_top' with {
+    {% embed 'provus_base_theme:card_image_top' with {
       content_attributes: content_attributes,
       title: label,
       body: content.body|render,
       image: content.image,
       is_image_circle: false,
-      url: url,
+      image_url: image_url,
       more_content: more_content|raw,
     } only %}
     {% endembed %}
