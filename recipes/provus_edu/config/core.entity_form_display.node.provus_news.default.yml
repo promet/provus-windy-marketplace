@@ -2,20 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.provus_blog.field_content
-    - field.field.node.provus_blog.field_featured_image
-    - field.field.node.provus_blog.field_provus_publish_date
-    - field.field.node.provus_blog.field_tags
-    - node.type.provus_blog
+    - field.field.node.provus_news.field_content
+    - field.field.node.provus_news.field_featured_image
+    - field.field.node.provus_news.field_provus_publish_date
+    - field.field.node.provus_news.field_tags
+    - node.type.provus_news
   module:
+    - content_moderation
     - datetime
     - media_library
     - path
     - tagify
     - text
-id: node.provus_blog.default
+id: node.provus_news.default
 targetEntityType: node
-bundle: provus_blog
+bundle: provus_news
 mode: default
 content:
   created:
@@ -68,6 +69,11 @@ content:
   path:
     type: path
     weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

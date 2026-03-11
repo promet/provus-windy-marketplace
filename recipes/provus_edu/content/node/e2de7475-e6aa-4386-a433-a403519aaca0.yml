@@ -39,3 +39,6 @@ default:
   field_featured_image:
     -
       entity: 56511d48-8b94-40de-a612-de1f30637a5d
+  field_provus_publish_date:
+    -
+      value: '2026-03-11T08:53:23'
