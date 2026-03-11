@@ -1,6 +1,6 @@
 {
     "require": {
-        "drupal/core": "^11.3.3",
+        "drupal/core": "^11.3.5",
         "drupal/automatic_updates": "^4.1.0",
         "drupal/autosave_form": "^1.10.0",
         "drupal/better_exposed_filters": "^7.1.1",
@@ -8,13 +8,13 @@
         "drupal/canvas": "^1.2.0",
         "drupal/captcha": "^2.0.10",
         "drupal/coffee": "^2.0.1",
-        "drupal/crop": "^2.5.0",
+        "drupal/crop": "^2.6.0",
         "drupal/dashboard": "^2.2.0",
-        "drupal/drupal_cms_helper": "^2.0.1",
+        "drupal/drupal_cms_helper": "^2.0.3",
         "drupal/drupical": "^1.0.2",
         "drupal/easy_breadcrumb": "^2.0.9",
         "drupal/easy_email": "^3.0.7",
-        "drupal/eca": "^3.0.10",
+        "drupal/eca": "^3.0.11",
         "drupal/entityreference_filter": "^2.0.0-beta5",
         "drupal/focal_point": "^2.1.2",
         "drupal/friendlycaptcha": "^1.1.4",
@@ -33,7 +33,7 @@
         "drupal/media_library_bulk_upload": "^1.0.6",
         "drupal/menu_item_extras": "^3.1.0",
         "drupal/menu_link_attributes": "^1.6.0",
-        "drupal/modeler_api": "^1.0.6",
+        "drupal/modeler_api": "^1.0.7",
         "drupal/navigation_extra_tools": "^1.3.2",
         "drupal/pathauto": "^1.14.0",
         "drupal/project_browser": "^2.1.3",
@@ -52,10 +52,15 @@
         "drupal/twig_tweak": "^3.4.1",
         "drupal/view_password": "^6.0.5",
         "drupal/views_bootstrap": "^5.5.0-rc3",
+        "drupal/provus_events": "*",
+        "drupal/provus_mega_menu": "*",
+        "drupal/blank": "*",
+        "drupal/bootstrap_barrio": "*",
         "drupal/easy_email_theme": "^1.1.0",
-        "drupal/gin": "^5.0.12"
+        "drupal/gin": "^5.0.12",
+        "drupal/provus_base_theme": "*",
+        "drupal/provus_edu": "*"
     },
     "type": "drupal-recipe",
-    "name": "drupal/provus_edu",
-    "version": "1.0.0"
+    "name": "drupal/provus_edu"
 }

@@ -4,10 +4,12 @@ _meta:
   uuid: ad466d4e-b78e-4de9-a3d5-0e96be01e5cd
   bundle: focal_point
   default_langcode: en
+  depends:
+    b25854c1-b621-4c55-b65c-455a0dae9ba9: file
 default:
   entity_id:
     -
-      value: 4
+      uuid: b25854c1-b621-4c55-b65c-455a0dae9ba9
   entity_type:
     -
       value: file

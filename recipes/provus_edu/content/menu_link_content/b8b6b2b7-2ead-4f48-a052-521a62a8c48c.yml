@@ -4,6 +4,8 @@ _meta:
   uuid: b8b6b2b7-2ead-4f48-a052-521a62a8c48c
   bundle: main
   default_langcode: en
+  depends:
+    7ccaa91b-3c2a-4492-9da2-58a94e947c33: menu_link_content
 default:
   enabled:
     -

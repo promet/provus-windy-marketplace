@@ -35,7 +35,9 @@ install:
   - path
   - path_alias
   - responsive_image
+  - rest
   - search
+  - serialization
   - system
   - taxonomy
   - text
@@ -46,6 +48,7 @@ install:
   - workflows
   - automatic_updates
   - autosave_form
+  - better_exposed_filters
   - bpmn_io
   - canvas
   - captcha
@@ -65,8 +68,10 @@ install:
   - eca_render
   - eca_ui
   - eca_user
+  - entityreference_filter
   - focal_point
   - friendlycaptcha
+  - fullcalendar_block
   - gin_login
   - gin_toolbar
   - google_translator
@@ -79,6 +84,7 @@ install:
   - mailsystem
   - media_file_delete
   - media_library_bulk_upload
+  - menu_item_extras
   - menu_link_attributes
   - modeler_api
   - navigation_extra_tools
@@ -89,38 +95,32 @@ install:
   - sam
   - scheduler
   - scheduler_content_moderation_integration
-  - svg_image
-  - symfony_mailer_lite
-  - tagify_user_list
-  - tagify
-  - token
-  - trash
-  - view_password
-  - stable9
-  - stark
-  - claro
-  - canvas_stark
-  - easy_email_theme
-  - bootstrap_barrio
-  - blank
-  - gin
-  - provus_edu
-  - provus_base_theme
-  - better_exposed_filters
-  - entityreference_filter
-  - views_bootstrap
-  - menu_item_extras
-  - provus_mega_menu
-  - rest
-  - serialization
-  - fullcalendar_block
   - search_api_db
   - search_api
   - smart_date_recur
   - smart_date
+  - svg_image
+  - symfony_mailer_lite
+  - tagify_user_list
+  - tagify
   - toastify
-  - provus_events
+  - token
+  - trash
   - twig_tweak
+  - view_password
+  - views_bootstrap
+  - provus_events
+  - provus_mega_menu
+  - claro
+  - stable9
+  - stark
+  - canvas_stark
+  - blank
+  - bootstrap_barrio
+  - easy_email_theme
+  - gin
+  - provus_base_theme
+  - provus_edu
 config:
   actions:
     core.date_format.fallback:
@@ -338,9 +338,9 @@ config:
         mail: admin@example.com
         slogan: ''
         page:
+          front: //home
           0: ''
           1: /user/login
-          front: /page/2
           2: ''
           3: /user/login
           4: ''
@@ -504,26 +504,26 @@ config:
         is_admin: false
         permissions:
           - 'access content'
+          - 'access content'
+          - 'access content'
+          - 'access content'
+          - 'access content'
+          - 'access content'
           - 'search content'
+          - 'search content'
+          - 'search content'
+          - 'search content'
+          - 'search content'
+          - 'search content'
+          - 'use klaro'
+          - 'use klaro'
+          - 'use klaro'
+          - 'use klaro'
+          - 'use klaro'
           - 'use klaro'
           - 'view media'
-          - 'access content'
-          - 'search content'
-          - 'use klaro'
           - 'view media'
-          - 'access content'
-          - 'search content'
-          - 'use klaro'
           - 'view media'
-          - 'access content'
-          - 'access content'
-          - 'access content'
-          - 'search content'
-          - 'search content'
-          - 'search content'
-          - 'use klaro'
-          - 'use klaro'
-          - 'use klaro'
           - 'view media'
           - 'view media'
           - 'view media'
@@ -533,62 +533,62 @@ config:
         is_admin: false
         permissions:
           - 'access administration pages'
+          - 'access administration pages'
+          - 'access administration pages'
+          - 'access administration pages'
+          - 'access administration pages'
+          - 'access administration pages'
+          - 'access coffee'
+          - 'access coffee'
+          - 'access coffee'
+          - 'access coffee'
+          - 'access coffee'
           - 'access coffee'
           - 'access contextual links'
+          - 'access contextual links'
+          - 'access contextual links'
+          - 'access contextual links'
+          - 'access contextual links'
+          - 'access contextual links'
+          - 'access navigation'
+          - 'access navigation'
+          - 'access navigation'
+          - 'access navigation'
+          - 'access navigation'
           - 'access navigation'
           - 'bypass honeypot protection'
+          - 'bypass honeypot protection'
+          - 'bypass honeypot protection'
+          - 'bypass honeypot protection'
+          - 'bypass honeypot protection'
+          - 'bypass honeypot protection'
+          - 'delete own files'
+          - 'delete own files'
+          - 'delete own files'
+          - 'delete own files'
+          - 'delete own files'
           - 'delete own files'
           - 'skip CAPTCHA'
+          - 'skip CAPTCHA'
+          - 'skip CAPTCHA'
+          - 'skip CAPTCHA'
+          - 'skip CAPTCHA'
+          - 'skip CAPTCHA'
           - 'view own unpublished content'
+          - 'view own unpublished content'
+          - 'view own unpublished content'
+          - 'view own unpublished content'
+          - 'view own unpublished content'
+          - 'view own unpublished content'
+          - 'view the administration theme'
+          - 'view the administration theme'
+          - 'view the administration theme'
+          - 'view the administration theme'
+          - 'view the administration theme'
           - 'view the administration theme'
           - 'view welcome dashboard'
-          - 'access administration pages'
-          - 'access coffee'
-          - 'access contextual links'
-          - 'access navigation'
-          - 'bypass honeypot protection'
-          - 'delete own files'
-          - 'skip CAPTCHA'
-          - 'view own unpublished content'
-          - 'view the administration theme'
           - 'view welcome dashboard'
-          - 'access administration pages'
-          - 'access coffee'
-          - 'access contextual links'
-          - 'access navigation'
-          - 'bypass honeypot protection'
-          - 'delete own files'
-          - 'skip CAPTCHA'
-          - 'view own unpublished content'
-          - 'view the administration theme'
           - 'view welcome dashboard'
-          - 'access administration pages'
-          - 'access administration pages'
-          - 'access administration pages'
-          - 'access coffee'
-          - 'access coffee'
-          - 'access coffee'
-          - 'access contextual links'
-          - 'access contextual links'
-          - 'access contextual links'
-          - 'access navigation'
-          - 'access navigation'
-          - 'access navigation'
-          - 'bypass honeypot protection'
-          - 'bypass honeypot protection'
-          - 'bypass honeypot protection'
-          - 'delete own files'
-          - 'delete own files'
-          - 'delete own files'
-          - 'skip CAPTCHA'
-          - 'skip CAPTCHA'
-          - 'skip CAPTCHA'
-          - 'view own unpublished content'
-          - 'view own unpublished content'
-          - 'view own unpublished content'
-          - 'view the administration theme'
-          - 'view the administration theme'
-          - 'view the administration theme'
           - 'view welcome dashboard'
           - 'view welcome dashboard'
           - 'view welcome dashboard'

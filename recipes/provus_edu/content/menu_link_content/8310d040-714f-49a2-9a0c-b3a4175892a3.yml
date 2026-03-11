@@ -5,6 +5,7 @@ _meta:
   bundle: main
   default_langcode: en
   depends:
+    fb73f668-7ec2-46ba-9223-43c459375ddb: menu_link_content
     e38ddaac-e248-4a4c-977b-9dcad65cb4b3: canvas_page
 default:
   enabled:

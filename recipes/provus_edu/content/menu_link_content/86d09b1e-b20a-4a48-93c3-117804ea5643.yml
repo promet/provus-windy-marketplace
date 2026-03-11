@@ -5,6 +5,7 @@ _meta:
   bundle: main
   default_langcode: en
   depends:
+    fb73f668-7ec2-46ba-9223-43c459375ddb: menu_link_content
     e3c3bfb6-eb4b-443e-882e-95e4e246df5c: node
 default:
   enabled:

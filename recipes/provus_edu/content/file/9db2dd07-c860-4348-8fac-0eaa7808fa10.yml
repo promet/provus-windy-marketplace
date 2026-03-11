@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: e4f1c7cc-79c2-409c-9a84-55d5d4dc1120
+  uuid: 9db2dd07-c860-4348-8fac-0eaa7808fa10
   default_langcode: en
 default:
   uid:
@@ -9,16 +9,16 @@ default:
       target_id: 1
   filename:
     -
-      value: image-(4)_0.png
+      value: shakehands.png
   uri:
     -
-      value: 'public://2026-03/image-%25252525252525284%2525252525252529_0.png'
+      value: 'public://2026-03/shakehands.png'
   filemime:
     -
       value: image/png
   filesize:
     -
-      value: 2507720
+      value: 1642959
   status:
     -
       value: true

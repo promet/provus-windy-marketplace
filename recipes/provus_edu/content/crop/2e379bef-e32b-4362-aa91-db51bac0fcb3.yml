@@ -7,7 +7,7 @@ _meta:
 default:
   entity_id:
     -
-      value: 23
+      value: '23'
   entity_type:
     -
       value: file

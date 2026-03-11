@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: 3ce7c9f4-91af-4920-aa5e-bb2f03d0fe9b
+  uuid: 37c890a1-1700-4ebd-97de-65ad845928fd
   default_langcode: en
 default:
   uid:
@@ -9,16 +9,16 @@ default:
       target_id: 1
   filename:
     -
-      value: image-(4)_0.png
+      value: image_program.png
   uri:
     -
-      value: 'public://2026-03/image-%2525252525284%252525252529_0_0.png'
+      value: 'public://2026-03/image_program.png'
   filemime:
     -
       value: image/png
   filesize:
     -
-      value: 2507720
+      value: 787643
   status:
     -
       value: true

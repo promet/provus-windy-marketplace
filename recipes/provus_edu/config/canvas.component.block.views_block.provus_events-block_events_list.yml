@@ -5,6 +5,11 @@ dependencies:
     - views.view.provus_events
   module:
     - views
+label: 'Provus Events: All Events List'
+id: block.views_block.provus_events-block_events_list
+source: block
+source_local_id: 'views_block:provus_events-block_events_list'
+provider: views
 active_version: 6d90ed033abec8d8
 versioned_properties:
   active:
@@ -18,8 +23,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'Provus Events: All Events List'
-id: block.views_block.provus_events-block_events_list
-provider: views
-source: block
-source_local_id: 'views_block:provus_events-block_events_list'
