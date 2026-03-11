@@ -109,9 +109,6 @@ install:
   - better_exposed_filters
   - entityreference_filter
   - views_bootstrap
-  - provus_academic_course
-  - provus_academic_department
-  - provus_academic_program
   - menu_item_extras
   - provus_mega_menu
   - rest
