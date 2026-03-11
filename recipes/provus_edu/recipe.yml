@@ -338,7 +338,7 @@ config:
         mail: admin@example.com
         slogan: ''
         page:
-          front: //home
+          front: /home
           0: ''
           1: /user/login
           2: ''
