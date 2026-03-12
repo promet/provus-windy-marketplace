@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - provus_edu
 id: provus_edu_pagetitle
@@ -14,4 +16,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search\r\n/events/*\r\n/blog\r\n/blog/*\r\n/academics/*"

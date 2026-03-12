@@ -88,7 +88,10 @@
 {% set image_url = (media_image and media_image.field_media_image.entity.uri.value) ? {
   src: file_url(media_image.field_media_image.entity.uri.value),
   alt: media_image.field_media_image.entity.alt ? media_image.field_media_image.entity.alt : 'Image',
-} : '' %}
+} : {
+  src: '',
+  alt: '',
+} %}
 
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
