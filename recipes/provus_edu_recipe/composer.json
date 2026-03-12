@@ -62,8 +62,8 @@
         "drupal/easy_email_theme": "^1.1.0",
         "drupal/gin": "^5.0.12",
         "drupal/provus_base_theme": "*",
-        "drupal/provus_edu": "*"
+        "drupal/provus_edu_recipe": "*"
     },
     "type": "drupal-recipe",
-    "name": "drupal/provus_edu"
+    "name": "drupal/provus_edu_recipe"
 }

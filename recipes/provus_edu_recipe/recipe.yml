@@ -1,4 +1,4 @@
-name: 'Drush Site-Install'
+name: 'Provus Edu Recipe'
 type: Site
 install:
   - announcements_feed
