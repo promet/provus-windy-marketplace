@@ -5,6 +5,11 @@ dependencies:
     - views.view.provus_people
   module:
     - views
+label: People
+id: block.views_block.provus_people-block_1
+source: block
+source_local_id: 'views_block:provus_people-block_1'
+provider: views
 active_version: 42c0e7e54b2ea38b
 versioned_properties:
   active:
@@ -18,8 +23,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: People
-id: block.views_block.provus_people-block_1
-provider: views
-source: block
-source_local_id: 'views_block:provus_people-block_1'

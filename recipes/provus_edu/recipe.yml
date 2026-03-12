@@ -115,16 +115,16 @@ install:
   - webform
   - provus_events
   - provus_mega_menu
-  - stark
-  - stable9
   - claro
+  - stable9
+  - stark
   - canvas_stark
-  - easy_email_theme
-  - bootstrap_barrio
   - blank
+  - bootstrap_barrio
+  - easy_email_theme
   - gin
-  - provus_edu
   - provus_base_theme
+  - provus_edu
 config:
   actions:
     core.date_format.fallback:
