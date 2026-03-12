@@ -27,11 +27,6 @@
 
 
   .card-extra {
-    //fix for provus_edu
-    .field--name-field-provus-links {
-      padding-top: 0;
-    }
-
     .btn {
       @include button-outlined;
 
