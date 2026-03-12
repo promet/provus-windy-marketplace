@@ -5,6 +5,7 @@ dependencies:
     - node.type.provus_academic_department
     - node.type.provus_academic_program
     - taxonomy.vocabulary.provus_category_program_level
+    - views.view.academic_programs
   module:
     - better_exposed_filters
     - entityreference_filter
@@ -464,7 +465,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card\" style=\"height: 193px;\">\r\n      <div class=\"card-body\">\r\n          <div class=\"card-content\">\r\n                  <h3 class=\"card-title\" style=\"height: 56px;\">\r\n            <div class=\"field field--name-field-provus-title field--type-string field--label-hidden field__item\">{{ title }}</div>\r\n      </h3>\r\n                      </div>\r\n            <div class=\"card-extra\">\r\n      \r\n      <div class=\"field field--name-field-provus-links field--type-link field--label-hidden field__items\">\r\n              <div class=\"field__item\"><a href=\"{{ view_node }} \" title=\"Courses\">Courses</a></div>\r\n          </div>\r\n  \r\n    </div>\r\n      </div>\r\n</div>"
+            text: "<div class=\"card\" style=\"height: 193px;\">\r\n      <div class=\"card-body\">\r\n          <div class=\"card-content\">\r\n                  <h3 class=\"card-title\" style=\"height: 56px;\">\r\n            <div class=\"field field--name-field-provus-title field--type-string field--label-hidden field__item\">{{ title }}</div>\r\n      </h3>\r\n                      </div>\r\n            <div class=\"card-extra\">\r\n      \r\n      <div class=\"field field--name-field-provus-links field--type-link field--label-hidden field__items\">\r\n              <div class=\"field__item\"><a href=\"{{ view_node }}\" title=\"Courses\">Courses</a></div>\r\n          </div>\r\n  \r\n    </div>\r\n      </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
