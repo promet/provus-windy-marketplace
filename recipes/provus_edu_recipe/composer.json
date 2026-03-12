@@ -7,6 +7,7 @@
         "drupal/better_exposed_filters": "^7.1.1",
         "drupal/bpmn_io": "^3.0.4",
         "drupal/canvas": "^1.2.0",
+        "drupal/canvas_full_html": "^1.0.4",
         "drupal/captcha": "^2.0.10",
         "drupal/coffee": "^2.0.1",
         "drupal/crop": "^2.6.0",
@@ -55,14 +56,15 @@
         "drupal/view_password": "^6.0.5",
         "drupal/views_bootstrap": "^5.5.0-rc3",
         "drupal/webform": "^6.3.0-beta8",
+        "drupal/provus_canvas_ajax_fix": "*",
         "drupal/provus_events": "*",
         "drupal/provus_mega_menu": "*",
-        "drupal/easy_email_theme": "^1.1.0",
-        "drupal/bootstrap_barrio": "*",
         "drupal/blank": "*",
+        "drupal/bootstrap_barrio": "*",
+        "drupal/easy_email_theme": "^1.1.0",
         "drupal/gin": "^5.0.12",
-        "drupal/provus_edu": "*",
-        "drupal/provus_base_theme": "*"
+        "drupal/provus_base_theme": "*",
+        "drupal/provus_edu": "*"
     },
     "type": "drupal-recipe",
     "name": "drupal/provus_edu"

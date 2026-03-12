@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.media.image.field_media_image
     - field.field.media.svg_image.field_media_svg_image
+    - filter.format.canvas_full_html
     - filter.format.canvas_html_block
     - image.style.canvas_parametrized_width
     - media.type.image
@@ -17,14 +18,98 @@ dependencies:
     - text
   theme:
     - provus_base_theme
-label: 'Card Icon'
-id: sdc.provus_base_theme.card_icon
-source: sdc
-source_local_id: 'provus_base_theme:card_icon'
-provider: provus_base_theme
-active_version: 7980685ba1c708f4
+active_version: a30cfb0c1e6c2823
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Our Services'
+          expression: ℹ︎string␟value
+        body:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_full_html
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'We provide exceptional services to help your business grow and succeed.'
+              format: canvas_full_html
+          expression: ℹ︎text_long␟processed
+        image_url:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+        link_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Action Button'
+          expression: ℹ︎string␟value
+        link_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /contact
+              options: {  }
+          expression: ℹ︎link␟url
+        link_style:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: default
+          expression: ℹ︎list_string␟value
+        more_content:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_full_html
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>Additional information or <a href="#">call-to-action content</a>.</p>'
+              format: canvas_full_html
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
+  7980685ba1c708f4:
     settings:
       prop_field_definitions:
         title:
@@ -113,3 +198,8 @@ versioned_properties:
           expression: ℹ︎text_long␟processed
     fallback_metadata:
       slot_definitions: {  }
+label: 'Card Icon'
+id: sdc.provus_base_theme.card_icon
+provider: provus_base_theme
+source: sdc
+source_local_id: 'provus_base_theme:card_icon'

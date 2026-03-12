@@ -1,0 +1,7 @@
+name: Provus Canvas AJAX Fix
+type: module
+description: Adds missing AJAX and dialog library dependencies for Drupal Canvas ajax.custom library.
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:canvas
