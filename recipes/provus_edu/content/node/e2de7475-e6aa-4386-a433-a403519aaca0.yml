@@ -30,7 +30,7 @@ default:
       value: true
   path:
     -
-      alias: /scholarships
+      alias: /blog/scholarships
       langcode: en
   field_content:
     -

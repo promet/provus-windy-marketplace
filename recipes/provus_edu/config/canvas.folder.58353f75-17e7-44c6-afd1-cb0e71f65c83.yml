@@ -13,6 +13,7 @@ items:
   - sdc.provus_base_theme.card_image_background
   - sdc.provus_base_theme.card_image_side
   - sdc.provus_base_theme.card_image_top
+  - sdc.provus_base_theme.card_profile
   - sdc.provus_base_theme.card_tall
   - sdc.provus_base_theme.card_text
   - sdc.provus_base_theme.cta
@@ -28,5 +29,6 @@ items:
   - sdc.provus_base_theme.list_style_item
   - sdc.provus_base_theme.mini
   - sdc.provus_base_theme.paragraph
+  - sdc.provus_base_theme.person
   - sdc.provus_base_theme.spacer
   - sdc.provus_base_theme.testimonial
