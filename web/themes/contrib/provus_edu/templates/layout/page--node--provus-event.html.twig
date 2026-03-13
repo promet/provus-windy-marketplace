@@ -167,10 +167,15 @@
                 <div class="divider-events _none">
                   <hr>
                 </div>
+                <div class="block-provus-heading">
+                  <h3 class="title">
+                    {{ 'Related News & Events'|t }}
+                  </h3>
+                </div>
                 <div class="section-upcoming-events _none bs-mb-4">
                   <div class="layout row layout-builder__layout">
                     <div class="col-lg-6 col-md-6 col-12">
-
+                      {{ drupal_view('provus_news', 'block_related_news') }}
                     </div>
                     <div class="col-lg-6 col-md-6 col-12">
                       {{ drupal_view('provus_events', 'block_events_upcoming') }}
