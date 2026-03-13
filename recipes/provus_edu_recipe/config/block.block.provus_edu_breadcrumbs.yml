@@ -20,4 +20,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/search\r\n/events/*\r\n/blog\r\n/blog/*"
+    pages: "/search\r\n/events/*\r\n/blog\r\n/blog/*\r\n/news\r\n/news/*"
