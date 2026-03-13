@@ -125,6 +125,8 @@ install:
   - gin
   - provus_edu
   - provus_base_theme
+  - canvas_full_html
+  - provus_canvas_ajax_fix
 config:
   actions:
     core.date_format.fallback:

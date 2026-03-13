@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Fixes missing JS library dependencies for Drupal Canvas ajax.custom library.
+ */
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function provus_canvas_ajax_fix_library_info_alter(array &$libraries, string $extension): void {
+  if ($extension !== 'canvas' || !isset($libraries['ajax.custom'])) {
+    return;
+  }
+
+  if (!isset($libraries['ajax.custom']['dependencies']) || !is_array($libraries['ajax.custom']['dependencies'])) {
+    $libraries['ajax.custom']['dependencies'] = [];
+  }
+
+  $extra_dependencies = [
+    'core/drupalSettings',
+    'core/once',
+    'core/drupal.ajax',
+    'core/drupal.dialog',
+    'core/drupal.dialog.ajax',
+  ];
+
+  foreach ($extra_dependencies as $dependency) {
+    if (!in_array($dependency, $libraries['ajax.custom']['dependencies'], TRUE)) {
+      $libraries['ajax.custom']['dependencies'][] = $dependency;
+    }
+  }
+}

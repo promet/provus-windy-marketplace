@@ -15,4 +15,5 @@ items:
   - sdc.bootstrap_barrio.modal
   - sdc.bootstrap_barrio.teaser
   - sdc.bootstrap_barrio.toasts
+  - sdc.canvas_full_html.rich_text_block
   - sdc.navigation.title
