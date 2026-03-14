@@ -64,18 +64,8 @@
 }
 
 .provus-card-tall {
-  //fix for provus_edu
-  .card {
-    background-color: transparent;
-    max-width: unset;
-  }
-
   .card-img-top {
     border-radius: $images-border-radius-radius-xxl 4px $images-border-radius-radius-xxl 4px;
-
-    //fix for provus_edu
-    height: unset;
-    width: unset;
   }
 
   .card-date {
