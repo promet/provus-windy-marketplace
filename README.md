@@ -1,6 +1,6 @@
 # About
 
-This repository is a sandbox for building and testing the **`provus_edu`** Drupal recipe.
+This repository is a sandbox for building and testing the **`provus_edu_recipe`** Drupal recipe.
 
 Reference implementation (Drupal 10):
 - https://windy.provusdemo.com/
@@ -22,10 +22,10 @@ Reference implementation (Drupal 10):
     ddev start
     ```
 
-3. Install Drupal using the `provus_edu` recipe:
+3. Install Drupal using the `provus_edu_recipe` recipe:
 
     ```
-    ddev drush si recipes/provus_edu -y
+    ddev drush si recipes/provus_edu_recipe -y
     ```
 
 # Importing / Exporting Recipe Work
@@ -35,19 +35,19 @@ Use this workflow to export changes from the site into the recipe directory, the
 1. Export the site into a local destination:
 
     ```
-    ddev drush site:export --destination=./provus_edu
+    ddev drush site:export --destination=./provus_edu_recipe
     ```
 
 2. Move the exported recipe into the recipes directory:
 
     ```
-    mv ./provus_edu ./recipes/provus_edu
+    mv ./provus_edu_recipe ./recipes/provus_edu_recipe
     ```
 
 3. Reinstall using the updated recipe:
 
     ```
-    ddev drush si recipes/provus_edu -y
+    ddev drush si recipes/provus_edu_recipe -y
     ```
 
 
