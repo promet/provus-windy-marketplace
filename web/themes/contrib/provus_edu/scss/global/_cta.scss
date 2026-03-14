@@ -1,0 +1,70 @@
+.block-provus-cta .cta-wrapper {
+  &.Primary,
+  &.Secondary {
+    background-color: $background-colors-background-light !important;
+  }
+
+  &.has-bg-image .cta-bg-image-container::before {
+    background: $background-colors-background-light;
+    opacity: 0.5;
+  }
+
+  .cta-title {
+    @include text-style-headline-h-2;
+
+    color: $primary-colors-primary !important;
+  }
+
+  .cta-body {
+    @include text-style-body-body-1;
+
+    color: $text-colors-text-primary !important;
+  }
+
+  &.Secondary .cta-links .btn.btn-primary {
+    background-color: $background-colors-background-white;
+
+    &:hover {
+      box-shadow: none;
+      border: 0;
+    }
+
+    &:active {
+      color: $text-colors-text-primary;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &:not(.Primary):not(.Secondary) .cta-links .btn.btn-primary  {
+    color: $primary-colors-primary;
+    text-decoration: underline;
+    padding: 0;
+    background: no-repeat;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: 0;
+    box-shadow: none;
+    letter-spacing: normal;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: none;
+    }
+
+    &:active {
+      color: $primary-colors-primary-accent;
+    }
+
+    &:focus {
+      color: $primary-colors-primary-hover;
+      text-decoration: none;
+    }
+  }
+}
+
