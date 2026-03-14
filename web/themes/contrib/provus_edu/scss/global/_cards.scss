@@ -107,6 +107,20 @@
   @include box-drop-shadow;
   width: 100%;
 
+  //fix for provus_edu
+  height: calc(100% - 20px);
+
+  //fix for provus_edu
+  .card-img.img-fluid {
+    margin-bottom: 20px;
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+      object-fit: contain;
+    }
+  }
+
   .list {
     margin-bottom: 0;
     padding: $padding-padding-xxlg;
