@@ -486,3 +486,7 @@ hr {
 }
 
 
+//fix for provus_edu
+[data-component-id="provus_base_theme:container"].d-flex > .row {
+  width: 100%;
+}
