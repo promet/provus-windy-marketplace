@@ -100,6 +100,22 @@ default:
         views_label: ''
         items_per_page: null
     -
+      parent_uuid: 7712fc48-ac73-4753-9ccb-bda23ef694dc
+      slot: column_1
+      uuid: 1b834310-451d-4d9f-bc5b-d0ae1e863bda
+      component_id: sdc.provus_base_theme.button
+      inputs:
+        text: 'View all news'
+        url:
+          uri: 'internal:/news'
+          options: {  }
+        variant: primary
+        id: my-button
+        size: normal
+        width: auto
+        wrapper: div
+        alignment: center
+    -
       uuid: ec9b01fd-d85d-4e24-a9b6-eaaefd3356fc
       component_id: sdc.provus_base_theme.container
       inputs:
@@ -150,15 +166,31 @@ default:
         decorative_line: false
         alignment: center
     -
-      parent_uuid: 625a157c-92ac-4ab5-90c9-25bcc56a729a
-      slot: column_1
-      uuid: 4134ac99-d97a-447b-8b39-75e719f69715
-      component_id: block.views_block.provus_events-block_events_list
+      parent_uuid: ec9b01fd-d85d-4e24-a9b6-eaaefd3356fc
+      slot: content
+      uuid: 24edec71-9a7e-48d1-878e-84338b1661bd
+      component_id: block.views_block.provus_events-block_events_upcoming
       inputs:
-        label: 'Provus Events: All Events List'
+        label: 'Provus Events: Upcoming Events List'
         label_display: '0'
         views_label: ''
         items_per_page: null
+    -
+      parent_uuid: ec9b01fd-d85d-4e24-a9b6-eaaefd3356fc
+      slot: content
+      uuid: 1a81f211-7627-4ca3-943e-f32909baaaf4
+      component_id: sdc.provus_base_theme.button
+      inputs:
+        text: 'View all events'
+        url:
+          uri: 'internal:/event-calendar'
+          options: {  }
+        variant: primary
+        id: my-button
+        size: normal
+        width: auto
+        wrapper: div
+        alignment: center
   path:
     -
       alias: /news-and-events

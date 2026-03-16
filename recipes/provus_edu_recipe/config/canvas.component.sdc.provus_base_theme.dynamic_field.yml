@@ -9,6 +9,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Dynamic Field'
+id: sdc.provus_base_theme.dynamic_field
+source: sdc
+source_local_id: 'provus_base_theme:dynamic_field'
+provider: provus_base_theme
 active_version: 80113a027007eccf
 versioned_properties:
   active:
@@ -393,8 +398,3 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Dynamic Field'
-id: sdc.provus_base_theme.dynamic_field
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:dynamic_field'

@@ -9,6 +9,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Accordion Item'
+id: sdc.provus_base_theme.accordion_item
+source: sdc
+source_local_id: 'provus_base_theme:accordion_item'
+provider: provus_base_theme
 active_version: 297fa9c83656ce79
 versioned_properties:
   active:
@@ -115,8 +120,3 @@ versioned_properties:
         more_content:
           title: 'More content'
           description: 'Additional content to be displayed when the accordion item is expanded'
-label: 'Accordion Item'
-id: sdc.provus_base_theme.accordion_item
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:accordion_item'
