@@ -337,7 +337,7 @@ default:
         html_tag: div
         container_type: container
         flex_enabled: false
-        custom_class: bg-grey
+        custom_class: 'bg-grey four-card-tall card-tall-wrapper'
     -
       parent_uuid: 17b34a42-3d90-4f3b-9bdc-52ba8ac9ce86
       slot: content

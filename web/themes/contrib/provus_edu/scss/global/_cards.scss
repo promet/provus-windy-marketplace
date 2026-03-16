@@ -210,3 +210,51 @@
   align-items: center;
   display: flex;
 }
+
+//fix for provus_edu
+.two-card-tall,
+.four-card-tall {
+  .provus-card-tall {
+    .card {
+      background-color: transparent;
+      max-width: unset;
+    }
+
+    .card-img-top {
+      height: unset;
+      width: unset;
+    }
+  }
+}
+
+//fix for provus_edu
+.two-card-tall {
+  > div > .row {
+    > div:first-of-type {
+      @include media-breakpoint-up(lg) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        padding-right: $padding-padding-xxxlg;
+      }
+    }
+
+    > div:last-of-type {
+      @include media-breakpoint-up(lg) {
+        padding-left: $padding-padding-xxxlg;
+      }
+    }
+  }
+
+  .provus-card-tall .card-img-top img {
+    @include media-breakpoint-up(md) {
+      max-height: 227px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-height: 264px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-height: 454px;
+    }
+  }
+}

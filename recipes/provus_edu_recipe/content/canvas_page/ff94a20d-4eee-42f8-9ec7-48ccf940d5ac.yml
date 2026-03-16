@@ -479,18 +479,27 @@ default:
         html_tag: div
         container_type: container
         flex_enabled: false
-        custom_class: bg-grey
+        custom_class: 'bg-grey two-card-tall card-tall-wrapper'
     -
       parent_uuid: d3f16a92-6734-4406-a9f5-53bf376b365a
       slot: content
-      uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
-      component_id: sdc.provus_base_theme.three_column
+      uuid: d6d54cce-f4b0-42a6-a1df-bec4cc0b74f5
+      component_id: sdc.provus_base_theme.two_column
       inputs:
-        desktop_width: 25-25-50
-        tablet_width: 25-25-50
-        mobile_width: 100-100-100
+        desktop_width: 50-50
+        tablet_width: 50-50
+        mobile_width: 100-100
     -
-      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      parent_uuid: d6d54cce-f4b0-42a6-a1df-bec4cc0b74f5
+      slot: column_1
+      uuid: 74c62455-a6cb-4bf2-b070-f0581b7069f9
+      component_id: sdc.provus_base_theme.two_column
+      inputs:
+        desktop_width: 50-50
+        tablet_width: 50-50
+        mobile_width: 100-100
+    -
+      parent_uuid: 74c62455-a6cb-4bf2-b070-f0581b7069f9
       slot: column_1
       uuid: 289f6fb3-460e-4144-aef7-0bcc03f9f091
       component_id: sdc.provus_base_theme.card_tall
@@ -505,7 +514,7 @@ default:
           uri: 'internal:/contact'
           options: {  }
     -
-      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
+      parent_uuid: 74c62455-a6cb-4bf2-b070-f0581b7069f9
       slot: column_2
       uuid: a8e4bc87-f88d-4a1d-b759-4c504fcc6a12
       component_id: sdc.provus_base_theme.card_tall
@@ -520,8 +529,8 @@ default:
           uri: 'internal:/contact'
           options: {  }
     -
-      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
-      slot: column_3
+      parent_uuid: d6d54cce-f4b0-42a6-a1df-bec4cc0b74f5
+      slot: column_2
       uuid: 25ddce83-2150-40c4-9a8d-e0b136e001a2
       component_id: sdc.provus_base_theme.heading
       inputs:
@@ -530,8 +539,8 @@ default:
         decorative_line: false
         alignment: left
     -
-      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
-      slot: column_3
+      parent_uuid: d6d54cce-f4b0-42a6-a1df-bec4cc0b74f5
+      slot: column_2
       uuid: e855a26c-534d-47f8-b76a-5b714285a16a
       component_id: sdc.provus_base_theme.mini
       inputs:
@@ -543,21 +552,8 @@ default:
           options: {  }
         event_title: 'Student Government Meeting'
     -
-      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
-      slot: column_3
-      uuid: df4ac7d9-3ac6-447a-8945-644d9005ac06
-      component_id: sdc.provus_base_theme.mini
-      inputs:
-        start_date: APR
-        end_date: '02'
-        full_dates: '10am to 8pm'
-        url:
-          uri: 'internal:/events/annual-conference-2024'
-          options: {  }
-        event_title: 'Campus Sustainability Fair'
-    -
-      parent_uuid: 3c01d43a-f5ca-4f41-b2b4-e7863c3f1ad7
-      slot: column_3
+      parent_uuid: d6d54cce-f4b0-42a6-a1df-bec4cc0b74f5
+      slot: column_2
       uuid: 94606e34-0019-4f0b-afb0-563083627164
       component_id: sdc.provus_base_theme.mini
       inputs:
@@ -568,6 +564,19 @@ default:
           uri: 'internal:/events/annual-conference-2024'
           options: {  }
         event_title: 'Outdoor Movie Night on Campus'
+    -
+      parent_uuid: d6d54cce-f4b0-42a6-a1df-bec4cc0b74f5
+      slot: column_2
+      uuid: df4ac7d9-3ac6-447a-8945-644d9005ac06
+      component_id: sdc.provus_base_theme.mini
+      inputs:
+        start_date: APR
+        end_date: '02'
+        full_dates: '10am to 8pm'
+        url:
+          uri: 'internal:/events/annual-conference-2024'
+          options: {  }
+        event_title: 'Campus Sustainability Fair'
     -
       uuid: 9422b500-c7b9-4bb9-9f08-599f0f1d659b
       component_id: sdc.provus_base_theme.container
