@@ -1,41 +1,56 @@
 .block-provus-cta .cta-wrapper {
-  &.Primary,
-  &.Secondary {
-    background-color: $background-colors-background-light !important;
-  }
 
-  &.has-bg-image .cta-bg-image-container::before {
-    background: $background-colors-background-light;
-    opacity: 0.5;
-  }
+
 
   .cta-title {
     @include text-style-headline-h-2;
-
-    color: $primary-colors-primary !important;
   }
 
   .cta-body {
     @include text-style-body-body-1;
-
-    color: $text-colors-text-primary !important;
   }
 
-  &.Secondary .cta-links .btn.btn-primary {
-    background-color: $background-colors-background-white;
+  &.Primary {
+    background-color: $background-colors-background-dark !important;
 
-    &:hover {
-      box-shadow: none;
-      border: 0;
+    &.has-bg-image .cta-bg-image-container::before {
+      background: $background-colors-background-dark;
+      opacity: 0.5;
+    }
+  }
+
+  &.Secondary {
+    background-color: $background-colors-background-light !important;
+
+    &.has-bg-image .cta-bg-image-container::before {
+      background: $background-colors-background-light;
+      opacity: 0.5;
     }
 
-    &:active {
-      color: $text-colors-text-primary;
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    .cta-body {
+      color: $text-colors-text-primary !important;
     }
 
-    &:focus {
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    .cta-title {
+      color: $primary-colors-primary !important;
+    }
+
+    .cta-links .btn.btn-primary {
+      background-color: $background-colors-background-white;
+
+      &:hover {
+        box-shadow: none;
+        border: 0;
+      }
+
+      &:active {
+        color: $text-colors-text-primary;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+      }
     }
   }
 
