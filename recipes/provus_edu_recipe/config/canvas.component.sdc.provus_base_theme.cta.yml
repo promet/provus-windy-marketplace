@@ -17,6 +17,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: Call-to-action
+id: sdc.provus_base_theme.cta
+source: sdc
+source_local_id: 'provus_base_theme:cta'
+provider: provus_base_theme
 active_version: 2034c23e4f632b7c
 versioned_properties:
   active:
@@ -151,8 +156,3 @@ versioned_properties:
         cta_footer:
           title: Buttons
           description: 'Buttons components placed inside the CTA container'
-label: Call-to-action
-id: sdc.provus_base_theme.cta
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:cta'

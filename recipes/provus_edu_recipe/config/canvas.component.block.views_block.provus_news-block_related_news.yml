@@ -5,6 +5,11 @@ dependencies:
     - views.view.provus_news
   module:
     - views
+label: 'News: Related News Block'
+id: block.views_block.provus_news-block_related_news
+source: block
+source_local_id: 'views_block:provus_news-block_related_news'
+provider: views
 active_version: ebac0aaed8b8a46f
 versioned_properties:
   active:
@@ -18,8 +23,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'News: Related News Block'
-id: block.views_block.provus_news-block_related_news
-provider: views
-source: block
-source_local_id: 'views_block:provus_news-block_related_news'

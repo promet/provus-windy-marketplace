@@ -10,7 +10,9 @@ items:
   - block.views_block.academic_programs-block_1
   - block.views_block.provus_events-block_events_list
   - block.views_block.provus_events-block_events_upcoming
+  - block.views_block.provus_events-block_events_upcoming_short
   - block.views_block.provus_news-block_news_listing
+  - block.views_block.provus_news-block_related_news
   - block.views_block.provus_news-recent_news
   - block.views_block.provus_people-block_1
   - block.views_block.recent_pages-block_recent_pages

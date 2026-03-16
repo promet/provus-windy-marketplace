@@ -16,6 +16,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Person Full Profile Card'
+id: sdc.provus_base_theme.person
+source: sdc
+source_local_id: 'provus_base_theme:person'
+provider: provus_base_theme
 active_version: 08a5cd5f22550271
 versioned_properties:
   active:
@@ -186,8 +191,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Person Full Profile Card'
-id: sdc.provus_base_theme.person
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:person'

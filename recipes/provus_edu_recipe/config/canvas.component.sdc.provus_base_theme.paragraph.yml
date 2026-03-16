@@ -9,6 +9,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: Paragraph
+id: sdc.provus_base_theme.paragraph
+source: sdc
+source_local_id: 'provus_base_theme:paragraph'
+provider: provus_base_theme
 active_version: 5639102862b2aa43
 versioned_properties:
   active:
@@ -245,8 +250,3 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Paragraph
-id: sdc.provus_base_theme.paragraph
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:paragraph'

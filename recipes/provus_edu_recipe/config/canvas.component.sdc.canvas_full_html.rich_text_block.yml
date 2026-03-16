@@ -7,6 +7,11 @@ dependencies:
     - canvas_full_html
     - options
     - text
+label: 'Rich Text Block'
+id: sdc.canvas_full_html.rich_text_block
+source: sdc
+source_local_id: 'canvas_full_html:rich_text_block'
+provider: canvas_full_html
 active_version: f464dad82c9c2e09
 versioned_properties:
   active:
@@ -49,8 +54,3 @@ versioned_properties:
         footer:
           title: Footer
           description: 'Optional footer content.'
-label: 'Rich Text Block'
-id: sdc.canvas_full_html.rich_text_block
-provider: canvas_full_html
-source: sdc
-source_local_id: 'canvas_full_html:rich_text_block'

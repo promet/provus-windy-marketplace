@@ -17,6 +17,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'List (Div) Item'
+id: sdc.provus_base_theme.list_canvas_item
+source: sdc
+source_local_id: 'provus_base_theme:list_canvas_item'
+provider: provus_base_theme
 active_version: c39155d1ef38ee46
 versioned_properties:
   active:
@@ -133,8 +138,3 @@ versioned_properties:
           expression: ℹ︎link␟url
     fallback_metadata:
       slot_definitions: {  }
-label: 'List (Div) Item'
-id: sdc.provus_base_theme.list_canvas_item
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:list_canvas_item'
