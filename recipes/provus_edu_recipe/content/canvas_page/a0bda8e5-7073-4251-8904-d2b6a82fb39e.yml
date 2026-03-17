@@ -87,9 +87,10 @@ default:
           componentId: sdc.provus_base_theme.container
         html_tag: div
         container_type: container
-        flex_enabled: false
+        flex_enabled: true
         padding_top: pt-5
         padding_bottom: pb-5
+        align_items: align-items-center
     -
       parent_uuid: 55d8722f-ed83-4e8d-9d3a-31dbe8fbf599
       slot: content
@@ -184,18 +185,18 @@ default:
     -
       parent_uuid: 78bc4698-2831-4c8e-8244-de5b76d21914
       slot: content
-      uuid: 898415c5-92ed-49a0-a8bf-0177f8bdd917
-      component_id: sdc.provus_base_theme.paragraph
-      inputs:
-        text:
-          value: '<p><strong>TitlePer credit hourFull-time per semesterIn-District Students$150 per credit hourFull-time (12+ credit hours): $1,800 per semesterOut-of-District Students$250 per credit hourFull-time (12+ credit hours): $3,000 per semesterTitle Out-of-State/International Students$400 per credit hourFull-time (12+ credit hours): $4,800 per semester</strong></p><p><strong>Payment DeadlinesSpring Semester 2025January 10, 2025Summer Semester 2025May 20, 2025Fall Semester 2025August 15, 2025</strong></p><p><strong>Tuition must be paid in full or arranged through a payment plan by these deadlines to avoid late fees.</strong></p>'
-          format: canvas_html_block
-    -
-      parent_uuid: 78bc4698-2831-4c8e-8244-de5b76d21914
-      slot: content
       uuid: 03eeb4f6-2b9a-42cd-b976-896bcff7a918
       component_id: sdc.provus_base_theme.one_column
       inputs: {  }
+    -
+      parent_uuid: 03eeb4f6-2b9a-42cd-b976-896bcff7a918
+      slot: column_1
+      uuid: 9b6258b9-d271-415b-b237-196462549917
+      component_id: sdc.provus_base_theme.paragraph
+      inputs:
+        text:
+          value: '<table class="table"><thead><tr><th><span style="white-space:pre-wrap;">Title</span></th><th><span style="white-space:pre-wrap;">Per credit hour</span></th><th><span style="white-space:pre-wrap;">Full-time per semester</span></th></tr></thead><tbody><tr><td><span style="white-space:pre-wrap;">In-District Students</span></td><td><span style="white-space:pre-wrap;">$150 per credit hour</span></td><td><span style="white-space:pre-wrap;">Full-time (12+ credit hours): $1,800 per semester</span></td></tr><tr><td><span style="white-space:pre-wrap;">Out-of-District Students</span></td><td><span style="white-space:pre-wrap;">$250 per credit hour</span></td><td><span style="white-space:pre-wrap;">Full-time (12+ credit hours): $3,000 per semester</span></td></tr><tr><td><span style="white-space:pre-wrap;">Title Out-of-State/International Students</span></td><td><span style="white-space:pre-wrap;">$400 per credit hour</span></td><td><span style="white-space:pre-wrap;">Full-time (12+ credit hours): $4,800 per semester</span></td></tr></tbody></table><table class="table"><thead><tr><th colspan="2"><span style="white-space:pre-wrap;">Payment Deadlines</span></th></tr></thead><tbody><tr><td><span style="white-space:pre-wrap;">Spring Semester 2025</span></td><td><span style="white-space:pre-wrap;">January 10, 2025</span></td></tr><tr><td><span style="white-space:pre-wrap;">Summer Semester 2025</span></td><td><span style="white-space:pre-wrap;">May 20, 2025</span></td></tr><tr><td><span style="white-space:pre-wrap;">Fall Semester 2025</span></td><td><span style="white-space:pre-wrap;">August 15, 2025</span></td></tr></tbody></table><p><br><span style="white-space:pre-wrap;">Tuition must be paid in full or arranged through a payment plan by these deadlines to avoid late fees.</span></p>'
+          format: canvas_full_html
     -
       parent_uuid: 03eeb4f6-2b9a-42cd-b976-896bcff7a918
       slot: column_1
@@ -220,8 +221,8 @@ default:
       component_id: sdc.provus_base_theme.paragraph
       inputs:
         text:
-          value: '<p><strong>Student ServicesCostStudent Services Fee$75 per semester (includes access to career services, counseling, and campus activities)Technology Fee$50 per semesterLab Fee (if applicable)$30 per lab courseParking Pass (optional)$25 per semester</strong></p>'
-          format: canvas_html_block
+          value: '<table class="table"><thead><tr><th><span style="white-space:pre-wrap;">Student Services</span></th><th>Cost</th></tr></thead><tbody><tr><td><span style="white-space:pre-wrap;">Student Services Fee</span></td><td><span style="white-space:pre-wrap;">$75 per semester (includes access to career services, counseling, and campus activities)</span></td></tr><tr><td><span style="white-space:pre-wrap;">Technology Fee</span></td><td><span style="white-space:pre-wrap;">$50 per semester</span></td></tr><tr><td><span style="white-space:pre-wrap;">Lab Fee (if applicable)</span></td><td><span style="white-space:pre-wrap;">$30 per lab course</span></td></tr><tr><td><span style="white-space:pre-wrap;">Parking Pass (optional)</span></td><td><span style="white-space:pre-wrap;">$25 per semester</span></td></tr></tbody></table>'
+          format: canvas_full_html
     -
       uuid: d9a88040-887b-48e2-ae00-49ef197d2601
       component_id: sdc.provus_base_theme.container
@@ -330,9 +331,10 @@ default:
           componentId: sdc.provus_base_theme.container
         html_tag: div
         container_type: container
-        flex_enabled: false
+        flex_enabled: true
         padding_bottom: pb-5
         padding_top: pt-5
+        align_items: align-items-center
     -
       parent_uuid: 80a2beb1-3477-453f-9a48-17473c60a469
       slot: content
