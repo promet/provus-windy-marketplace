@@ -311,12 +311,13 @@ default:
     -
       parent_uuid: 89b56f28-c3f5-429a-9189-3d3966e0fe78
       slot: content
-      uuid: 5ae486d8-fab0-41d2-b110-d51519c36de6
+      uuid: 4746cc95-b4f8-4f3e-a434-cabbe0830560
       component_id: sdc.provus_base_theme.paragraph
       inputs:
         text:
-          value: '<p class="text-align-center"><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(0, 0, 0);display:inline !important;float:none;font-family:&quot;Source Sans 3&quot;, serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:pre-wrap;widows:2;word-spacing:0px;">Sign up for our newsletter to get the latest updates, news, and events delivered straight to your inbox.</span></p>'
+          value: '<p class="text-align-center">Sign up for our newsletter to get the latest updates, news, and events delivered straight to your inbox.</p>'
           format: canvas_full_html
+        margin_bottom: mb-4
     -
       parent_uuid: 89b56f28-c3f5-429a-9189-3d3966e0fe78
       slot: content

@@ -7,7 +7,7 @@
         align-items: center;
         @include text-style-headline-h-2;
         color: $color-heading;
-  
+
         &::before,
         &::after {
           content: "";
@@ -15,18 +15,18 @@
           height: 2px; // Adjust thickness of the line
           background-color: #5B1522; // Same color as text
         }
-  
+
         &::before {
           margin-right: 40px;
         }
-  
+
         &::after {
           margin-left: 40px;
         }
       }
     }
   }
-  
+
 
   .field--name-field-webform {
     display: flex;
@@ -83,7 +83,7 @@
     letter-spacing: -0.128px;
   }
 
-  select { 
+  select {
     padding: .65rem 1rem;
   }
 
@@ -125,7 +125,7 @@
 
       &:after {
         content: ' ';
-        
+
         width: 16px;
         height: 16px;
         position: absolute;
@@ -137,5 +137,33 @@
 
   .form-actions {
     margin-bottom: 0 !important;
+  }
+}
+
+//fix for provus_edu
+.webform-submission-newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin: 12px 0;
+
+  .form-type-email,
+  .form-actions {
+    margin-bottom: 0 !important;
+  }
+
+  .form-type-email {
+    label {
+      display: none !important;
+    }
+
+    [type="email"]:focus {
+      border-width: 1px;
+    }
+  }
+
+  .form-actions .button {
+    margin-right: 0;
   }
 }
