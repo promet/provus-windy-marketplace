@@ -172,6 +172,97 @@ default:
         default_data: ''
         redirect: true
         lazy: true
+    -
+      uuid: dd8129f9-a37b-41ec-80e3-05316ed2a546
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: true
+        padding_bottom: pb-5
+        padding_top: pt-5
+        align_items: align-items-center
+    -
+      parent_uuid: dd8129f9-a37b-41ec-80e3-05316ed2a546
+      slot: content
+      uuid: 3d50c11e-3ee1-4b12-aed3-fe42f40a1541
+      component_id: sdc.provus_base_theme.two_column
+      inputs:
+        desktop_width: 50-50
+        tablet_width: 50-50
+        mobile_width: 100-100
+    -
+      parent_uuid: 3d50c11e-3ee1-4b12-aed3-fe42f40a1541
+      slot: column_1
+      uuid: 03ff0ac0-1881-4694-a564-c340909f9aa9
+      component_id: sdc.provus_base_theme.google_map
+      inputs:
+        title: 'Main campus map'
+        embed_url:
+          uri: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.1231554743968!2d-87.6734807!3d41.9546897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd240b74542cb%3A0x858ca15d09e3ac77!2s4001%20N%20Ravenswood%20Ave%2C%20Chicago%2C%20IL%2060613%2C%20USA!5e0!3m2!1sen!2sph!4v1773728012815!5m2!1sen!2sph'
+          options: {  }
+        size: '16:9'
+        radius: rounded-0
+        allow_fullscreen: false
+    -
+      parent_uuid: 3d50c11e-3ee1-4b12-aed3-fe42f40a1541
+      slot: column_2
+      uuid: 603ecf52-f5f1-41ec-9ee5-9fd3d6d8ce3f
+      component_id: sdc.provus_base_theme.heading
+      inputs:
+        level_tag: h2
+        title: 'Visit Us in Person'
+        decorative_line: false
+        alignment: left
+    -
+      parent_uuid: 3d50c11e-3ee1-4b12-aed3-fe42f40a1541
+      slot: column_2
+      uuid: 34cb276f-729b-48ee-a425-396123d9b5b7
+      component_id: sdc.provus_base_theme.paragraph
+      inputs:
+        text:
+          value: '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(0, 0, 0);display:inline !important;float:none;font-family:&quot;Source Sans 3&quot;, serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:pre-wrap;widows:2;word-spacing:0px;">Easily find your way to Windy City Community College using our interactive campus map.</span></p>'
+          format: canvas_full_html
+    -
+      parent_uuid: 3d50c11e-3ee1-4b12-aed3-fe42f40a1541
+      slot: column_2
+      uuid: c1b1de2c-eeea-41ac-be9b-ab7835a936c9
+      component_id: sdc.provus_base_theme.button
+      inputs:
+        text: 'Show Google Map'
+        url:
+          uri: 'https://www.google.com/maps?ll=41.954567%2C-87.67364&z=16&t=m&hl=en&gl=PH&mapclient=embed&q=4001%20N%20Ravenswood%20Ave%20Chicago%2C%20IL%2060613%20USA'
+          options: {  }
+        variant: primary
+        id: my-button
+        size: normal
+        width: auto
   path:
     -
       alias: /contact

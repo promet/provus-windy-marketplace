@@ -20,6 +20,7 @@ items:
   - sdc.provus_base_theme.divider
   - sdc.provus_base_theme.dynamic_field
   - sdc.provus_base_theme.event
+  - sdc.provus_base_theme.google_map
   - sdc.provus_base_theme.heading
   - sdc.provus_base_theme.hero_banner
   - sdc.provus_base_theme.image
