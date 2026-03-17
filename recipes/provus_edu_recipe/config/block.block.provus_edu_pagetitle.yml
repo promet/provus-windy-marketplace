@@ -19,5 +19,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: false
-    pages: "/search\r\n/events/*\r\n/blog\r\n/blog/*\r\n/academics/*\r\n/news\r\n/news/*"
+    negate: true
+    pages: '/people/*'
