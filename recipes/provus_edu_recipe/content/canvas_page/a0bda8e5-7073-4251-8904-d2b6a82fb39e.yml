@@ -28,10 +28,10 @@ default:
       uuid: d35bf739-de05-4f58-9bb6-11be2c152972
       component_id: sdc.provus_base_theme.hero_banner
       inputs:
-        title: tuition-fees
+        title: 'Tuition & Fees'
         body:
           value: '<p><strong>Explore tuition rates, fees, and financial aid options to invest in your education at Windy City Community College.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: 84ca57b2-8f30-4a6b-bc97-4216ab31036a
@@ -49,7 +49,7 @@ default:
       inputs:
         text: 'Apply Now'
         url:
-          uri: 'internal:/contact'
+          uri: 'internal:/'
           options: {  }
         variant: primary
         id: my-button

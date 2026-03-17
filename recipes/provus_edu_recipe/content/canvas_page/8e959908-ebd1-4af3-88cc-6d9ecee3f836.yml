@@ -51,7 +51,7 @@ default:
       inputs:
         text: 'Apply Now'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/admissions'
           options: {  }
         variant: primary
         id: my-button
@@ -65,7 +65,7 @@ default:
       inputs:
         text: 'Explore Programs'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/academics/programs'
           options: {  }
         variant: secondary
         id: my-button
@@ -172,10 +172,11 @@ default:
               - src
           componentId: sdc.provus_base_theme.container
         html_tag: div
-        flex_enabled: false
+        flex_enabled: true
         padding_top: pt-5
         padding_bottom: pb-5
         container_type: container
+        align_items: align-items-center
     -
       parent_uuid: 4b6daa4a-7578-45af-8f2e-00855530156a
       slot: content
@@ -248,10 +249,11 @@ default:
               - src
           componentId: sdc.provus_base_theme.container
         html_tag: div
-        flex_enabled: false
+        flex_enabled: true
         padding_top: pt-5
         padding_bottom: pb-5
         container_type: container
+        align_items: align-items-center
     -
       parent_uuid: 89eb41a3-ed98-483f-8a0c-36cd8c1e8239
       slot: content
@@ -288,7 +290,7 @@ default:
       inputs:
         text: 'Learn more about admissions'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/admissions'
           options: {  }
         variant: primary
         id: my-button
@@ -431,7 +433,7 @@ default:
       inputs:
         text: 'Apply now'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/admissions'
           options: {  }
         variant: primary
         id: my-button

@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'A Revival of Traditional Plays and Performances'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /revival-traditional-plays-and-performances
+      alias: /news/revival-traditional-plays-and-performances
       langcode: en
   field_content:
     -

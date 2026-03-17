@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Windy City Community College Battles Flu Season'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /windy-city-community-college-battles-flu-season
+      alias: /news/windy-city-community-college-battles-flu-season
       langcode: en
   field_content:
     -

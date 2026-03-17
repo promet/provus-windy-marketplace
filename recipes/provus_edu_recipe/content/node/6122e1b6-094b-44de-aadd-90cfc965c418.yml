@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Windy City Community College as a Weekend Getaway'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /windy-city-community-college-weekend-getaway-0
+      alias: /news/windy-city-community-college-weekend-getaway-0
       langcode: en
   field_content:
     -

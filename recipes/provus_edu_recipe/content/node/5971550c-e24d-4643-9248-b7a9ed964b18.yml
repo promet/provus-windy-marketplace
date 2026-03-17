@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Stay Safe Windy City Community College: Essential Safety Tips and Resources from Windy City Community College Officials'

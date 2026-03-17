@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: "Public Debate to Be Held on Windy City Community College's Education Funding"
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /public-debate-be-held-windy-city-community-colleges-education-funding
+      alias: /news/public-debate-be-held-windy-city-community-colleges-education-funding
       langcode: en
   field_content:
     -

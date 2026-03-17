@@ -1,4 +1,4 @@
-name: 'Drush Site-Install'
+name: 'Provus Edu'
 type: Site
 install:
   - announcements_feed
@@ -53,6 +53,7 @@ install:
   - better_exposed_filters
   - bpmn_io
   - canvas
+  - canvas_full_html
   - captcha
   - coffee
   - crop
@@ -113,20 +114,19 @@ install:
   - view_password
   - views_bootstrap
   - webform
+  - provus_canvas_ajax_fix
   - provus_events
   - provus_mega_menu
-  - stark
-  - stable9
   - claro
+  - stable9
+  - stark
   - canvas_stark
-  - easy_email_theme
-  - bootstrap_barrio
   - blank
+  - bootstrap_barrio
+  - easy_email_theme
   - gin
-  - provus_edu
   - provus_base_theme
-  - canvas_full_html
-  - provus_canvas_ajax_fix
+  - provus_edu
 config:
   actions:
     core.date_format.fallback:
@@ -347,16 +347,6 @@ config:
           front: /home
           0: ''
           1: /user/login
-          2: ''
-          3: /user/login
-          4: ''
-          5: /user/login
-          6: ''
-          7: /user/login
-          8: ''
-          9: /user/login
-          10: ''
-          11: /user/login
         admin_compact_mode: false
         weight_select_max: 100
         default_langcode: en
@@ -539,65 +529,15 @@ config:
         is_admin: false
         permissions:
           - 'access administration pages'
-          - 'access administration pages'
-          - 'access administration pages'
-          - 'access administration pages'
-          - 'access administration pages'
-          - 'access administration pages'
-          - 'access coffee'
-          - 'access coffee'
-          - 'access coffee'
-          - 'access coffee'
-          - 'access coffee'
           - 'access coffee'
           - 'access contextual links'
-          - 'access contextual links'
-          - 'access contextual links'
-          - 'access contextual links'
-          - 'access contextual links'
-          - 'access contextual links'
-          - 'access navigation'
-          - 'access navigation'
-          - 'access navigation'
-          - 'access navigation'
-          - 'access navigation'
           - 'access navigation'
           - 'bypass honeypot protection'
-          - 'bypass honeypot protection'
-          - 'bypass honeypot protection'
-          - 'bypass honeypot protection'
-          - 'bypass honeypot protection'
-          - 'bypass honeypot protection'
           - 'delete own files'
-          - 'delete own files'
-          - 'delete own files'
-          - 'delete own files'
-          - 'delete own files'
-          - 'delete own files'
-          - 'skip CAPTCHA'
-          - 'skip CAPTCHA'
-          - 'skip CAPTCHA'
-          - 'skip CAPTCHA'
-          - 'skip CAPTCHA'
           - 'skip CAPTCHA'
           - 'use text format webform_default'
           - 'view own unpublished content'
-          - 'view own unpublished content'
-          - 'view own unpublished content'
-          - 'view own unpublished content'
-          - 'view own unpublished content'
-          - 'view own unpublished content'
           - 'view the administration theme'
-          - 'view the administration theme'
-          - 'view the administration theme'
-          - 'view the administration theme'
-          - 'view the administration theme'
-          - 'view the administration theme'
-          - 'view welcome dashboard'
-          - 'view welcome dashboard'
-          - 'view welcome dashboard'
-          - 'view welcome dashboard'
-          - 'view welcome dashboard'
           - 'view welcome dashboard'
     user.settings:
       simpleConfigUpdate:

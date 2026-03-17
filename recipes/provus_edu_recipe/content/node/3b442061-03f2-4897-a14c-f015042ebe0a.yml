@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: "The Pros and Cons of Windy City Community College's New Commercial Development Plan"
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /pros-and-cons-windy-city-community-colleges-new-commercial-development-plan
+      alias: /news/pros-and-cons-windy-city-community-colleges-new-commercial-development-plan
       langcode: en
   field_content:
     -

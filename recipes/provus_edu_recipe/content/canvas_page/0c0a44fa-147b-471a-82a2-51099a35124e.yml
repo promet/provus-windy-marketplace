@@ -6,6 +6,10 @@ _meta:
   depends:
     a122bd25-46fa-4bbe-8d83-4c5fe70bff4c: file
     e03c5670-c10e-4d72-9680-3a3254f1b09a: media
+    6c65703d-c267-4290-9da2-8e72234bab5f: file
+    ceb04550-df6a-4029-b7a3-3febfbeaad03: media
+    b52d8a59-4f97-4b77-8435-850e7ffe425e: file
+    24c7ee02-b08e-472b-9ecd-30c9a3591645: media
 default:
   revision_user:
     -
@@ -24,11 +28,10 @@ default:
       uuid: 2120206d-5c27-419f-8187-2995b82db846
       component_id: sdc.provus_base_theme.hero_banner
       inputs:
-        subtitle: 'Get Started'
         title: 'Stay Informed, Stay Engaged'
         body:
           value: '<p><strong>Discover the latest news, upcoming events, and achievements happening at Windy City Community College.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: e03c5670-c10e-4d72-9680-3a3254f1b09a
@@ -191,6 +194,76 @@ default:
         width: auto
         wrapper: div
         alignment: center
+    -
+      uuid: 042d6fe7-8fec-48c5-86ee-a05193c38c49
+      component_id: sdc.provus_base_theme.container
+      inputs:
+        background_image:
+          sourceType: default-relative-url
+          value:
+            src: 'https://placehold.co/1920x1014'
+            alt: 'Image alt text'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.provus_base_theme.container
+        html_tag: div
+        container_type: container
+        flex_enabled: false
+        padding_bottom: pb-5
+        padding_top: pt-5
+    -
+      parent_uuid: 042d6fe7-8fec-48c5-86ee-a05193c38c49
+      slot: content
+      uuid: 867c3d94-86dc-440f-b152-193a61df6770
+      component_id: sdc.provus_base_theme.two_column
+      inputs:
+        desktop_width: 50-50
+        tablet_width: 50-50
+        mobile_width: 100-100
+    -
+      parent_uuid: 867c3d94-86dc-440f-b152-193a61df6770
+      slot: column_1
+      uuid: 9bdde80c-5385-481a-a3e5-ac43dcea788e
+      component_id: sdc.provus_base_theme.card_image_top
+      inputs:
+        title: 'Faculty Research Showcase: Innovating Education'
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: ceb04550-df6a-4029-b7a3-3febfbeaad03
+            target_type: media
+        is_image_circle: false
+        link_style: default
+    -
+      parent_uuid: 867c3d94-86dc-440f-b152-193a61df6770
+      slot: column_2
+      uuid: 58fa5050-74dd-4168-b736-8911653fac32
+      component_id: sdc.provus_base_theme.card_image_top
+      inputs:
+        title: 'Community Outreach Programs Making a Difference'
+        image_url:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 24c7ee02-b08e-472b-9ecd-30c9a3591645
+            target_type: media
+        is_image_circle: false
+        link_style: default
   path:
     -
       alias: /news-and-events

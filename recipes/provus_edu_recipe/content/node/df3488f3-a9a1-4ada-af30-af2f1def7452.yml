@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Strategy for Enhancing Public Safety and Law Enforcement'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /strategy-enhancing-public-safety-and-law-enforcement
+      alias: /news/strategy-enhancing-public-safety-and-law-enforcement
       langcode: en
   field_content:
     -

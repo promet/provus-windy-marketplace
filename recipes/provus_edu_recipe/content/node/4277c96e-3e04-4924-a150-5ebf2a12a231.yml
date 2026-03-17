@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Youth Sports Initiatives: Fostering Next-Gen Athletes'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /youth-sports-initiatives-fostering-next-gen-athletes
+      alias: /news/youth-sports-initiatives-fostering-next-gen-athletes
       langcode: en
   field_content:
     -

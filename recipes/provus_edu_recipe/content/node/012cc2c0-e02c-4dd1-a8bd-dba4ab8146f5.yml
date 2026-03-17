@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Mental Health Resources in Windy City Community College'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /mental-health-resources-windy-city-community-college
+      alias: /news/mental-health-resources-windy-city-community-college
       langcode: en
   field_content:
     -

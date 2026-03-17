@@ -128,7 +128,6 @@ default:
       inputs:
         level_tag: h2
         title: 'A Community of Opportunity'
-        subtitle: 'Get Started'
         decorative_line: true
         alignment: center
     -
@@ -230,7 +229,7 @@ default:
       inputs:
         text: 'Learn more'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/student-life'
           options: {  }
         variant: primary
         id: my-button
@@ -373,7 +372,10 @@ default:
           componentId: sdc.provus_base_theme.container
         html_tag: div
         container_type: container
-        flex_enabled: false
+        flex_enabled: true
+        align_items: align-items-center
+        padding_bottom: pb-5
+        padding_top: pt-5
     -
       parent_uuid: 6d1df367-55fb-4646-ae59-fb6238f21280
       slot: content
@@ -467,6 +469,20 @@ default:
           value: '<p>Join our student community today and unlock member perks. Get updates, useful resources, and invites to exclusive sessions. Meet peers, share ideas, and build skills together every week. Sign up now and belong with us.</p>'
           format: canvas_html_block
         background_color: Secondary
+    -
+      parent_uuid: d7e4ee63-f8d1-47a5-a785-df0be8e9564f
+      slot: cta_footer
+      uuid: d3a223fc-7094-4bf0-9b95-8dfa62b4a123
+      component_id: sdc.provus_base_theme.button
+      inputs:
+        text: 'Apply Now'
+        url:
+          uri: 'internal:/admissions'
+          options: {  }
+        variant: primary
+        id: my-button
+        size: normal
+        width: auto
   path:
     -
       alias: /about

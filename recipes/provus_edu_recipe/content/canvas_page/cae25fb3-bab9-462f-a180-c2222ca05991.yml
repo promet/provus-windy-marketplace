@@ -47,7 +47,7 @@ default:
         title: 'Student Life at Windy City'
         body:
           value: '<p><strong>Explore a vibrant community where learning extends beyond the classroom. From clubs and events to sports and campus activities, Windy City offers endless opportunities to connect, grow, and thrive.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: 3133db7f-fc9f-40b2-9509-ae9b3eab5733
@@ -55,36 +55,8 @@ default:
         is_short_banner: true
         image_position: full
         background_color: primary
-        text_container_width: col-lg-6
-        text_alignment: left
-    -
-      parent_uuid: 229ae24d-1963-4254-83cc-227a0dab2b17
-      slot: hero_banner_buttons
-      uuid: c47745d4-66c7-466c-bb97-8c36b8aa6085
-      component_id: sdc.provus_base_theme.button
-      inputs:
-        text: 'Apply Now'
-        url:
-          uri: 'internal:/'
-          options: {  }
-        variant: primary
-        id: my-button
-        size: normal
-        width: auto
-    -
-      parent_uuid: 229ae24d-1963-4254-83cc-227a0dab2b17
-      slot: hero_banner_buttons
-      uuid: 676e2f5f-0e46-474d-98c8-26dac075c9f1
-      component_id: sdc.provus_base_theme.button
-      inputs:
-        text: 'Explore Programs'
-        url:
-          uri: 'internal:/'
-          options: {  }
-        variant: secondary
-        id: my-button
-        size: normal
-        width: auto
+        text_container_width: col-lg-12
+        text_alignment: center
     -
       uuid: 1a462c81-c163-422d-b95a-8788785ad965
       component_id: sdc.provus_base_theme.container
@@ -361,8 +333,10 @@ default:
       component_id: sdc.provus_base_theme.paragraph
       inputs:
         text:
-          value: '<p class="text-align-center">There’s always something happening on campus! Join us for a mix of educational, social, and cultural events, including:</p>'
-          format: canvas_html_block
+          value: |-
+            <p class="text-align-center">There’s always something happening on campus! Join us for a mix of educational, social, and cultural events, including:</p>
+            <br/>
+          format: canvas_full_html
     -
       parent_uuid: af8c31da-4414-4416-9f28-06e47f58dec2
       slot: column_1

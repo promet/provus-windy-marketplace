@@ -105,9 +105,10 @@ default:
           componentId: sdc.provus_base_theme.container
         html_tag: div
         container_type: container
-        flex_enabled: false
+        flex_enabled: true
         padding_top: pt-5
         padding_bottom: pb-5
+        align_items: align-items-center
     -
       parent_uuid: 55d8722f-ed83-4e8d-9d3a-31dbe8fbf599
       slot: content
@@ -216,7 +217,7 @@ default:
       inputs:
         text: 'View All Programs'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/academics/programs'
           options: {  }
         variant: primary
         id: my-button
@@ -282,8 +283,10 @@ default:
       component_id: sdc.provus_base_theme.paragraph
       inputs:
         text:
-          value: '<p class="text-align-center">Life can be busy, but your education doesn’t have to wait. We offer multiple learning formats to fit your schedule:</p>'
-          format: canvas_html_block
+          value: |-
+            <p class="text-align-center">Life can be busy, but your education doesn’t have to wait. We offer multiple learning formats to fit your schedule:</p>
+            <br/>
+          format: canvas_full_html
     -
       parent_uuid: 905d6f89-0fef-48de-9102-959aab8119cf
       slot: content
@@ -357,6 +360,13 @@ default:
         width: auto
         wrapper: div
         alignment: center
+    -
+      parent_uuid: 905d6f89-0fef-48de-9102-959aab8119cf
+      slot: content
+      uuid: 2506af3e-7535-41b8-a6dc-b948929c2ad2
+      component_id: sdc.provus_base_theme.spacer
+      inputs:
+        padding_all: p-4
     -
       parent_uuid: 905d6f89-0fef-48de-9102-959aab8119cf
       slot: content
@@ -439,7 +449,7 @@ default:
       uuid: 64c572dd-2cc2-4b5d-95fd-a6d445ee5560
       component_id: sdc.provus_base_theme.spacer
       inputs:
-        padding_all: p-5
+        padding_all: p-3
     -
       uuid: e1aac840-c2ef-46f1-868e-4e66ffad914f
       component_id: sdc.provus_base_theme.container
@@ -552,7 +562,7 @@ default:
       inputs:
         text: 'Apply Now'
         url:
-          uri: 'internal:/contact'
+          uri: 'internal:/admissions'
           options: {  }
         variant: primary
         id: my-button

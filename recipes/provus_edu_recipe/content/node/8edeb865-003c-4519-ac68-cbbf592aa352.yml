@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Local Sports Complex Expansion Plans'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /local-sports-complex-expansion-plans
+      alias: /news/local-sports-complex-expansion-plans
       langcode: en
   field_content:
     -

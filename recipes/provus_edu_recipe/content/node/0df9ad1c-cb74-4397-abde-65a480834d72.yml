@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Upcoming Facilities and Services'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /upcoming-facilities-and-services
+      alias: /news/upcoming-facilities-and-services
       langcode: en
   field_content:
     -

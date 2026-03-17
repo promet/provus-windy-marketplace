@@ -5,7 +5,6 @@ dependencies:
     - node.type.provus_academic_department
     - node.type.provus_academic_program
     - taxonomy.vocabulary.provus_category_program_level
-    - views.view.academic_programs
   module:
     - better_exposed_filters
     - entityreference_filter

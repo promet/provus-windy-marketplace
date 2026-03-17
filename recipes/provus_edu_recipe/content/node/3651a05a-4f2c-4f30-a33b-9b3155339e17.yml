@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'E-Commerce and Digital Strategies (3 credits)'

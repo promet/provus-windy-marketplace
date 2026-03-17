@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Film Festival Success Stories'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /film-festival-success-stories
+      alias: /news/film-festival-success-stories
       langcode: en
   field_content:
     -

@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Trends and Predictions for the Next School Year'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /trends-and-predictions-next-school-year
+      alias: /news/trends-and-predictions-next-school-year
       langcode: en
   field_content:
     -

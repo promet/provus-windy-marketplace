@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Business Statistics (3 credits)'

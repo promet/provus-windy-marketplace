@@ -4,6 +4,8 @@ _meta:
   uuid: f62a2595-1725-4973-be9f-5b7d98bc6ea5
   bundle: footer-1
   default_langcode: en
+  depends:
+    e3c3bfb6-eb4b-443e-882e-95e4e246df5c: node
 default:
   enabled:
     -
@@ -16,9 +18,9 @@ default:
       value: footer-1
   link:
     -
-      uri: 'internal:/'
       title: ''
       options: {  }
+      target_uuid: e3c3bfb6-eb4b-443e-882e-95e4e246df5c
   external:
     -
       value: false
@@ -27,10 +29,13 @@ default:
       value: true
   weight:
     -
-      value: 0
+      value: -47
   expanded:
     -
       value: false
   revision_translation_affected:
     -
       value: true
+  view_mode:
+    -
+      value: default

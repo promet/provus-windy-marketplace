@@ -16,7 +16,7 @@ default:
       value: footer
   link:
     -
-      uri: 'internal:/'
+      uri: 'internal:/sitemap.xml'
       title: ''
       options: {  }
   external:
@@ -34,3 +34,6 @@ default:
   revision_translation_affected:
     -
       value: true
+  view_mode:
+    -
+      value: default

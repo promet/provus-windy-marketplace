@@ -75,9 +75,10 @@ default:
           componentId: sdc.provus_base_theme.container
         html_tag: div
         container_type: container
-        flex_enabled: false
+        flex_enabled: true
         padding_bottom: pb-5
         padding_top: pt-5
+        align_items: align-items-center
     -
       parent_uuid: 7c5b212e-cf88-4904-8e5a-c971c1e713fa
       slot: content
@@ -108,7 +109,6 @@ default:
       inputs:
         level_tag: h2
         title: 'Leadership at Windy City Community College'
-        subtitle: 'Get Started'
         decorative_line: false
         alignment: left
     -

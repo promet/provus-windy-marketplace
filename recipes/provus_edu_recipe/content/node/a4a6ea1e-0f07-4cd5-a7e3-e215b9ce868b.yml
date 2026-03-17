@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: "Who's Running in the Upcoming Local Elections?"
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /whos-running-upcoming-local-elections
+      alias: /news/whos-running-upcoming-local-elections
       langcode: en
   field_content:
     -

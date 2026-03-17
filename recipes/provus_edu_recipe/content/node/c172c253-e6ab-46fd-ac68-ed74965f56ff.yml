@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Emerging Business Hubs in Windy City Community College'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /emerging-business-hubs-windy-city-community-college
+      alias: /news/emerging-business-hubs-windy-city-community-college
       langcode: en
   field_content:
     -

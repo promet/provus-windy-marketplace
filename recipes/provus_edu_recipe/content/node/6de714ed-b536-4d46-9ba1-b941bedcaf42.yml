@@ -30,7 +30,7 @@ default:
       value: true
   path:
     -
-      alias: /windy-city-community-college-weekend-getaway
+      alias: /news/windy-city-community-college-weekend-getaway
       langcode: en
   field_content:
     -

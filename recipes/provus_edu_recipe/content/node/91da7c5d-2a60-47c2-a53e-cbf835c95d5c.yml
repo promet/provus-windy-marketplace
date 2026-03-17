@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: "Innovations That Are Shaping Windy City Community College's Future"
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /innovations-are-shaping-windy-city-community-colleges-future
+      alias: /news/innovations-are-shaping-windy-city-community-colleges-future
       langcode: en
   field_content:
     -

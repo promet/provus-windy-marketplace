@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Elective (3 credits)'
@@ -30,7 +30,7 @@ default:
       value: true
   path:
     -
-      alias: /academics/marketing-major-bs/elective-3-credits-2
+      alias: /academics/marketing-major-bs/elective-3-credits-3
       langcode: en
   field_provus_ac_about:
     -

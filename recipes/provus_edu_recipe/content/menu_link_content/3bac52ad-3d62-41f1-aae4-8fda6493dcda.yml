@@ -4,6 +4,8 @@ _meta:
   uuid: 3bac52ad-3d62-41f1-aae4-8fda6493dcda
   bundle: footer-1
   default_langcode: en
+  depends:
+    a2584fc9-aaa5-40f2-ba53-e3493c56ef03: canvas_page
 default:
   enabled:
     -
@@ -16,9 +18,9 @@ default:
       value: footer-1
   link:
     -
-      uri: 'internal:/'
       title: ''
       options: {  }
+      target_uuid: a2584fc9-aaa5-40f2-ba53-e3493c56ef03
   external:
     -
       value: false
@@ -27,10 +29,13 @@ default:
       value: true
   weight:
     -
-      value: 0
+      value: -49
   expanded:
     -
       value: false
   revision_translation_affected:
     -
       value: true
+  view_mode:
+    -
+      value: default

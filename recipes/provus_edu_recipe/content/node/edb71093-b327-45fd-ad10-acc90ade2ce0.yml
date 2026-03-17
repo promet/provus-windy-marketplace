@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'The Annual Marathon: New Routes and Runner Information'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /annual-marathon-new-routes-and-runner-information
+      alias: /news/annual-marathon-new-routes-and-runner-information
       langcode: en
   field_content:
     -

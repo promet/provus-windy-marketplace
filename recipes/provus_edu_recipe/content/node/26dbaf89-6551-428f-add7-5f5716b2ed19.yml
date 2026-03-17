@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Windy City Community College Sports League'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /windy-city-community-college-sports-league
+      alias: /news/windy-city-community-college-sports-league
       langcode: en
   field_content:
     -

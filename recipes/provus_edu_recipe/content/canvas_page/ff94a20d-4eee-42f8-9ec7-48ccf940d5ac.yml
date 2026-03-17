@@ -79,7 +79,7 @@ default:
       inputs:
         text: 'Apply Now'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/admissions'
           options: {  }
         variant: primary
     -
@@ -196,7 +196,7 @@ default:
       inputs:
         text: 'Learn More'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/about'
           options: {  }
         variant: primary
     -
@@ -277,7 +277,7 @@ default:
             target_uuid: 1fb73729-8724-45c1-a291-fda4b7a25af2
             target_type: media
         link:
-          uri: 'internal:/'
+          uri: 'internal:/academics'
           options: {  }
     -
       parent_uuid: e24f1a2c-5125-4437-b66b-ca5ffa54b308
@@ -291,7 +291,7 @@ default:
             target_uuid: 16bc3f5e-7495-42ae-b536-84df56892752
             target_type: media
         link:
-          uri: 'internal:/'
+          uri: 'internal:/academics'
           options: {  }
     -
       parent_uuid: e24f1a2c-5125-4437-b66b-ca5ffa54b308
@@ -305,7 +305,7 @@ default:
             target_uuid: 67915c7d-eed4-410c-8ec2-01cc14ab8e26
             target_type: media
         link:
-          uri: 'internal:/'
+          uri: 'internal:/academics'
           options: {  }
     -
       parent_uuid: 28efa37e-bf67-442e-b69b-bd6cec3cbe9b
@@ -328,7 +328,7 @@ default:
             target_uuid: 981e0a80-285d-4873-a025-f0e50093da87
             target_type: media
         link:
-          uri: 'internal:/about'
+          uri: 'internal:/academics'
           options: {  }
     -
       parent_uuid: 2d4ca744-1b66-4c03-b42b-f93be766fd79
@@ -342,7 +342,7 @@ default:
             target_uuid: 947a3f46-f3f7-4913-ba3d-cfa6b7c01e4d
             target_type: media
         link:
-          uri: 'internal:/about'
+          uri: 'internal:/academics'
           options: {  }
     -
       parent_uuid: 2d4ca744-1b66-4c03-b42b-f93be766fd79
@@ -356,8 +356,37 @@ default:
             target_uuid: a8107cfd-9acb-4add-84e2-4aa3580fe4b8
             target_type: media
         link:
-          uri: 'internal:/about'
+          uri: 'internal:/academics'
           options: {  }
+    -
+      parent_uuid: 28efa37e-bf67-442e-b69b-bd6cec3cbe9b
+      slot: content
+      uuid: 64780ce5-0c0c-4aaf-89cb-97b7f91eedb0
+      component_id: sdc.provus_base_theme.one_column
+      inputs: {  }
+    -
+      parent_uuid: 64780ce5-0c0c-4aaf-89cb-97b7f91eedb0
+      slot: column_1
+      uuid: 98b6e7e5-bef2-4e2f-a098-16c45644d6ac
+      component_id: sdc.provus_base_theme.spacer
+      inputs:
+        padding_all: p-3
+    -
+      parent_uuid: 64780ce5-0c0c-4aaf-89cb-97b7f91eedb0
+      slot: column_1
+      uuid: 1f56db7e-e51a-438b-ab3d-27fd150346fd
+      component_id: sdc.provus_base_theme.button
+      inputs:
+        text: 'View all programs'
+        url:
+          uri: 'internal:/academics'
+          options: {  }
+        variant: primary
+        id: my-button
+        size: normal
+        width: auto
+        wrapper: div
+        alignment: center
     -
       uuid: 60af13ed-f5e3-4340-b83f-ba8c07d31ed0
       component_id: sdc.provus_base_theme.container
@@ -443,7 +472,7 @@ default:
       inputs:
         text: 'Get Started'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/academics/business-management/marketing-major-bs'
           options: {  }
         variant: primary
     -
@@ -511,7 +540,7 @@ default:
             target_type: media
         header: 'October 1, 2025'
         link:
-          uri: 'internal:/contact'
+          uri: 'internal:/blog'
           options: {  }
     -
       parent_uuid: 74c62455-a6cb-4bf2-b070-f0581b7069f9
@@ -526,7 +555,7 @@ default:
             target_type: media
         header: 'January 1, 2024'
         link:
-          uri: 'internal:/contact'
+          uri: 'internal:/blog'
           options: {  }
     -
       parent_uuid: d6d54cce-f4b0-42a6-a1df-bec4cc0b74f5
@@ -548,7 +577,7 @@ default:
         end_date: '26'
         full_dates: '1pm - 3pm'
         url:
-          uri: 'internal:/events/annual-conference-2024'
+          uri: 'internal:/news-and-events'
           options: {  }
         event_title: 'Student Government Meeting'
     -
@@ -561,7 +590,7 @@ default:
         end_date: '15'
         full_dates: '10am to 12pm'
         url:
-          uri: 'internal:/events/annual-conference-2024'
+          uri: 'internal:/news-and-events'
           options: {  }
         event_title: 'Outdoor Movie Night on Campus'
     -
@@ -574,7 +603,7 @@ default:
         end_date: '02'
         full_dates: '10am to 8pm'
         url:
-          uri: 'internal:/events/annual-conference-2024'
+          uri: 'internal:/news-and-events'
           options: {  }
         event_title: 'Campus Sustainability Fair'
     -
@@ -706,7 +735,7 @@ default:
       inputs:
         text: 'Explore Resources'
         url:
-          uri: 'internal:/'
+          uri: 'internal:/student-life'
           options: {  }
         variant: primary
         alignment: center
@@ -785,7 +814,7 @@ default:
         is_image_circle: false
         link_text: 'Clubs & Organizations'
         link_url:
-          uri: 'internal:/'
+          uri: 'internal:/student-life'
           options: {  }
         link_style: default
     -
@@ -801,7 +830,7 @@ default:
         is_image_circle: false
         link_text: 'Sports & Fitness'
         link_url:
-          uri: 'internal:/'
+          uri: 'internal:/student-life'
           options: {  }
         link_style: default
     -
@@ -817,7 +846,7 @@ default:
         is_image_circle: false
         link_text: Volunteer
         link_url:
-          uri: 'internal:/'
+          uri: 'internal:/student-life'
           options: {  }
         link_style: default
   path:

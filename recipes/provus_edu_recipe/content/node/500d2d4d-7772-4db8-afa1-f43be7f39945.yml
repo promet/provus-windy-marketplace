@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'Summer Concert Series Returns to Windy City Community College'
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /summer-concert-series-returns-windy-city-community-college
+      alias: /news/summer-concert-series-returns-windy-city-community-college
       langcode: en
   field_content:
     -
