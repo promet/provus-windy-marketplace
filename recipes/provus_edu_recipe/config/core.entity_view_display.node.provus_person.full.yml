@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.full
     - field.field.node.provus_person.field_content
     - field.field.node.provus_person.field_featured_image
     - field.field.node.provus_person.field_provus_email
@@ -13,12 +13,17 @@ dependencies:
     - field.field.node.provus_person.field_provus_titles
     - node.type.provus_person
   module:
+    - layout_builder
     - text
     - user
-id: node.provus_person.teaser
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.provus_person.full
 targetEntityType: node
 bundle: provus_person
-mode: teaser
+mode: full
 content:
   field_content:
     type: text_default
@@ -31,10 +36,41 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: medium
+      view_mode: default
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_provus_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_provus_fname:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_provus_lname:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_provus_telephone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_provus_titles:
     type: string
@@ -42,14 +78,10 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 6
     region: content
 hidden:
   addtoany: true
-  field_provus_email: true
-  field_provus_fname: true
-  field_provus_lname: true
   field_provus_person_category: true
-  field_provus_telephone: true
   links: true
   search_api_excerpt: true
