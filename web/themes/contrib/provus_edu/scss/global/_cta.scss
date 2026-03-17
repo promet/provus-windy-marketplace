@@ -1,7 +1,4 @@
 .block-provus-cta .cta-wrapper {
-
-
-
   .cta-title {
     @include text-style-headline-h-2;
   }
@@ -16,6 +13,10 @@
     &.has-bg-image .cta-bg-image-container::before {
       background: $background-colors-background-dark;
       opacity: 0.5;
+    }
+
+    .cta-links .btn.btn-primary {
+      @include text-style-button-secondary;
     }
   }
 
@@ -33,24 +34,6 @@
 
     .cta-title {
       color: $primary-colors-primary !important;
-    }
-
-    .cta-links .btn.btn-primary {
-      background-color: $background-colors-background-white;
-
-      &:hover {
-        box-shadow: none;
-        border: 0;
-      }
-
-      &:active {
-        color: $text-colors-text-primary;
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-      }
     }
   }
 
