@@ -340,7 +340,7 @@ config:
     system.site:
       simpleConfigUpdate:
         langcode: en
-        name: 'Drush Site-Install'
+        name: 'Provus Edu'
         mail: admin@example.com
         slogan: ''
         page:
