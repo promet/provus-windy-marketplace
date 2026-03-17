@@ -131,7 +131,7 @@ default:
       inputs:
         text:
           value: '<p>At Windy City Community College, we believe in making quality education accessible and affordable for everyone. Explore our straightforward tuition and fees structure designed to fit your budget and educational goals.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       uuid: 78bc4698-2831-4c8e-8244-de5b76d21914
       component_id: sdc.provus_base_theme.container
@@ -285,7 +285,7 @@ default:
       inputs:
         text:
           value: "<p>We’re here to help you reduce the cost of your education!</p><p>Federal Financial Aid: Apply at <a href=\"https://FAFSA.gov%E2%80%A8/\"><u>FAFSA.gov\L</u></a></p><p>Scholarships: Explore a variety of merit- and need-based scholarships on our Scholarships Page\L</p><p>Grants: Learn more about state and federal grants available to eligible students</p>"
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 6d8b8d4b-e71e-40dd-8bfb-3dcbe3d5eab9
       slot: column_2
@@ -375,7 +375,7 @@ default:
       inputs:
         text:
           value: '<p>Our Student Accounts Office is here to answer your questions about tuition, fees, or payment options.<br><br>Phone: <a href="tel:+1 (773)-525-8255"><u>(773)-525-8255</u></a><br><br>Email: <a href="mailto:ignite@prometsource.com"><u>ignite@prometsource.com</u></a><br><br>Office Hours: Monday–Friday, 9:00 AM – 5:00 PM CT</p>'
-          format: canvas_html_block
+          format: canvas_full_html
   path:
     -
       alias: /tuition-fees

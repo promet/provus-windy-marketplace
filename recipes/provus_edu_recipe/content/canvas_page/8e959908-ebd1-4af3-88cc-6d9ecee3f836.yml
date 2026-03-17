@@ -33,7 +33,7 @@ default:
         title: 'Finding the Right Education for You'
         body:
           value: '<p><strong>Explore degree and certificate programs that match your goals and ambitions</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: 37382dc2-912f-4475-a4d0-9bbb1562f5dd
@@ -217,7 +217,7 @@ default:
       inputs:
         text:
           value: "<p>Graduates of the BAS in Business are prepared for leadership roles in various industries, including:</p><p>✓ Marketing and Sales\L</p><p>✓ Human Resources\L</p><p>✓ Financial Analysis\L</p><p>✓ Entrepreneurial Ventures</p><p><strong>Median Salary: $70,000+ annually</strong> (varies by role and experience)</p>"
-          format: canvas_html_block
+          format: canvas_full_html
     -
       uuid: 89eb41a3-ed98-483f-8a0c-36cd8c1e8239
       component_id: sdc.provus_base_theme.container
@@ -281,7 +281,7 @@ default:
       inputs:
         text:
           value: '<p>To qualify for the program, applicants must:<br><br>Hold an associate degree or have completed at least 60 transferable credits.<br>Submit official transcripts from previous institutions.<br>Complete an application and submit a personal statement.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: b4e80f2d-8bc9-4a6f-a87d-d720d2c2e917
       slot: column_1
@@ -423,7 +423,7 @@ default:
         title: 'Become a Member'
         body:
           value: '<p>Join our student community today and unlock member perks. Get updates, useful resources, and invites to exclusive sessions. Meet peers, share ideas, and build skills together every week. Sign up now and belong with us.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
         background_color: Secondary
     -
       parent_uuid: 0af84e71-a81d-4f78-b05d-8fac5e465887

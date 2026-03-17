@@ -33,7 +33,7 @@ default:
         title: 'Meet Our Dedicated Faculty and Leadership Team'
         body:
           value: '<p><strong>Learn about the passionate professionals who guide Windy City Community College towards academic excellence and community growth.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: a111c616-c38a-48cd-8fc4-30ae046373f5
@@ -119,7 +119,7 @@ default:
       inputs:
         text:
           value: '<p>At Windy City Community College, our leadership team is dedicated to providing innovative solutions and fostering an environment of academic success, inclusivity, and community service. Our faculty members and administrative leaders work tirelessly to ensure that students receive a world-class education, preparing them for both professional success and personal growth.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       uuid: 8b2c4c73-b202-4009-806b-25f3891a4db8
       component_id: sdc.bootstrap_barrio.container
@@ -402,7 +402,7 @@ default:
       inputs:
         text:
           value: '<p>For any questions or more information about our faculty or leadership, feel free to reach out directly. We’re here to help!</p><p>Contact Information:<br><br>General Inquiries: <a href="mailto:ignite@prometsource.com"><u>ignite@prometsource.com&nbsp;</u></a><br>Leadership Team: <a href="mailto:ignite@prometsource.com"><u>ignite@prometsource.com&nbsp;</u></a><br>Office Hours: Monday – Friday, 9 AM – 5 PM</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: d1758f2f-4f4c-42c1-ba5e-f908aa95444f
       slot: column_2

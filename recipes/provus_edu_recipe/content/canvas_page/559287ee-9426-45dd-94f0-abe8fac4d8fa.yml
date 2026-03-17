@@ -29,7 +29,7 @@ default:
         title: 'Get in Touch with Windy City Community College'
         body:
           value: '<p><strong>Whether you have questions about admissions, programs, or campus life, we’re here to help.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: 3133db7f-fc9f-40b2-9509-ae9b3eab5733
@@ -115,7 +115,7 @@ default:
       inputs:
         text:
           value: '<p>📍 Address:<br>4809 N. Ravenswood Ave. Suite 126,&nbsp;<br>Chicago, IL 60640<br><br>📞 Phone:<br>(773)-525-8255<br><br>✉️ Email:<br>ignite@prometsource.com&nbsp;<br><br>🕒 Hours of Operation:<br>Monday–Friday: 8:00 AM – 5:00 PM CT<br>Saturday: 9:00 AM – 2:00 PM CT</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       uuid: 1ceef973-053a-4d0d-bbf8-9b8b4d3ecaca
       component_id: sdc.provus_base_theme.container
