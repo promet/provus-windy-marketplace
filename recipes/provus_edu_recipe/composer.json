@@ -59,12 +59,12 @@
         "drupal/provus_canvas_ajax_fix": "*",
         "drupal/provus_events": "*",
         "drupal/provus_mega_menu": "*",
-        "drupal/easy_email_theme": "^1.1.0",
-        "drupal/bootstrap_barrio": "*",
         "drupal/blank": "*",
+        "drupal/bootstrap_barrio": "*",
+        "drupal/easy_email_theme": "^1.1.0",
         "drupal/gin": "^5.0.12",
-        "drupal/provus_edu": "*",
-        "drupal/provus_base_theme": "*"
+        "drupal/provus_base_theme": "*",
+        "drupal/provus_edu": "*"
     },
     "type": "drupal-recipe",
     "name": "drupal/provus_edu"

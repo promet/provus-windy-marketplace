@@ -114,6 +114,7 @@ install:
   - view_password
   - views_bootstrap
   - webform
+  - webform_ui
   - provus_canvas_ajax_fix
   - provus_events
   - provus_mega_menu

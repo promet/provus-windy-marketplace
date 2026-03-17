@@ -5,6 +5,11 @@ dependencies:
     - options
   theme:
     - provus_base_theme
+label: Divider
+id: sdc.provus_base_theme.divider
+source: sdc
+source_local_id: 'provus_base_theme:divider'
+provider: provus_base_theme
 active_version: 38d5e7ffecbd2aa2
 versioned_properties:
   active:
@@ -84,8 +89,3 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Divider
-id: sdc.provus_base_theme.divider
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:divider'
