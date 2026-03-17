@@ -142,6 +142,13 @@ default:
     -
       parent_uuid: f186d302-3491-4270-b27e-d54aeb63c072
       slot: column_1
+      uuid: 0a7fdce5-f523-478d-abc6-92ae46764299
+      component_id: sdc.provus_base_theme.divider
+      inputs:
+        padding_bottom: pb-5
+    -
+      parent_uuid: f186d302-3491-4270-b27e-d54aeb63c072
+      slot: column_1
       uuid: c82209f5-37c2-4220-b22d-0c7b841b5079
       component_id: sdc.provus_base_theme.heading
       inputs:

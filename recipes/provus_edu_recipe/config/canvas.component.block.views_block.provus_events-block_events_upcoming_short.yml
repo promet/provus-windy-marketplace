@@ -5,6 +5,11 @@ dependencies:
     - views.view.provus_events
   module:
     - views
+label: 'Provus Events: Upcoming Events List short'
+id: block.views_block.provus_events-block_events_upcoming_short
+source: block
+source_local_id: 'views_block:provus_events-block_events_upcoming_short'
+provider: views
 active_version: 84c375cb405ccb4c
 versioned_properties:
   active:
@@ -29,8 +34,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'Provus Events: Upcoming Events List short'
-id: block.views_block.provus_events-block_events_upcoming_short
-provider: views
-source: block
-source_local_id: 'views_block:provus_events-block_events_upcoming_short'
