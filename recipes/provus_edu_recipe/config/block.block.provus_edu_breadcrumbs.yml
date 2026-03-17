@@ -16,8 +16,4 @@ settings:
   label: Breadcrumbs
   label_display: '0'
   provider: system
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: "/search\r\n/events/*\r\n/blog\r\n/blog/*\r\n/news\r\n/news/*"
+visibility: {  }

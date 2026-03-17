@@ -29,33 +29,35 @@
  * @ingroup themeable
  */
 #}
+
 {%
   set classes = [
   'mb-4',
   'card-wrapper',
   'provus-card-tall',
-  'provus-person-card'
+  'provus-person-card',
+  'person--teaser'
 ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-      <div{{ content_attributes.addClass('card') }}>
-        <div class="card-wrapper">
-          <div class="card-img-top">
-            {{content.field_provus_media_image}}
-          </div>
-          <div class="card-body">
-            <div class="card-title">{{ label }}</div>
-              <div class="card-text">
-                <div class="title">{{ content.field_provus_titles }}</div>
-                <div>{{ content.body }}</div>
-                <div class="link">
-                  <a href="{{ url }}">Full Bio</a>
-                </div>
-              </div>
+    <div{{ content_attributes.addClass('card') }}>
+      <div class="card-wrapper">
+        <div class="card-img-top">
+          {{content.field_featured_image}}
+        </div>
+        <div class="card-body">
+          <div class="card-title">{{ label }}</div>
+          <div class="card-text">
+            <div class="title">{{ content.field_provus_titles }}</div>
+            <div>{{ content.field_content }}</div>
+            <div class="link">
+              <a href="{{ url }}">{{ 'Full Bio'|t }}</a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
   {% endblock %}
 </div>

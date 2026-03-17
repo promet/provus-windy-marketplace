@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card_tall
     - core.entity_view_mode.node.teaser
     - node.type.provus_person
   module:
@@ -200,10 +201,11 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Faculty
     display_plugin: block
     position: 2
     display_options:
+      title: Faculty
       fields:
         title:
           id: title
@@ -274,14 +276,30 @@ display:
           offset: 0
           items_per_page: 5
       style:
-        type: default
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          grid_class: ''
+          col_xs: col-1
+          col_sm: col-sm-1
+          col_md: col-md-4
+          col_lg: col-lg-4
+          col_xl: col-xl-4
+          col_xxl: col-xxl-3
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       defaults:
+        title: false
         pager: false
         style: false
         row: false
         fields: false
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -293,10 +311,30 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: People
     display_plugin: page
     position: 1
     display_options:
+      style:
+        type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          col_xs: none
+          col_sm: none
+          col_md: col-md-12
+          col_lg: col-lg-4
+          col_xl: none
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card_tall
+      defaults:
+        style: false
+        row: false
+      display_description: ''
       display_extenders: {  }
       path: people
     cache_metadata:

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.card_tall
     - field.field.node.provus_person.field_content
     - field.field.node.provus_person.field_featured_image
     - field.field.node.provus_person.field_provus_email
@@ -13,20 +13,17 @@ dependencies:
     - field.field.node.provus_person.field_provus_titles
     - node.type.provus_person
   module:
-    - text
+    - layout_builder
     - user
-id: node.provus_person.teaser
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.provus_person.card_tall
 targetEntityType: node
 bundle: provus_person
-mode: teaser
+mode: card_tall
 content:
-  field_content:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     label: hidden
@@ -35,6 +32,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_provus_telephone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_provus_titles:
     type: string
@@ -46,10 +51,10 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_content: true
   field_provus_email: true
   field_provus_fname: true
   field_provus_lname: true
   field_provus_person_category: true
-  field_provus_telephone: true
   links: true
   search_api_excerpt: true
