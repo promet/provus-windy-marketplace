@@ -41,7 +41,7 @@ default:
         title: 'Your Future Starts Here'
         body:
           value: '<p><strong>Discover your potential at Windy City Community College.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: 244ad7b5-af27-4a99-99ae-b5480ff12d6d
@@ -138,7 +138,7 @@ default:
       inputs:
         text:
           value: '<p class="text-align-center">At Windy City Community College, we believe education is the key to unlocking a brighter future. As a cornerstone of learning and growth, we provide accessible, high-quality programs designed to meet the diverse needs of our students and the evolving demands of the workforce.</p><p><br>&nbsp;</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: f186d302-3491-4270-b27e-d54aeb63c072
       slot: column_1
@@ -227,7 +227,7 @@ default:
       inputs:
         text:
           value: '<p class="text-align-center">Join our inclusive and vibrant community, where you’ll gain the skills, knowledge, and confidence to thrive.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: c9abfd68-54ae-40d6-b06d-fb580d0881fb
       slot: column_1
@@ -423,7 +423,7 @@ default:
       inputs:
         text:
           value: '<p>As a community-driven college, we’re proud to play a pivotal role in the economic and cultural development of our region. By partnering with industries, nonprofits, and government organizations, we help our students and the community thrive together.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       uuid: 3a1b50e2-dc42-4d06-a5f8-78b5fca4d1b9
       component_id: sdc.provus_base_theme.container
@@ -474,7 +474,7 @@ default:
         title: 'Become a Member'
         body:
           value: '<p>Join our student community today and unlock member perks. Get updates, useful resources, and invites to exclusive sessions. Meet peers, share ideas, and build skills together every week. Sign up now and belong with us.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
         background_color: Secondary
     -
       parent_uuid: d7e4ee63-f8d1-47a5-a785-df0be8e9564f

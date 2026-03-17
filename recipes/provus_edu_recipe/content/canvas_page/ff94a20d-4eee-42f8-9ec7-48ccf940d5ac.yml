@@ -61,7 +61,7 @@ default:
         title: 'Empowering Futures, One Step at a Time'
         body:
           value: '<p><strong>Explore over 100 programs designed to help you succeed in academics, careers, and beyond.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: 9b05d50f-b745-485a-80ff-e4cd615add31
@@ -144,7 +144,7 @@ default:
       inputs:
         text:
           value: '<p>At Windy City Community College, we’re more than just a place to learn—we’re a community dedicated to your success. Whether you’re pursuing a degree, earning a certification, or exploring a new passion, you’ll find the resources, support, and opportunities you need to thrive.</p><p>Our innovative programs are designed to fit your life, with flexible schedules, online and hybrid options, and personalized support every step of the way. Join a diverse and inclusive campus where students of all backgrounds come together to achieve their goals, build meaningful connections, and create a brighter future.</p><p>Discover what’s possible at Windy City Community College. Your journey starts here!</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: ec12bcaf-c027-40aa-8e45-b9e7cffb03fa
       slot: column_1
@@ -463,7 +463,7 @@ default:
       inputs:
         text:
           value: '<p>At Windy City Community College, we’re committed to helping you achieve your dreams. With over 100 affordable programs, flexible class schedules, and a supportive community, we provide the tools and opportunities you need to thrive. Whether you''re starting your academic journey, advancing your career, or exploring new interests, Windy City Community College is the perfect place to begin. Join us and take the first step toward a brighter future!</p><p><a href="https://windy.provusdemo.com/admissions"><strong>HOW TO APPLY</strong></a></p><p><a href="https://windy.provusdemo.com/admissions"><strong>FINANCIAL AID OPTIONS</strong></a></p><p><a href="https://windy.provusdemo.com/contact"><strong>SCHEDULE A TOUR</strong></a></p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 5d11a23b-bec9-4c47-87d2-2cc23bff0c1e
       slot: column_2

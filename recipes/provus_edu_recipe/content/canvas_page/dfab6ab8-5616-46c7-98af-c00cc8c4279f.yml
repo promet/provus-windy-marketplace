@@ -31,7 +31,7 @@ default:
         title: Admissions
         body:
           value: '<p><strong>Find everything you need to apply, enroll, and take the first step toward your future at Windy City Community College.</strong></p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: 11d193dc-502f-45bd-8a31-f9eb665de18d
@@ -131,7 +131,7 @@ default:
       inputs:
         text:
           value: '<p>Welcome to Windy City Community College! We’re excited that you’re considering joining our vibrant community of learners, innovators, and achievers. Whether you’re starting your academic journey, seeking to transfer, or returning to education, we’re here to help you succeed.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 95a4ad6a-bc38-47a4-8b92-95e7dc1c7a2f
       slot: column_2
@@ -346,7 +346,7 @@ default:
         title: 'Visit Campus'
         body:
           value: '<p>Come see what makes Windy City Community College special! Schedule a campus tour and experience.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
         background_color: Secondary
     -
       parent_uuid: f437cd89-25aa-4e05-981a-2d2bfbe16442
@@ -437,7 +437,7 @@ default:
       inputs:
         text:
           value: '<p>Got questions? We’re here to help!<br><br>Phone: <a href="tel:+1 (773)-525-8255"><u>(773)-525-8255</u></a><br><br>Email: <a href="mailto:ignite@prometsource.com"><u>ignite@prometsource.com</u></a><br><br>Address: 4809 N. Ravenswood Ave. Suite 126, Chicago, IL 60640<br><br>Start your journey today and discover how Windy City Community College can help you achieve your dreams!</p>'
-          format: canvas_html_block
+          format: canvas_full_html
   path:
     -
       alias: /admissions

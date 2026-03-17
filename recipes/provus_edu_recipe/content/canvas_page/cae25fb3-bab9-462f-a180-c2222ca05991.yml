@@ -117,7 +117,7 @@ default:
       inputs:
         text:
           value: '<p class="text-align-center">Get involved with one of our many student-led clubs and organizations. From cultural and academic groups to special interest and volunteer clubs, there’s a place for you to connect with peers who share your passions.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 7af1f7bc-8e96-4b40-a298-6b09ae214f8e
       slot: column_1
@@ -512,7 +512,7 @@ default:
       inputs:
         text:
           value: "<p>Stay active and have fun with our recreational activities and athletic programs. From intramural sports to competitive teams, we offer plenty of ways to play, compete, and stay fit.\L</p><p><br>Facilities Include:</p><ul><li data-list-item-id=\"e7fc90a96666526ff30fb99e40708d85b\">State-of-the-art fitness center</li><li data-list-item-id=\"eab9e0172ab0fe0c88842fbd14afe4273\">Outdoor sports fields</li><li data-list-item-id=\"e5adc4a4f616882ce840a39ab679f10fb\">Basketball and volleyball courts</li></ul>"
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 41cd25fc-95c4-4cbc-afc8-6976e9b2787f
       slot: column_2
@@ -586,7 +586,7 @@ default:
       inputs:
         text:
           value: '<p class="text-align-center">At Windy City Community College, we celebrate diversity and foster an inclusive campus where everyone feels welcomed and valued. Through events, workshops, and support services, we embrace the unique perspectives that make our community stronger.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 09f751bb-9b93-4f4a-9372-c8c82c3073a2
       slot: column_1
@@ -651,7 +651,7 @@ default:
         title: 'Become a Member'
         body:
           value: '<p>Join our student community today and unlock member perks. Get updates, useful resources, and invites to exclusive sessions. Meet peers, share ideas, and build skills together every week. Sign up now and belong with us.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
         background_color: Secondary
     -
       parent_uuid: 0af84e71-a81d-4f78-b05d-8fac5e465887

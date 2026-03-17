@@ -35,7 +35,7 @@ default:
         title: 'Your Goals. Your Path. Your Future.'
         body:
           value: '<p>Discover the academic opportunities waiting for you at Windy City Community College. From career-focused programs to transfer pathways, we’re here to help you achieve your dreams.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
         image_url:
           CANVAS_ENTITY_REFERENCE:
             target_uuid: d6722984-821a-48cd-b184-926826f7f4b6
@@ -136,7 +136,7 @@ default:
       inputs:
         text:
           value: '<p>At Windy City Community College, we’re dedicated to providing an education that’s as unique as your aspirations. With a diverse selection of programs, flexible learning options, and unparalleled support, we empower students to excel in the classroom and beyond.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 95a4ad6a-bc38-47a4-8b92-95e7dc1c7a2f
       slot: column_2
@@ -208,7 +208,7 @@ default:
       inputs:
         text:
           value: '<p class="text-align-center">Explore our diverse range of programs designed to meet the needs of today’s students and tomorrow’s workforce.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
     -
       parent_uuid: 3d9202a5-1a70-40b4-9edb-5ff98ea135e9
       slot: column_1
@@ -552,7 +552,7 @@ default:
         title: 'Become a Member'
         body:
           value: '<p>Join our student community today and unlock member perks. Get updates, useful resources, and invites to exclusive sessions. Meet peers, share ideas, and build skills together every week. Sign up now and belong with us.</p>'
-          format: canvas_html_block
+          format: canvas_full_html
         background_color: Secondary
     -
       parent_uuid: f437cd89-25aa-4e05-981a-2d2bfbe16442
