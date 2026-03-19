@@ -56,7 +56,6 @@
         "drupal/view_password": "^6.0.5",
         "drupal/views_bootstrap": "^5.5.0-rc3",
         "drupal/webform": "^6.3.0-beta8",
-        "drupal/provus_canvas_ajax_fix": "*",
         "drupal/provus_events": "*",
         "drupal/provus_mega_menu": "*",
         "drupal/blank": "*",

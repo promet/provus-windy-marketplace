@@ -1,7 +1,5 @@
 <?php
 
-use Drupal\Core\Extension\ExtensionPathResolver;
-
 
 /**
  * @file
@@ -26,6 +24,33 @@ function provus_edu_preprocess_block(array &$variables): void {
     base_path() . $theme_path . '/logo-inverse.png';
 
   $variables['footer_branding_logo_alt'] = t('Home');
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function provus_edu_library_info_alter(array &$libraries, string $extension): void {
+  if ($extension !== 'canvas' || !isset($libraries['ajax.custom'])) {
+    return;
+  }
+
+  if (!isset($libraries['ajax.custom']['dependencies']) || !is_array($libraries['ajax.custom']['dependencies'])) {
+    $libraries['ajax.custom']['dependencies'] = [];
+  }
+
+  $extra_dependencies = [
+    'core/drupalSettings',
+    'core/once',
+    'core/drupal.ajax',
+    'core/drupal.dialog',
+    'core/drupal.dialog.ajax',
+  ];
+
+  foreach ($extra_dependencies as $dependency) {
+    if (!in_array($dependency, $libraries['ajax.custom']['dependencies'], TRUE)) {
+      $libraries['ajax.custom']['dependencies'][] = $dependency;
+    }
+  }
 }
 
 /**
