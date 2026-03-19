@@ -115,18 +115,16 @@ install:
   - views_bootstrap
   - webform
   - webform_ui
-  - provus_events
   - provus_mega_menu
   - claro
   - stable9
   - stark
   - canvas_stark
-  - blank
   - bootstrap_barrio
   - easy_email_theme
   - gin
   - provus_base_theme
-  - provus_edu
+  - provus_edu_theme
 config:
   actions:
     core.date_format.fallback:
@@ -370,7 +368,7 @@ config:
     system.theme:
       simpleConfigUpdate:
         admin: gin
-        default: provus_edu
+        default: provus_edu_theme
     user.flood:
       simpleConfigUpdate:
         uid_only: false
@@ -500,28 +498,7 @@ config:
         is_admin: false
         permissions:
           - 'access content'
-          - 'access content'
-          - 'access content'
-          - 'access content'
-          - 'access content'
-          - 'access content'
-          - 'search content'
-          - 'search content'
-          - 'search content'
-          - 'search content'
-          - 'search content'
-          - 'search content'
           - 'use klaro'
-          - 'use klaro'
-          - 'use klaro'
-          - 'use klaro'
-          - 'use klaro'
-          - 'use klaro'
-          - 'view media'
-          - 'view media'
-          - 'view media'
-          - 'view media'
-          - 'view media'
           - 'view media'
     user.role.authenticated:
       setProperties:

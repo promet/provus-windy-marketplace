@@ -7,7 +7,6 @@ dependencies:
     - taxonomy.vocabulary.provus_category_program_level
   module:
     - better_exposed_filters
-    - entityreference_filter
     - node
     - taxonomy
     - user
@@ -201,50 +200,6 @@ display:
           plugin_id: bundle
           value:
             provus_academic_program: provus_academic_program
-        field_provus_ap_department_target_id_entityreference_filter:
-          id: field_provus_ap_department_target_id_entityreference_filter
-          table: node__field_provus_ap_department
-          field: field_provus_ap_department_target_id_entityreference_filter
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entityreference_filter_view_result
-          operator: or
-          value: null
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_provus_ap_department_target_id_entityreference_filter_op
-            label: Department
-            description: ''
-            use_operator: false
-            operator: field_provus_ap_department_target_id_entityreference_filter_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: dept_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          reference_display: 'academic_programs:entity_reference_1'
-          reference_arguments: ''
-          hide_empty_filter: true
         field_provus_ap_program_level_target_id:
           id: field_provus_ap_program_level_target_id
           table: node__field_provus_ap_program_level
@@ -324,11 +279,9 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - node_list
+      tags: {  }
   block_1:
     id: block_1
     display_title: Block
@@ -515,11 +468,9 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - node_list
+      tags: {  }
   entity_reference_1:
     id: entity_reference_1
     display_title: 'Entity Reference - Departments'

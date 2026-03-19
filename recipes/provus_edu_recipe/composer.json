@@ -1,4 +1,8 @@
 {
+    "name": "drupal/provus_edu_recipe",
+    "description": "Drupal CMS site template for Provus Edu, built with Provus Edu components.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
     "require": {
         "drupal/core": "^11.3.5",
         "drupal/addtoany": "^2.0.7",
@@ -56,15 +60,11 @@
         "drupal/view_password": "^6.0.5",
         "drupal/views_bootstrap": "^5.5.0-rc3",
         "drupal/webform": "^6.3.0-beta8",
-        "drupal/provus_events": "*",
-        "drupal/provus_mega_menu": "*",
-        "drupal/blank": "*",
-        "drupal/bootstrap_barrio": "*",
+        "drupal/provus_base_theme": "^1.0@beta",
+        "drupal/provus_edu_theme": "^1.0@beta",
+        "drupal/provus_mega_menu": "^1.0@beta",
+        "drupal/bootstrap_barrio": "^5.5",
         "drupal/easy_email_theme": "^1.1.0",
-        "drupal/gin": "^5.0.12",
-        "drupal/provus_base_theme": "*",
-        "drupal/provus_edu": "*"
-    },
-    "type": "drupal-recipe",
-    "name": "drupal/provus_edu"
+        "drupal/gin": "^5.0.12"
+    }
 }
