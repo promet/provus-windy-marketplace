@@ -5,6 +5,11 @@ dependencies:
     - views.view.provus_people
   module:
     - views
+label: 'People: Faculty'
+id: block.views_block.provus_people-block_1
+source: block
+source_local_id: 'views_block:provus_people-block_1'
+provider: views
 active_version: 3d1c372e9fbeb340
 versioned_properties:
   active:
@@ -29,8 +34,3 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: 'People: Faculty'
-id: block.views_block.provus_people-block_1
-provider: views
-source: block
-source_local_id: 'views_block:provus_people-block_1'

@@ -32,7 +32,7 @@ default:
       value: true
   path:
     -
-      alias: /emily-parker
+      alias: /people/emily-parker
       langcode: en
   field_content:
     -

@@ -39,6 +39,6 @@ regions:
   footer_fifth: 'Footer fifth'
 
 # Information added by Drupal.org packaging script on 2026-03-19
-version: '1.0.0-beta1'
+version: '1.0.0'
 project: 'provus_edu_theme'
-datestamp: 1773889409
+datestamp: 1773898528

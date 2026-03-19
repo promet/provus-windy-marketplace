@@ -9,6 +9,11 @@ dependencies:
     - text
   theme:
     - provus_base_theme
+label: 'Google Map'
+id: sdc.provus_base_theme.google_map
+source: sdc
+source_local_id: 'provus_base_theme:google_map'
+provider: provus_base_theme
 active_version: 546ab730948f3472
 versioned_properties:
   active:
@@ -187,8 +192,3 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Google Map'
-id: sdc.provus_base_theme.google_map
-provider: provus_base_theme
-source: sdc
-source_local_id: 'provus_base_theme:google_map'

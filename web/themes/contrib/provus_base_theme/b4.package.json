@@ -1,7 +1,7 @@
 {
-  "name": "barrio_sass",
+  "name": "provus_base_theme",
   "version": "4.4",
-  "description": "Barrio SASS implementation",
+  "description": "provus_base_theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,8 @@
     "Drupal",
     "Barrio"
   ],
-  "author": "@hatuhay",
-  "license": "MIT",
+  "author": "@nx2611",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.3.1",

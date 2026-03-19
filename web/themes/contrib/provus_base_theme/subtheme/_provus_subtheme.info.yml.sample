@@ -1,6 +1,6 @@
 name: Provus Subtheme
 type: theme
-description: 'SASS starter kit for a Provus SubTheme. This is an experimental version. You may use at your own risk.'
+description: 'SASS starter kit for a Provus SubTheme.'
 core_version_requirement: ^11
 base theme: provus_base_theme
 

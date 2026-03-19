@@ -1,6 +1,6 @@
-name: Provus Base Theme
+name: provus_base_theme
 type: theme
-description: 'SASS starter kit for a Bootstrap Barrio SubTheme.'
+description: 'provus_base_theme'
 core_version_requirement: ^11
 base theme: bootstrap_barrio
 
@@ -33,3 +33,8 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
+
+# Information added by Drupal.org packaging script on 2026-03-19
+version: '1.0.0'
+project: 'provus_base_theme'
+datestamp: 1773898504
