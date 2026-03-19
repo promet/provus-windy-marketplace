@@ -114,4 +114,8 @@ props:
       title: 'Content attributes'
       description: 'Drupal template function placeholder — no content is required here. Please leave this section blank.'
       default: ''
-    
+
+slots:
+  buttons:
+    title: Additional Buttons
+    description: Additional button components displayed in the card footer.
