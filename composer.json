@@ -97,7 +97,7 @@
         "drupal/twig_tweak": "^3.4",
         "drupal/ui_icons": "^1.1",
         "drupal/view_password": "^6",
-        "drupal/views_bootstrap": "^5.5@RC",
+        "drupal/views_bootstrap": "^5.4",
         "drupal/views_infinite_scroll": "^2",
         "drupal/webform": "^6.3-beta3",
         "drupal/yoast_seo": "^2.1",
