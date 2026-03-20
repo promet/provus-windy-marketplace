@@ -71,6 +71,9 @@ else
   time drush -n updb
 fi
 
+#== Install Provus EDU Recipe.
+drush si recipes/provus_edu_recipe -y
+
 #== Warm up caches.
 echo
 echo 'Run cron.'
