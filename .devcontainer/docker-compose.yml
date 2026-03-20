@@ -3,7 +3,7 @@ include:
 
 services:
   app:
-    image: devpanel/php:8.3-base-rc
+    image: php:8.4-apache
     environment:
       DP_APP_ID: 'drupalforge'
       APP_ROOT: '/var/www/html'        
