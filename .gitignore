@@ -1,9 +1,19 @@
+/.devpanel/dumps/
+/.devpanel/salt.txt
+/.editorconfig
+/.gitattributes
+/config/sync/.htaccess
+/logs/
+/private/
+
 # Dependencies managed by Composer.
-# Dependencies managed by Composer.
-/recipes/drupal*
-/recipes/byte
-/recipes/easy*
+/CONTRIBUTING.md
+/patches.lock.json
+/recipes/
+!/recipes/provus_edu_recipe/
 /vendor
+/web/
+!/web/modules/custom/
 
 # macOS
 .DS_Store

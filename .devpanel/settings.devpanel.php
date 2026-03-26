@@ -38,3 +38,4 @@ if (!empty($realpath)) {
   $settings['file_private_path'] = $realpath;
 }
 $settings['trusted_host_patterns'][] = getenv('DP_HOSTNAME') ?: '.*';
+$settings['testing_package_manager'] = TRUE;
