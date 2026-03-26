@@ -131,11 +131,13 @@
                 "web-root": "web/"
             },
             "file-mapping": {
+                "[web-root]/sites/default/settings.php": {
+                    "path": "web/core/assets/scaffold/files/default.settings.php",
+                    "overwrite": false
+                },
                 "[web-root]/example.gitignore": false
             },
-            "allowed-packages": [
-                "drupal/drupal_cms_seo_tools"
-            ]
+            "allowed-packages": ["drupal/drupal_cms_seo_tools"]
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
@@ -169,6 +171,7 @@
     "scripts": {
         "post-update-cmd": [
             "@php -r \"@unlink('vendor/bin/composer');\""
-        ]
+        ],
+        "post-drupal-scaffold-cmd": "cd web/sites/default && test -z \"$(grep 'include \\$devpanel_settings;' settings.php)\" && patch -Np1 -r /dev/null < $APP_ROOT/.devpanel/drupal-settings.patch || :"
     }
 }

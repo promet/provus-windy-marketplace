@@ -11,8 +11,6 @@ exec > >(tee $LOG_FILE) 2>&1
 TIMEFORMAT=%lR
 # For faster performance, don't audit dependencies automatically.
 export COMPOSER_NO_AUDIT=1
-# For faster performance, don't install dev dependencies.
-export COMPOSER_NO_DEV=1
 
 #== Remove root-owned files.
 echo
@@ -32,8 +30,7 @@ else
   time source .devpanel/composer_setup.sh
   echo
 fi
-# If update fails, change it to install.
-time composer -n update --no-dev --no-progress
+time composer -n install --no-progress
 
 #== Create the private files directory.
 if [ ! -d private ]; then
@@ -56,23 +53,35 @@ if [ ! -f .devpanel/salt.txt ]; then
   time openssl rand -hex 32 > .devpanel/salt.txt
 fi
 
-#== Install Drupal.
+#== Install Provus EDU.
 echo
 if [ -z "$(drush status --field=db-status)" ]; then
-  echo 'Install Drupal.'
-  time drush -n si
+  STATIC_FILES_DIR=$WEB_ROOT/sites/default/files
+  if [ ! -d "$STATIC_FILES_DIR" ]; then
+    echo 'Create the public files directory.'
+    time mkdir -p $STATIC_FILES_DIR
+  fi
+
+  echo
+  echo 'Install Provus EDU Recipe.'
+  if ! time drush -n si recipes/provus_edu_recipe; then
+    #== The recipe installation may fail due to a false writability check.
+    until time drush recipe ../recipes/provus_edu_recipe; do
+      :
+    done
+  fi
 
   echo
   echo 'Tell Automatic Updates about patches.'
   drush -n cset --input-format=yaml package_manager.settings additional_trusted_composer_plugins '["cweagans/composer-patches"]'
   time drush ev '\Drupal::moduleHandler()->invoke("automatic_updates", "modules_installed", [[], FALSE])'
+
+  echo
+  time drush cr
 else
   echo 'Update database.'
   time drush -n updb
 fi
-
-#== Install Provus EDU Recipe.
-drush si recipes/provus_edu_recipe -y
 
 #== Warm up caches.
 echo
