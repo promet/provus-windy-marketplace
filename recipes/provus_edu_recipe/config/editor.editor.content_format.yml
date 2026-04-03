@@ -63,7 +63,7 @@ settings:
           enabled: true
           provider: anthropic__claude-sonnet-4-5-20250929
           autocreate: false
-          tone_vocabulary: tags
+          tone_vocabulary: provus_category_tone
           use_description: true
         ai_ckeditor_translate:
           enabled: false
