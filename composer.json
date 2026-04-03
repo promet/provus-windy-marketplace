@@ -27,6 +27,7 @@
         "drupal/ai_provider_amazeeio": "^1.2.7",
         "drupal/ai_provider_anthropic": "^1.1",
         "drupal/ai_provider_openai": "^1.1",
+        "drupal/ai_seo": "^1.0",
         "drupal/automatic_updates": "^4.1",
         "drupal/autosave_form": "^1.10",
         "drupal/bpmn_io": "^3",

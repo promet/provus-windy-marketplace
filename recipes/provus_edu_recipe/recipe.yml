@@ -13,6 +13,7 @@ install:
   - ai_image_bulk_alt_text
   - ai_observability
   - ai_provider_anthropic
+  - ai_seo
   - announcements_feed
   - automated_cron
   - big_pipe
