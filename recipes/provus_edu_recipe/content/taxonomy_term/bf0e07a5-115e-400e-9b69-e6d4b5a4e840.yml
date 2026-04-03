@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: bf0e07a5-115e-400e-9b69-e6d4b5a4e840
+  bundle: provus_category_tone
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Energetic / Youthful'
+  description:
+    -
+      value: '<ul><li data-list-item-id="eb7576569b46b1c58aa1b02cf50eb152a">Casual, upbeat, sometimes playful</li><li data-list-item-id="ed85372a6cfa8c687dea72f7dc3ccbda7">Uses contractions and modern phrasing</li><li data-list-item-id="ea85c38a66daf4c264769291e42b5ae46">Highlights experiences and community</li></ul>'
+      format: content_format
+  weight:
+    -
+      value: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
