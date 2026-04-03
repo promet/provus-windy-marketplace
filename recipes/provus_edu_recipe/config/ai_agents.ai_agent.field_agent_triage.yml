@@ -1,9 +1,6 @@
-uuid: 6ea1fcc8-e00d-47aa-b494-61d56b4ce2e5
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: m8zBQbgujn2ApClmIwiPhrfE7T8Dq8-OUlRw5RM-C8Q
 id: field_agent_triage
 label: 'Field Agent'
 description: 'This is capable of adding, editing, informing, reordering or removing a field types to an existing Drupal entity type/bundles, lookup fields existing on entities and also change the form display and view display of the fields. Note that this does not generate entity type or bundles.'

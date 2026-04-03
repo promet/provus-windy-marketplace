@@ -1,9 +1,6 @@
-uuid: 96d54c20-5996-4636-a13a-c0668c089ea9
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: '-ihDyIymCzWvZWYuThoezYSlqGTDURDMOqdBXvj-l0g'
 id: content_type_agent_triage
 label: 'Content Type Agent'
 description: 'This is the initial agents for content type/node types, that can figure out if you are trying to create, edit, delete or ask questions about content types.'

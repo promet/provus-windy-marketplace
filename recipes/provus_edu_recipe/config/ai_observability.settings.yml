@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: of8eJeE-9g4TORUxeXH1EAwJWJdfn0HiUl1XCw0rOIc
 logging_enabled: true
 log_event_types:
   - Drupal\ai\Event\PreGenerateResponseEvent

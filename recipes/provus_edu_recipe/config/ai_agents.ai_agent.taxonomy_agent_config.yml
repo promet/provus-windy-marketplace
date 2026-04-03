@@ -1,9 +1,6 @@
-uuid: c990b5bf-6637-41cd-8e40-23e5165de5f9
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: lxWr7b_upTm90SNRMg1hCXYvlfpLwkM8VPImJEax7lo
 id: taxonomy_agent_config
 label: 'Taxonomy Agent'
 description: 'The taxonomy agent can generate and edit vocabularies, as well as create and edit taxonomy terms. It can also answer questions, and give suggestions on what taxonomy terms to create from a general question. Please do ask it multiple instructions at once, it can handle it.'

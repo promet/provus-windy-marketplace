@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: nlljsnKeLq1zcdYyjuQIO-_EDOzKH9T9_j1tz0jiaUg
 prompt: |2
 
    You are a helpful accessibility expert that can provide alt text for images.
