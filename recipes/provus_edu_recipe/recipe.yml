@@ -7,6 +7,7 @@ install:
   - ai_assistant_api
   - ai_automators
   - ai_ckeditor
+  - ai_content_suggestions
   - ai_dashboard
   - ai_image_alt_text
   - ai_image_bulk_alt_text
