@@ -1,6 +1,19 @@
 name: 'Provus Edu'
 type: Site
 install:
+  - ai
+  - ai_agents
+  - ai_agents_explorer
+  - ai_assistant_api
+  - ai_automators
+  - ai_ckeditor
+  - ai_content_suggestions
+  - ai_dashboard
+  - ai_image_alt_text
+  - ai_image_bulk_alt_text
+  - ai_observability
+  - ai_provider_anthropic
+  - ai_seo
   - announcements_feed
   - automated_cron
   - big_pipe

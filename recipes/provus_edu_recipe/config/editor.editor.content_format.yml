@@ -10,6 +10,8 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - aickeditor
+      - ai_balloon_menu
       - heading
       - bold
       - italic
@@ -27,6 +29,49 @@ settings:
       - removeFormat
       - sourceEditing
   plugins:
+    ai_ckeditor_ai:
+      dialog:
+        autoresize: 'min-width: 600px'
+        height: '750'
+        width: '900'
+        dialog_class: ai-ckeditor-modal
+      plugins:
+        ai_agents_ckeditor:
+          agents: {  }
+          enabled: false
+        ai_automators_ckeditor:
+          enabled: false
+          workflows: {  }
+        ai_ckeditor_completion:
+          enabled: true
+          provider: anthropic__claude-sonnet-4-5-20250929
+        ai_ckeditor_help:
+          enabled: false
+        ai_ckeditor_modify_prompt:
+          enabled: true
+          provider: anthropic__claude-sonnet-4-5-20250929
+        ai_ckeditor_reformat_html:
+          enabled: true
+          provider: anthropic__claude-sonnet-4-5-20250929
+        ai_ckeditor_spellfix:
+          enabled: true
+          provider: anthropic__claude-sonnet-4-5-20250929
+        ai_ckeditor_summarize:
+          enabled: true
+          provider: anthropic__claude-sonnet-4-5-20250929
+        ai_ckeditor_tone:
+          enabled: true
+          provider: anthropic__claude-sonnet-4-5-20250929
+          autocreate: false
+          tone_vocabulary: provus_category_tone
+          use_description: true
+        ai_ckeditor_translate:
+          enabled: false
+          provider: anthropic__claude-sonnet-4-5-20250929
+          language_source: tax
+          autocreate: false
+          translate_vocabulary: provus_cat_editorial_section
+          use_description: false
     ckeditor5_alignment:
       enabled_alignments:
         - center

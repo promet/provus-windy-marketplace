@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 88d2d2c4-aba1-4c2d-800b-9c4b76a5200a
+  bundle: provus_category_tone
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Aspirational / Inspirational'
+  description:
+    -
+      value: '<ul><li data-list-item-id="e0c01e1a7b169c45e6dfa7aacc5f72259">Big-picture, future-focused</li><li data-list-item-id="edc4439a19f573d2ef04f033aadd711c6">Emotional, motivating</li><li data-list-item-id="ec2a1795daaf1c4e61010d625538637cf">Emphasizes transformation and opportunity</li></ul>'
+      format: content_format
+  weight:
+    -
+      value: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 0875749e-4a4f-4340-93ce-2e84c23c95c7
+  bundle: provus_category_tone
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Academic / Authoritative'
+  description:
+    -
+      value: '<ul><li data-list-item-id="e58dee613db0249e4471fd0ec32698b1a">Precise, formal, credible</li><li data-list-item-id="eddf811d7b51a0a4989af2c62273e1063">Discipline-specific language</li><li data-list-item-id="e08950f55a19baf01dce809f6c91be608">Evidence-driven</li></ul>'
+      format: content_format
+  weight:
+    -
+      value: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
