@@ -9,8 +9,9 @@
 # Dependencies managed by Composer.
 /CONTRIBUTING.md
 /patches.lock.json
-/recipes/
-!/recipes/provus_edu_recipe/
+/recipes/*
+!/recipes/provus_edu/
+!/recipes/provus_edu/**
 /vendor
 /web/
 !/web/modules/custom/
