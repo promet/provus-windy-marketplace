@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: basic_text
-label: 'Basic Text'
-revision: false
-description: null

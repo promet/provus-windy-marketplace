@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Category: Program Level'
-vid: provus_category_program_level
-description: null
-weight: 0
-new_revision: false
