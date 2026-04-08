@@ -301,20 +301,27 @@
 
     // Centered when 2 cols.
     function centerColumns() {
+      var $header = $('header');
+      var $navBar = $("nav.menu--main ul.navbar-nav");
+
+      var headerHeight = $header.outerHeight();
+
+      var adminBarHeight = 0;
+      if ($('.top-bar').length) {
+        adminBarHeight = $('.top-bar').outerHeight() || 0;
+      }
+
+      var positionTop = headerHeight + adminBarHeight;
+
+      var navOffset = $navBar.offset();
+      var navWidth = $navBar.outerWidth();
+
       $("nav.menu--main ul.navbar-nav > li").each(function () {
-        var menuLevelFirst = $(this);
-        var menuLevelSecond = menuLevelFirst.find("ul.dropdown-cor-menu.level-1");
-        var menuLevelFirstHeight = menuLevelFirst.innerHeight();
-        var windowWidth = window.innerWidth;
-        var elementWidth = 756;
-        var positionLeft = (windowWidth - elementWidth) / 2 + 'px';
-        var positionTop;
-        if ($('body').hasClass('scrolled')) {
-          positionTop = 58;
-        }
-        else {
-          positionTop = menuLevelFirst.offset().top + menuLevelFirstHeight;
-        }
+        var menuLevelSecond = $(this).find("ul.dropdown-cor-menu.level-1");
+
+        var elementWidth = menuLevelSecond.outerWidth();
+
+        var positionLeft = navOffset.left + (navWidth / 2) - (elementWidth / 2) - 200;
 
         menuLevelSecond.css({
           'left': positionLeft,
@@ -395,7 +402,7 @@
       centerColumns();
     }, 50);
 
-    $(window).on('scroll resize orientationchange', debounceCenterColumns);
+    $(window).on('resize orientationchange', debounceCenterColumns);
     debounceCenterColumns();
 
     setTimeout(function () {
