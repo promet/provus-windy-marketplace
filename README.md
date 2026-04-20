@@ -22,10 +22,10 @@ Reference implementation (Drupal 10):
     ddev start
     ```
 
-3. Install Drupal using the `provus_edu_recipe` recipe:
+3. Install Drupal using the `provus_edu` recipe:
 
     ```
-    ddev drush si recipes/provus_edu_recipe -y
+    ddev drush si recipes/provus_edu -y
     ```
 
 # Importing / Exporting Recipe Work
