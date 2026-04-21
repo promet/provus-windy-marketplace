@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b96086f2e349ffeaf742f2975d6d5de",
+    "content-hash": "53e034d50e54d86076b0cd02d3a32777",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2740,17 +2740,17 @@
         },
         {
             "name": "drupal/canvas",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/canvas.git",
-                "reference": "1.3.2"
+                "reference": "1.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/canvas-1.3.2.zip",
-                "reference": "1.3.2",
-                "shasum": "11804ca6dc7509c742fc1ed14c1014557731e35d"
+                "url": "https://ftp.drupal.org/files/projects/canvas-1.3.3.zip",
+                "reference": "1.3.3",
+                "shasum": "5f2899d1fcbb12bb9b5f3ad663229cca36edffd4"
             },
             "require": {
                 "drupal/core": "^11.2",
@@ -2760,6 +2760,7 @@
                 "devizzent/cebe-php-openapi": "^1.1.4",
                 "drupal/ai": "^1.2.1",
                 "drupal/ai_agents": "^1.2",
+                "drupal/ai_agents_test": "^1.0@alpha",
                 "drupal/jsonapi_menu_items": "^1.2.8",
                 "drupal/metatag": "^2.1",
                 "drupal/pathauto": "^1.13",
@@ -2768,15 +2769,15 @@
                 "drush/drush": "^13",
                 "jangregor/phpstan-prophecy": "~1|~2",
                 "league/openapi-psr7-validator": "^0.22.0",
-                "mglaman/phpstan-drupal": "^2.0.9",
+                "mglaman/phpstan-drupal": "^2.0.12",
                 "phpat/phpat": "^0.12",
                 "phpstan/phpstan-strict-rules": "^2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.3.2",
-                    "datestamp": "1774394884",
+                    "version": "1.3.3",
+                    "datestamp": "1776736835",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6324,17 +6325,17 @@
         },
         {
             "name": "drupal/provus_base_theme",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/provus_base_theme.git",
-                "reference": "1.0.2"
+                "reference": "1.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/provus_base_theme-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "63248092963aba376e873038936822db63f74607"
+                "url": "https://ftp.drupal.org/files/projects/provus_base_theme-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "34bd189ed7460c8b55f46e241e8dc42994cb3fe7"
             },
             "require": {
                 "drupal/bootstrap_barrio": ">=5.1.3",
@@ -6343,8 +6344,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1776684903",
+                    "version": "1.0.3",
+                    "datestamp": "1776759814",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -6377,17 +6378,17 @@
         },
         {
             "name": "drupal/provus_edu_theme",
-            "version": "1.0.1",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/provus_edu_theme.git",
-                "reference": "1.0.1"
+                "reference": "1.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/provus_edu_theme-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "45197cc2baa8c3a1b11019bb5b66fd7fa1e69b05"
+                "url": "https://ftp.drupal.org/files/projects/provus_edu_theme-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "cb0d255bcf4466ced02aecd44ad6eebabbb901d1"
             },
             "require": {
                 "drupal/core": "^11",
@@ -6396,8 +6397,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1776048490",
+                    "version": "1.0.3",
+                    "datestamp": "1776760658",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -6430,17 +6431,17 @@
         },
         {
             "name": "drupal/provus_mega_menu",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/provus_mega_menu.git",
-                "reference": "1.0.2"
+                "reference": "1.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/provus_mega_menu-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "6ec7d47be2c62ccfb941ecc788ce5faba73097f3"
+                "url": "https://ftp.drupal.org/files/projects/provus_mega_menu-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "9eb04ee20ded726474e44f14cc98ea4ceb36ec2f"
             },
             "require": {
                 "drupal/core": "^11"
@@ -6448,8 +6449,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1776046734",
+                    "version": "1.0.3",
+                    "datestamp": "1776759615",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -8977,16 +8978,16 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.16",
+            "version": "v0.3.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "11e7d5f93803a2190b00e145142cb00a33d17ad2"
+                "reference": "6a82ac19a28b916ae0885828795dbd4c59d9a818"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/11e7d5f93803a2190b00e145142cb00a33d17ad2",
-                "reference": "11e7d5f93803a2190b00e145142cb00a33d17ad2",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/6a82ac19a28b916ae0885828795dbd4c59d9a818",
+                "reference": "6a82ac19a28b916ae0885828795dbd4c59d9a818",
                 "shasum": ""
             },
             "require": {
@@ -9030,9 +9031,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.16"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.17"
             },
-            "time": "2026-03-23T14:35:33+00:00"
+            "time": "2026-04-20T16:07:33+00:00"
         },
         {
             "name": "league/commonmark",
