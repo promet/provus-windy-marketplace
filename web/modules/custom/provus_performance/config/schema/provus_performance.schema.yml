@@ -23,6 +23,12 @@ provus_performance.settings:
       sequence:
         type: string
         label: 'URL'
+    preconnect_urls:
+      type: sequence
+      label: 'Origins to open early TCP+TLS connections to (optionally suffix " crossorigin")'
+      sequence:
+        type: string
+        label: 'Origin'
     excluded_paths:
       type: sequence
       label: 'Paths (wildcards allowed) where optimization is disabled'

@@ -134,6 +134,12 @@ final class LcpResponseSubscriber implements EventSubscriberInterface {
 
     $headInjection = '';
 
+    // Preconnects are cheap hints that let the browser open the TCP +
+    // TLS handshake to third-party origins in parallel with HTML parse,
+    // so the first request for fonts/CSS from that origin doesn't pay
+    // for handshake time. Emit them first so they lead the <head>.
+    $headInjection .= $this->buildPreconnects((array) $config->get('preconnect_urls'));
+
     if ($imgMatch !== null) {
       [$imgTag, $imgPos, $attrs] = $imgMatch;
 
@@ -332,6 +338,50 @@ final class LcpResponseSubscriber implements EventSubscriberInterface {
       }
       $out .= '<link rel="preload" as="font" type="' . $type
         . '" href="' . htmlspecialchars($url, ENT_QUOTES | ENT_HTML5) . '" crossorigin>';
+    }
+    return $out;
+  }
+
+  /**
+   * Builds <link rel="preconnect"> tags for configured origins.
+   *
+   * Each entry is a URL, optionally suffixed with " crossorigin" to
+   * emit the crossorigin attribute (required for font subresources and
+   * anything CORS-fetched — e.g. fonts.gstatic.com). Invalid or empty
+   * entries are skipped silently.
+   *
+   * @param array<int, string> $entries
+   */
+  private function buildPreconnects(array $entries): string {
+    $out = '';
+    $seen = [];
+    foreach ($entries as $entry) {
+      $entry = trim((string) $entry);
+      if ($entry === '') {
+        continue;
+      }
+      // Split off a trailing " crossorigin" (case-insensitive) flag.
+      $crossorigin = false;
+      if (preg_match('/^(.*?)\s+crossorigin\s*$/i', $entry, $m)) {
+        $entry = trim($m[1]);
+        $crossorigin = true;
+      }
+      // Only emit http(s) origins — a dns-prefetch-style hint for
+      // file:// or javascript: URLs would be invalid.
+      if (!preg_match('#^https?://#i', $entry)) {
+        continue;
+      }
+      // Dedupe on origin+crossorigin so config duplicates don't double
+      // up in the head.
+      $key = strtolower($entry) . '|' . ($crossorigin ? '1' : '0');
+      if (isset($seen[$key])) {
+        continue;
+      }
+      $seen[$key] = true;
+
+      $out .= '<link rel="preconnect" href="'
+        . htmlspecialchars($entry, ENT_QUOTES | ENT_HTML5) . '"'
+        . ($crossorigin ? ' crossorigin' : '') . '>';
     }
     return $out;
   }

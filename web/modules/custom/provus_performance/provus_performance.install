@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall hooks for Provus Performance.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Adds render-blocking CSS/JS transforms and turns them on by default.
+ *
+ * Existing installs only had the LCP preload settings; flip the new
+ * toggles to "on" so the module's async-stylesheet + defer-script
+ * behavior activates without requiring a trip to the settings form.
+ * Also invalidates the internal page cache so already-cached pages
+ * get re-rendered through the subscriber.
+ */
+function provus_performance_update_10001(): void {
+  $config = \Drupal::configFactory()->getEditable('provus_performance.settings');
+
+  $defaults = [
+    'async_stylesheets' => TRUE,
+    'defer_scripts' => TRUE,
+    'script_strategy' => 'defer',
+    'inline_critical_css' => '',
+    'critical_css_patterns' => [],
+    'critical_js_patterns' => [],
+    // Google Fonts is the single most common render-blocking origin on
+    // Drupal themes; ship sensible defaults so existing installs get a
+    // free preconnect without visiting the form.
+    'preconnect_urls' => [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com crossorigin',
+    ],
+  ];
+  foreach ($defaults as $key => $value) {
+    if ($config->get($key) === NULL) {
+      $config->set($key, $value);
+    }
+  }
+  $config->save();
+
+  // Page cache keys responses by URL and won't re-fire the response
+  // subscriber until cache entries are invalidated. Flush it so the
+  // new CSS/JS rewrites appear on the next request.
+  \Drupal::service('cache.page')->deleteAll();
+  if (\Drupal::hasService('cache.dynamic_page_cache')) {
+    \Drupal::service('cache.dynamic_page_cache')->deleteAll();
+  }
+}

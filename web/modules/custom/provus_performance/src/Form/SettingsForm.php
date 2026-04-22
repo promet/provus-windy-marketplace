@@ -84,6 +84,14 @@ final class SettingsForm extends ConfigFormBase {
       '#rows' => 4,
       '#placeholder' => "/themes/contrib/provus_edu_theme/fonts/inter-variable.woff2",
     ];
+    $form['fonts']['preconnect_urls'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Preconnect origins'),
+      '#description' => $this->t('One origin per line. Each emits <code>&lt;link rel="preconnect"&gt;</code> in <code>&lt;head&gt;</code> so the TCP+TLS handshake starts in parallel with HTML parsing. Suffix a line with <code> crossorigin</code> for origins that serve CORS resources like fonts — e.g. <code>https://fonts.gstatic.com crossorigin</code>.'),
+      '#default_value' => $this->linesFromArray($config->get('preconnect_urls')),
+      '#rows' => 4,
+      '#placeholder' => "https://fonts.googleapis.com\nhttps://fonts.gstatic.com crossorigin",
+    ];
 
     $form['render_blocking'] = [
       '#type' => 'details',
@@ -178,6 +186,7 @@ final class SettingsForm extends ConfigFormBase {
       ->set('content_anchors', $this->arrayFromLines($form_state->getValue('content_anchors')))
       ->set('skip_selectors', $this->arrayFromLines($form_state->getValue('skip_selectors')))
       ->set('font_preloads', $this->arrayFromLines($form_state->getValue('font_preloads')))
+      ->set('preconnect_urls', $this->arrayFromLines($form_state->getValue('preconnect_urls')))
       ->set('excluded_paths', $this->arrayFromLines($form_state->getValue('excluded_paths')))
       ->set('async_stylesheets', (bool) $form_state->getValue('async_stylesheets'))
       ->set('defer_scripts', (bool) $form_state->getValue('defer_scripts'))
@@ -186,6 +195,15 @@ final class SettingsForm extends ConfigFormBase {
       ->set('critical_css_patterns', $this->arrayFromLines($form_state->getValue('critical_css_patterns')))
       ->set('critical_js_patterns', $this->arrayFromLines($form_state->getValue('critical_js_patterns')))
       ->save();
+
+    // Page cache stores the full rendered HTML; without invalidating it
+    // here, toggling these settings wouldn't take effect until an
+    // unrelated cache bust. This is a config form, so a full purge of
+    // the two page-level caches is cheap and expected.
+    \Drupal::service('cache.page')->deleteAll();
+    if (\Drupal::hasService('cache.dynamic_page_cache')) {
+      \Drupal::service('cache.dynamic_page_cache')->deleteAll();
+    }
 
     parent::submitForm($form, $form_state);
   }

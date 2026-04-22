@@ -21,7 +21,7 @@ function provus_performance_help(string $route_name, RouteMatchInterface $route_
   $output .= '<ul>';
   $output .= '<li>' . t('Detecting the first above-the-fold image in the rendered HTML and injecting a <code>&lt;link rel="preload" as="image"&gt;</code> hint in <code>&lt;head&gt;</code>.') . '</li>';
   $output .= '<li>' . t('Removing <code>loading="lazy"</code> from that image and setting <code>fetchpriority="high"</code>.') . '</li>';
-  $output .= '<li>' . t('Preloading configured font files with <code>&lt;link rel="preload" as="font" crossorigin&gt;</code>.') . '</li>';
+  $output .= '<li>' . t('Preloading configured font files with <code>&lt;link rel="preload" as="font" crossorigin&gt;</code> and opening early connections to third-party origins with <code>&lt;link rel="preconnect"&gt;</code>.') . '</li>';
   $output .= '<li>' . t('Eliminating render-blocking requests: loading non-critical stylesheets asynchronously (preload-swap with <code>&lt;noscript&gt;</code> fallback), deferring non-critical scripts, and inlining critical CSS in <code>&lt;head&gt;</code>.') . '</li>';
   $output .= '</ul>';
   $output .= '<p>' . t('Configure at <a href=":url">Administration » Configuration » System » Provus Performance</a>.', [

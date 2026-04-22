@@ -9,7 +9,7 @@ On every non-admin HTML response, the module:
 1. Finds the first above-the-fold `<img>` in the rendered HTML (using configurable anchors like `<main`, `role="main"`, `class="hero`).
 2. Injects a `<link rel="preload" as="image" fetchpriority="high">` into `<head>` — including `imagesrcset` and `imagesizes` for responsive images — so the browser fetches the hero image immediately, in parallel with CSS/JS.
 3. Removes `loading="lazy"` from that image and sets `fetchpriority="high"` and `decoding="async"` on it.
-4. Emits `<link rel="preload" as="font" crossorigin>` for any font URLs you configure.
+4. Emits `<link rel="preload" as="font" crossorigin>` for any font URLs you configure, plus `<link rel="preconnect">` for any origins you list (Google Fonts is wired up by default — `fonts.googleapis.com` and `fonts.gstatic.com crossorigin`).
 5. Optionally eliminates **render-blocking** CSS & JS (see below) to cut First Contentful Paint.
 
 It is **theme-agnostic** and works with Canvas-placed hero images because the detection happens on the rendered HTML, not on render arrays.
@@ -29,7 +29,9 @@ Three independent transforms, each with its own switch:
 - **Defer non-critical scripts.** Any external `<script src>` in `<head>` that isn't already `async`, `defer`, or `type="module"` gets a `defer` (or `async`) attribute. Inline scripts and `drupalSettings` are not touched. Use the **Critical JS** textarea to exempt scripts that must run synchronously.
 - **Inline critical CSS.** Paste above-the-fold CSS into the textarea; it is emitted as a `<style data-provus-critical>` block at the top of `<head>`, so the browser can render the hero/above-the-fold area before any external stylesheet arrives. Generate the critical CSS with tools like [Critical](https://github.com/addyosmani/critical) or Drupal's Advanced CSS/JS Aggregation module.
 
-Enable these on `/admin/config/system/provus-performance` under **Render-blocking CSS & JS**. Start with async stylesheets + defer scripts — those are safe for most sites. Add inline critical CSS once you've generated it.
+Async stylesheets and script defer are **on by default** for fresh installs; existing installs pick them up via `drush updb`. Configure at `/admin/config/system/provus-performance` under **Render-blocking CSS & JS**. Add inline critical CSS once you've generated it with [Critical](https://github.com/addyosmani/critical) or AdvAgg.
+
+> **If PageSpeed still reports render-blocking requests after enabling**, the most common cause is a stale page cache. Drupal stores the un-rewritten HTML under the URL. The settings form invalidates the page cache on save automatically; if you changed config another way, run `drush cache:rebuild` (or `drush cr`) and re-run the audit.
 
 ## Why this fixes a 26s LCP
 
