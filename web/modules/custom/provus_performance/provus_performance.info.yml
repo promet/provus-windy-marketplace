@@ -1,0 +1,6 @@
+name: 'Provus Performance'
+type: module
+description: 'Fixes LCP (Largest Contentful Paint) by preloading the hero image and key fonts, and by removing lazy-loading from above-the-fold images. Theme-agnostic; works with Canvas-built pages.'
+package: 'Provus'
+core_version_requirement: ^10.3 || ^11
+configure: provus_performance.settings

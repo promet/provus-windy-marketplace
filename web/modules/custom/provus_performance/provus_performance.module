@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Provus Performance module.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function provus_performance_help(string $route_name, RouteMatchInterface $route_match): string {
+  if ($route_name !== 'help.page.provus_performance') {
+    return '';
+  }
+  $output = '<h2>' . t('Provus Performance') . '</h2>';
+  $output .= '<p>' . t('Improves Largest Contentful Paint (LCP) by:') . '</p>';
+  $output .= '<ul>';
+  $output .= '<li>' . t('Detecting the first above-the-fold image in the rendered HTML and injecting a <code>&lt;link rel="preload" as="image"&gt;</code> hint in <code>&lt;head&gt;</code>.') . '</li>';
+  $output .= '<li>' . t('Removing <code>loading="lazy"</code> from that image and setting <code>fetchpriority="high"</code>.') . '</li>';
+  $output .= '<li>' . t('Preloading configured font files with <code>&lt;link rel="preload" as="font" crossorigin&gt;</code>.') . '</li>';
+  $output .= '</ul>';
+  $output .= '<p>' . t('Configure at <a href=":url">Administration » Configuration » System » Provus Performance</a>.', [
+    ':url' => \Drupal\Core\Url::fromRoute('provus_performance.settings')->toString(),
+  ]) . '</p>';
+  return $output;
+}

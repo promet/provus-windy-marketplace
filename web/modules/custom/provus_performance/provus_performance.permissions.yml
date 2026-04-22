@@ -1,0 +1,4 @@
+administer provus performance:
+  title: 'Administer Provus Performance'
+  description: 'Configure LCP preload and font preloads.'
+  restrict access: true

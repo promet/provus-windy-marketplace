@@ -1,0 +1,14 @@
+services:
+  provus_performance.lcp_response_subscriber:
+    class: Drupal\provus_performance\EventSubscriber\LcpResponseSubscriber
+    arguments:
+      - '@config.factory'
+      - '@router.admin_context'
+      - '@current_route_match'
+      - '@logger.channel.provus_performance'
+    tags:
+      - { name: event_subscriber }
+
+  logger.channel.provus_performance:
+    parent: logger.channel_base
+    arguments: ['provus_performance']

@@ -1,0 +1,7 @@
+provus_performance.settings:
+  path: '/admin/config/system/provus-performance'
+  defaults:
+    _form: '\Drupal\provus_performance\Form\SettingsForm'
+    _title: 'Provus Performance'
+  requirements:
+    _permission: 'administer provus performance'

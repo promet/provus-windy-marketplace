@@ -1,0 +1,26 @@
+enabled: true
+content_anchors:
+  - '<main'
+  - 'role="main"'
+  - 'id="main-content"'
+  - 'class="canvas'
+  - 'class="region-hero'
+  - 'class="hero'
+skip_selectors:
+  - 'data:'
+  - 'class="logo'
+  - 'id="logo'
+  - 'sprite'
+  - 'icon-'
+  - '/favicon'
+font_preloads: {  }
+excluded_paths:
+  - '/admin/*'
+  - '/user/*'
+  - '/node/add/*'
+  - '/node/*/edit'
+  - '/node/*/revisions/*'
+  - '/batch*'
+  - '/system/*'
+set_fetchpriority: true
+remove_lazy: true

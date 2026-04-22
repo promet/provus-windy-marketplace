@@ -1,0 +1,37 @@
+provus_performance.settings:
+  type: config_object
+  label: 'Provus Performance settings'
+  mapping:
+    enabled:
+      type: boolean
+      label: 'Enable LCP optimization'
+    content_anchors:
+      type: sequence
+      label: 'HTML anchors used to locate the main content start'
+      sequence:
+        type: string
+        label: 'Anchor'
+    skip_selectors:
+      type: sequence
+      label: 'Substrings that disqualify an <img> from being treated as LCP (matched on the tag text)'
+      sequence:
+        type: string
+        label: 'Substring'
+    font_preloads:
+      type: sequence
+      label: 'Font URLs to preload'
+      sequence:
+        type: string
+        label: 'URL'
+    excluded_paths:
+      type: sequence
+      label: 'Paths (wildcards allowed) where optimization is disabled'
+      sequence:
+        type: string
+        label: 'Path'
+    set_fetchpriority:
+      type: boolean
+      label: 'Set fetchpriority="high" on the LCP image'
+    remove_lazy:
+      type: boolean
+      label: 'Remove loading="lazy" from the LCP image'
