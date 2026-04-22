@@ -8,6 +8,8 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Render\HtmlResponse;
 use Drupal\Core\Routing\AdminContext;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\provus_performance\Options;
+use Drupal\provus_performance\RenderBlockingOptimizer;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
@@ -31,6 +33,7 @@ final class LcpResponseSubscriber implements EventSubscriberInterface {
     private readonly AdminContext $adminContext,
     private readonly RouteMatchInterface $routeMatch,
     private readonly LoggerInterface $logger,
+    private readonly RenderBlockingOptimizer $renderBlockingOptimizer,
   ) {}
 
   /**
@@ -156,24 +159,42 @@ final class LcpResponseSubscriber implements EventSubscriberInterface {
 
     $headInjection .= $this->buildFontPreloads((array) $config->get('font_preloads'));
 
-    if ($headInjection === '') {
-      return $html;
+    if ($headInjection !== '') {
+      // Inject right after <head ...> opening tag (only the first occurrence).
+      $injected = preg_replace(
+        '/(<head\b[^>]*>)/i',
+        '$1' . $this->escapeReplacement($headInjection),
+        $html,
+        1,
+        $count,
+      );
+      if ($injected === null || $count === 0) {
+        $this->logger->warning('Failed to inject LCP preload tags into <head>.');
+      }
+      else {
+        $html = $injected;
+      }
     }
 
-    // Inject right after <head ...> opening tag (only the first occurrence).
-    $injected = preg_replace(
-      '/(<head\b[^>]*>)/i',
-      '$1' . $this->escapeReplacement($headInjection),
-      $html,
-      1,
-      $count,
+    // Render-blocking transforms run last so they can see the preload
+    // links we just injected and avoid re-processing them.
+    $html = $this->renderBlockingOptimizer->optimize($html, $this->buildOptimizerOptions($config));
+
+    return $html;
+  }
+
+  /**
+   * Builds the Options value object from module config.
+   */
+  private function buildOptimizerOptions($config): Options {
+    return new Options(
+      inlineCriticalCss: trim((string) $config->get('inline_critical_css')),
+      asyncStylesheets: (bool) $config->get('async_stylesheets'),
+      deferScripts: (bool) $config->get('defer_scripts'),
+      criticalCssPatterns: array_filter(array_map('strval', (array) $config->get('critical_css_patterns'))),
+      criticalJsPatterns: array_filter(array_map('strval', (array) $config->get('critical_js_patterns'))),
+      scriptStrategy: ((string) $config->get('script_strategy')) ?: 'defer',
     );
-    if ($injected === null || $count === 0) {
-      $this->logger->warning('Failed to inject LCP preload tags into <head>.');
-      return $html;
-    }
-
-    return $injected;
   }
 
   /**

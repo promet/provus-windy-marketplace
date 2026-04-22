@@ -1,6 +1,6 @@
 # Provus Performance
 
-Fixes **Largest Contentful Paint (LCP)** on Drupal sites built with Canvas (or any theme) without touching theme templates.
+Fixes **Largest Contentful Paint (LCP)** and **render-blocking requests** on Drupal sites built with Canvas (or any theme) without touching theme templates.
 
 ## What it does
 
@@ -10,8 +10,26 @@ On every non-admin HTML response, the module:
 2. Injects a `<link rel="preload" as="image" fetchpriority="high">` into `<head>` — including `imagesrcset` and `imagesizes` for responsive images — so the browser fetches the hero image immediately, in parallel with CSS/JS.
 3. Removes `loading="lazy"` from that image and sets `fetchpriority="high"` and `decoding="async"` on it.
 4. Emits `<link rel="preload" as="font" crossorigin>` for any font URLs you configure.
+5. Optionally eliminates **render-blocking** CSS & JS (see below) to cut First Contentful Paint.
 
 It is **theme-agnostic** and works with Canvas-placed hero images because the detection happens on the rendered HTML, not on render arrays.
+
+## Render-blocking CSS & JS (FCP fix)
+
+External stylesheets in `<head>` block rendering until they finish downloading and parsing; synchronous scripts block the HTML parser too. On a typical Drupal page this can add 1–2 seconds to First Contentful Paint and delay LCP image discovery.
+
+Three independent transforms, each with its own switch:
+
+- **Load non-critical stylesheets asynchronously.** Every `<link rel="stylesheet">` in `<head>` is rewritten to the preload-swap pattern:
+  ```html
+  <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  ```
+  The `<noscript>` fallback keeps the page fully styled when JavaScript is disabled. Use the **Critical CSS — do not async** textarea to exempt stylesheets that must stay synchronous (substring match against the tag text, e.g. `critical`, `canvas.css`).
+- **Defer non-critical scripts.** Any external `<script src>` in `<head>` that isn't already `async`, `defer`, or `type="module"` gets a `defer` (or `async`) attribute. Inline scripts and `drupalSettings` are not touched. Use the **Critical JS** textarea to exempt scripts that must run synchronously.
+- **Inline critical CSS.** Paste above-the-fold CSS into the textarea; it is emitted as a `<style data-provus-critical>` block at the top of `<head>`, so the browser can render the hero/above-the-fold area before any external stylesheet arrives. Generate the critical CSS with tools like [Critical](https://github.com/addyosmani/critical) or Drupal's Advanced CSS/JS Aggregation module.
+
+Enable these on `/admin/config/system/provus-performance` under **Render-blocking CSS & JS**. Start with async stylesheets + defer scripts — those are safe for most sites. Add inline critical CSS once you've generated it.
 
 ## Why this fixes a 26s LCP
 

@@ -35,3 +35,27 @@ provus_performance.settings:
     remove_lazy:
       type: boolean
       label: 'Remove loading="lazy" from the LCP image'
+    async_stylesheets:
+      type: boolean
+      label: 'Load non-critical stylesheets asynchronously (preload-swap pattern)'
+    defer_scripts:
+      type: boolean
+      label: 'Add defer/async to non-critical external scripts in <head>'
+    script_strategy:
+      type: string
+      label: 'Loading strategy applied to non-critical scripts ("defer" or "async")'
+    inline_critical_css:
+      type: string
+      label: 'CSS inlined in a <style> element at the top of <head>'
+    critical_css_patterns:
+      type: sequence
+      label: 'Substrings that mark a <link rel="stylesheet"> as critical and exempt from async loading'
+      sequence:
+        type: string
+        label: 'Substring'
+    critical_js_patterns:
+      type: sequence
+      label: 'Substrings that mark a <script> as critical and exempt from defer/async'
+      sequence:
+        type: string
+        label: 'Substring'

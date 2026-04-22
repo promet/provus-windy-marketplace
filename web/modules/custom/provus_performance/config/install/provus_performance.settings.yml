@@ -24,3 +24,9 @@ excluded_paths:
   - '/system/*'
 set_fetchpriority: true
 remove_lazy: true
+async_stylesheets: false
+defer_scripts: false
+script_strategy: defer
+inline_critical_css: ''
+critical_css_patterns: {  }
+critical_js_patterns: {  }

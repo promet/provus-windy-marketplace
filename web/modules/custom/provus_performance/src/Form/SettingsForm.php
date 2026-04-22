@@ -85,6 +85,67 @@ final class SettingsForm extends ConfigFormBase {
       '#placeholder' => "/themes/contrib/provus_edu_theme/fonts/inter-variable.woff2",
     ];
 
+    $form['render_blocking'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Render-blocking CSS & JS'),
+      '#description' => $this->t('Eliminate render-blocking requests that delay First Contentful Paint. Enable each transform independently.'),
+      '#open' => TRUE,
+    ];
+    $form['render_blocking']['async_stylesheets'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Load non-critical stylesheets asynchronously'),
+      '#default_value' => (bool) $config->get('async_stylesheets'),
+      '#description' => $this->t('Rewrites <code>&lt;link rel="stylesheet"&gt;</code> in <code>&lt;head&gt;</code> to <code>&lt;link rel="preload" as="style" onload="this.rel=\'stylesheet\'"&gt;</code> with a <code>&lt;noscript&gt;</code> fallback. Use the "critical" list below to exempt blocking stylesheets that must arrive synchronously.'),
+    ];
+    $form['render_blocking']['critical_css_patterns'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Critical CSS — do not async'),
+      '#description' => $this->t('One substring per line. Any <code>&lt;link rel="stylesheet"&gt;</code> whose tag contains one of these strings is left as a render-blocking request. Useful for the small above-the-fold stylesheet that must load synchronously.'),
+      '#default_value' => $this->linesFromArray($config->get('critical_css_patterns')),
+      '#rows' => 4,
+      '#states' => [
+        'visible' => [':input[name="async_stylesheets"]' => ['checked' => TRUE]],
+      ],
+    ];
+    $form['render_blocking']['defer_scripts'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Defer non-critical scripts in <code>&lt;head&gt;</code>'),
+      '#default_value' => (bool) $config->get('defer_scripts'),
+      '#description' => $this->t('Adds <code>defer</code> (or <code>async</code>) to each external <code>&lt;script src&gt;</code> that isn\'t already async/defer/type="module". Inline scripts and <code>drupalSettings</code> are not touched.'),
+    ];
+    $form['render_blocking']['script_strategy'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('Script loading strategy'),
+      '#options' => [
+        'defer' => $this->t('<strong>defer</strong> — download in parallel, execute in order after HTML parsing (recommended)'),
+        'async' => $this->t('<strong>async</strong> — download in parallel, execute as soon as downloaded (order not guaranteed)'),
+      ],
+      '#default_value' => ((string) $config->get('script_strategy')) ?: 'defer',
+      '#states' => [
+        'visible' => [':input[name="defer_scripts"]' => ['checked' => TRUE]],
+      ],
+    ];
+    $form['render_blocking']['critical_js_patterns'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Critical JS — do not defer/async'),
+      '#description' => $this->t('One substring per line. Any <code>&lt;script&gt;</code> whose tag contains one of these strings is left alone.'),
+      '#default_value' => $this->linesFromArray($config->get('critical_js_patterns')),
+      '#rows' => 4,
+      '#states' => [
+        'visible' => [':input[name="defer_scripts"]' => ['checked' => TRUE]],
+      ],
+    ];
+    $form['render_blocking']['inline_critical_css'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Inline critical CSS'),
+      '#description' => $this->t('CSS pasted here is injected as <code>&lt;style&gt;</code> at the top of <code>&lt;head&gt;</code> so the browser can render above-the-fold content without waiting for external stylesheets. Generate this with tools like <a href=":critical" target="_blank" rel="noopener">Critical</a> or Drupal\'s Advanced CSS/JS Aggregation module and paste the result here.', [
+        ':critical' => 'https://github.com/addyosmani/critical',
+      ]),
+      '#default_value' => (string) $config->get('inline_critical_css'),
+      '#rows' => 8,
+      '#attributes' => ['spellcheck' => 'false'],
+    ];
+
     $form['scope'] = [
       '#type' => 'details',
       '#title' => $this->t('Scope'),
@@ -105,6 +166,11 @@ final class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
+    $strategy = (string) $form_state->getValue('script_strategy');
+    if ($strategy !== 'async') {
+      $strategy = 'defer';
+    }
+
     $this->config(self::SETTINGS)
       ->set('enabled', (bool) $form_state->getValue('enabled'))
       ->set('remove_lazy', (bool) $form_state->getValue('remove_lazy'))
@@ -113,6 +179,12 @@ final class SettingsForm extends ConfigFormBase {
       ->set('skip_selectors', $this->arrayFromLines($form_state->getValue('skip_selectors')))
       ->set('font_preloads', $this->arrayFromLines($form_state->getValue('font_preloads')))
       ->set('excluded_paths', $this->arrayFromLines($form_state->getValue('excluded_paths')))
+      ->set('async_stylesheets', (bool) $form_state->getValue('async_stylesheets'))
+      ->set('defer_scripts', (bool) $form_state->getValue('defer_scripts'))
+      ->set('script_strategy', $strategy)
+      ->set('inline_critical_css', (string) $form_state->getValue('inline_critical_css'))
+      ->set('critical_css_patterns', $this->arrayFromLines($form_state->getValue('critical_css_patterns')))
+      ->set('critical_js_patterns', $this->arrayFromLines($form_state->getValue('critical_js_patterns')))
       ->save();
 
     parent::submitForm($form, $form_state);

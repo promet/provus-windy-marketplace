@@ -1,4 +1,7 @@
 services:
+  provus_performance.render_blocking_optimizer:
+    class: Drupal\provus_performance\RenderBlockingOptimizer
+
   provus_performance.lcp_response_subscriber:
     class: Drupal\provus_performance\EventSubscriber\LcpResponseSubscriber
     arguments:
@@ -6,6 +9,7 @@ services:
       - '@router.admin_context'
       - '@current_route_match'
       - '@logger.channel.provus_performance'
+      - '@provus_performance.render_blocking_optimizer'
     tags:
       - { name: event_subscriber }
 
