@@ -26,6 +26,7 @@ Reference implementation (Drupal 10):
 
     ```
     ddev drush si recipes/provus_edu -y
+    ddev drush en provus_site_alert -y
     ```
 
 # Importing / Exporting Recipe Work
