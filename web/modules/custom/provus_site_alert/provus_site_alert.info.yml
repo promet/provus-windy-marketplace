@@ -1,0 +1,8 @@
+name: 'Provus Site Alert'
+type: module
+description: 'Automatically configures the Bootstrap Site Alert module with Bootstrap 4 defaults on install.'
+package: 'Provus'
+core_version_requirement: ^10.3 || ^11
+dependencies:
+  - drupal:user
+  - bootstrap_site_alert:bootstrap_site_alert

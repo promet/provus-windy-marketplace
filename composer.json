@@ -30,6 +30,7 @@
         "drupal/autosave_form": "^1.10.0",
         "drupal/better_exposed_filters": "^7.1.1",
         "drupal/bootstrap_barrio": "^5.5.20",
+        "drupal/bootstrap_site_alert": "^3.0",
         "drupal/bpmn_io": "^3.0.4",
         "drupal/byte_theme": "^1",
         "drupal/canvas": "^1.2.0",

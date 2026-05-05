@@ -1,0 +1,5 @@
+alert:
+  version: VERSION
+  css:
+    theme:
+      css/alert.css: {}

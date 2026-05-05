@@ -1,0 +1,11 @@
+.bs-site-alert::before {
+  display: none;
+}
+.bs-site-alert {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+.bs-site-alert a {
+  color: white;
+}

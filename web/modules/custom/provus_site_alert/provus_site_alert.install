@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the Provus Site Alert module.
+ */
+
+use Drupal\Component\Utility\Random;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ *
+ * Seeds Bootstrap Site Alert state with Bootstrap 4 defaults. A single
+ * dismissable warning alert is created in an inactive state so site
+ * administrators can activate and customise it without manual form setup.
+ */
+function provus_site_alert_install() {
+  $state = \Drupal::state();
+
+  // Bootstrap version — must be set first so the admin form renders properly.
+  $state->set('bootstrap_site_alert_version', '4');
+
+  // Number of alert slots created by this install.
+  $state->set('bootstrap_site_alert_count', 1);
+
+  // Alert #0 defaults (index appended to every key, matching module convention).
+  $state->set('bootstrap_site_alert_active0', 1);
+  $state->set('bootstrap_site_alert_severity0', 'alert-warning');
+  $state->set('bootstrap_site_alert_dismiss0', 0);
+  $state->set('bootstrap_site_alert_no_admin0', 1);
+  $state->set('bootstrap_site_alert_exclude0', 0);
+  $state->set('bootstrap_site_alert_only_paths0', '');
+  $state->set('bootstrap_site_alert_negate0', 0);
+  $state->set('bootstrap_site_alert_message0', [
+    'value'  => 'Exploring Provus Edu? <a href="https://resource.prometsource.com/request-provusedu-demo" target="_blank">Take the guided walkthrough →</a>',
+    'format' => 'content_format',
+  ]);
+
+  // Unique dismiss-tracking key, matching the pattern used by the module form.
+  $random = new Random();
+  $state->set('bootstrap_site_alert_key', $random->string(16, TRUE));
+
+  // Ensure anonymous and authenticated users can see the alert when activated.
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['view bootstrap site alerts']);
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['view bootstrap site alerts']);
+
+  \Drupal::messenger()->addStatus(t(
+    'Bootstrap Site Alert has been pre-configured with Bootstrap 4 defaults. '
+    . 'Visit <a href=":url">the configuration form</a> to activate and customise your alert.',
+    [':url' => \Drupal\Core\Url::fromRoute('bootstrap_site_alert.admin')->toString()]
+  ));
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Removes all bootstrap_site_alert state entries written by this module.
+ * Permissions granted to roles are intentionally left in place because they
+ * may have been granted independently by bootstrap_site_alert itself.
+ */
+function provus_site_alert_uninstall() {
+  $database = \Drupal::database();
+  $database->delete('key_value')
+    ->condition('collection', 'state')
+    ->condition('name', $database->escapeLike('bootstrap_site_alert') . '%', 'LIKE')
+    ->execute();
+}

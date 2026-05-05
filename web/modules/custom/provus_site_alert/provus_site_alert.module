@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Module hooks for Provus Site Alert.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function provus_site_alert_page_attachments(array &$attachments): void {
+  $attachments['#attached']['library'][] = 'provus_site_alert/alert';
+}
