@@ -15,19 +15,35 @@
 # For GNU Affero General Public License see <https://www.gnu.org/licenses/>.
 # ----------------------------------------------------------------------
 
+cd $APP_ROOT
+
 #== Import database
 if [ -z "$(drush status --field=db-status)" ]; then
-  if [[ -f "$APP_ROOT/.devpanel/dumps/db.sql.gz" ]]; then
-    echo  'Import mysql file ...'
-    drush sqlq --file="$APP_ROOT/.devpanel/dumps/db.sql.gz" --file-delete
+  if [[ -f .devpanel/dumps/db.sql.gz ]]; then
+    echo 'Import mysql file ...'
+    drush sqlq --file=../.devpanel/dumps/db.sql.gz
+    gzip .devpanel/dumps/db.sql
   fi
+  # We apply the AI recipe here to give every container its own key.
+  echo 'Apply drupal_cms_ai recipe.'
+  RECIPES_PATH=$(drush --include=.devpanel/drush crp)
+  until time drush --include=.devpanel/drush -q recipe "$RECIPES_PATH/drupal_cms_ai" -i drupal_cms_ai.provider=amazeeai; do
+    time drush cr
+  done
+  drush -n cset klaro.klaro_app.deepchat status 0
 fi
 
 if [[ -n "$DB_SYNC_VOL" ]]; then
-  if [[ ! -f "/var/www/build/.devpanel/init-container.sh" ]]; then
-    echo  'Sync volume...'
-    sudo chown -R 1000:1000 /var/www/build 
-    rsync -av --delete --delete-excluded $APP_ROOT/ /var/www/build
+  if [[ ! -f "../build/.devpanel/init-container.sh" ]]; then
+    php web/modules/contrib/automatic_updates/auto-update
+    echo 'Sync volume...'
+    if [[ -n "$DRUPALFORGE_DEVCONTAINER" ]]; then
+      # Preserve source permissions, but ensure rsync-created directories remain
+      # user-writable so it can continue copying nested files on fresh volumes.
+      sudo rsync -a --chmod=Du+w --ignore-existing --exclude .git --exclude .devpanel/dumps ./ ../build
+    else
+      sudo rsync -av --delete --delete-excluded --exclude .devpanel/dumps ./ ../build
+    fi
   fi
 fi
 
@@ -38,4 +54,5 @@ drush cron
 echo
 echo 'Populate caches.'
 drush cache:warm &> /dev/null || :
-$APP_ROOT/.devpanel/warm
+.devpanel/warm
+.devpanel/warm /user/login

@@ -5,28 +5,14 @@
  * DevPanel Drupal settings overrides.
  */
 
+use Symfony\Component\HttpFoundation\Request;
+
 $databases['default']['default']['database'] = getenv('DB_NAME');
 $databases['default']['default']['username'] = getenv('DB_USER');
 $databases['default']['default']['password'] = getenv('DB_PASSWORD');
 $databases['default']['default']['host'] = getenv('DB_HOST');
 $databases['default']['default']['port'] = getenv('DB_PORT');
 $databases['default']['default']['driver'] = getenv('DB_DRIVER');
-
-$driver = $databases['default']['default']['driver'] ?? '';
-if (in_array($driver, ['mysql', 'mariadb'], TRUE)) {
-  $ssl_verify_attr = NULL;
-  if (defined('Pdo\\Mysql::ATTR_SSL_VERIFY_SERVER_CERT')) {
-    $ssl_verify_attr = constant('Pdo\\Mysql::ATTR_SSL_VERIFY_SERVER_CERT');
-  }
-  elseif (defined('PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT')) {
-    $ssl_verify_attr = constant('PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT');
-  }
-
-  if ($ssl_verify_attr !== NULL) {
-    $databases['default']['default']['pdo'][$ssl_verify_attr] = 'OFF';
-  }
-}
-
 $databases['default']['default']['isolation_level'] = 'READ COMMITTED';
 if (empty($settings['hash_salt'])) {
   $settings['hash_salt'] = hash('sha256', serialize($databases));
@@ -39,3 +25,13 @@ if (!empty($realpath)) {
 }
 $settings['trusted_host_patterns'][] = getenv('DP_HOSTNAME') ?: '.*';
 $settings['testing_package_manager'] = TRUE;
+
+// When running in a development container, trust reverse proxy headers.
+if (getenv('DRUPALFORGE_DEVCONTAINER') && isset($_SERVER['HTTP_X_FORWARDED_HOST'], $_SERVER['REMOTE_ADDR'])) {
+  $settings['reverse_proxy'] = TRUE;
+  $settings['reverse_proxy_addresses'] = [$_SERVER['REMOTE_ADDR']];
+  $settings['reverse_proxy_trusted_headers'] =
+    Request::HEADER_X_FORWARDED_HOST |
+    Request::HEADER_X_FORWARDED_PROTO |
+    Request::HEADER_X_FORWARDED_PORT;
+}
