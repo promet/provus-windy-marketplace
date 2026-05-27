@@ -1,24 +1,27 @@
 #!/usr/bin/env bash
+
 if [ -n "${DEBUG_SCRIPT:-}" ]; then
   set -x
 fi
+
 set -eu -o pipefail
-cd $APP_ROOT
+cd "$APP_ROOT"
 
 LOG_FILE="logs/init-$(date +%F-%T).log"
-exec > >(tee $LOG_FILE) 2>&1
+exec > >(tee "$LOG_FILE") 2>&1
 
 TIMEFORMAT=%lR
-# For faster performance, don't audit dependencies automatically.
+
 export COMPOSER_NO_AUDIT=1
+export COMPOSER_NO_BLOCKING=1
+export COMPOSER_NO_SECURITY_BLOCKING=1
 
-#== Remove root-owned files.
 echo
-echo Remove root-owned files.
-time sudo rm -rf lost+found
+echo "Remove root-owned files."
+time sudo rm -rf lost+found || :
 
-#== Composer install.
 echo
+echo "Composer install."
 if [ -f composer.json ]; then
   if composer show --locked cweagans/composer-patches ^2 &> /dev/null; then
     echo 'Update patches.lock.json.'
@@ -30,71 +33,53 @@ else
   time source .devpanel/composer_setup.sh
   echo
 fi
-time composer -n install --no-progress
 
-#== Create the private files directory.
-if [ ! -d private ]; then
-  echo
-  echo 'Create the private files directory.'
-  time mkdir private
-fi
+time composer install --no-progress
 
-#== Create the config sync directory.
-if [ ! -d config/sync ]; then
-  echo
-  echo 'Create the config sync directory.'
-  time mkdir -p config/sync
-fi
+# Directories
+[ ! -d private ] && mkdir private
+[ ! -d config/sync ] && mkdir -p config/sync
 
-#== Generate hash salt.
-if [ ! -f .devpanel/salt.txt ]; then
-  echo
-  echo 'Generate hash salt.'
-  time openssl rand -hex 32 > .devpanel/salt.txt
-fi
-
-#== Install Provus EDU.
 echo
+echo "Install or update Drupal."
+
 if [ -z "$(drush status --field=db-status)" ]; then
-  STATIC_FILES_DIR=$WEB_ROOT/sites/default/files
-  if [ ! -d "$STATIC_FILES_DIR" ]; then
-    echo 'Create the public files directory.'
-    time mkdir -p $STATIC_FILES_DIR
-  fi
+  echo "Install Drupal (recipe)."
 
-  echo
-  echo 'Install Provus EDU Recipe.'
-  if ! time drush -n si recipes/provus_edu_recipe; then
-    #== The recipe installation may fail due to a false writability check.
-    until time drush recipe ../recipes/provus_edu_recipe; do
-      :
-    done
-  fi
+  until time drush si recipes/provus_edu -y; do
+    :
+  done
 
-  echo
-  echo 'Tell Automatic Updates about patches.'
-  drush -n cset --input-format=yaml package_manager.settings additional_trusted_composer_plugins '["cweagans/composer-patches"]'
+  drush en provus_site_alert -y
+  drush pmu search -y || :
+
+  echo "Enable Automatic Updates."
+  drush cset --input-format=yaml package_manager.settings additional_trusted_composer_plugins '["cweagans/composer-patches","drupal/site_template_helper"]'
+  drush cset --input-format=yaml package_manager.settings include_unknown_files_in_project_root '["assets","patches.json","patches.lock.json"]'
+  drush cset --input-format=yaml automatic_updates.settings unattended '{"method":"console","level":"patch"}'
+
   time drush ev '\Drupal::moduleHandler()->invoke("automatic_updates", "modules_installed", [[], FALSE])'
+  time php web/modules/contrib/automatic_updates/auto-update
 
-  echo
-  time drush cr
+  drush cr
 else
-  echo 'Update database.'
-  time drush -n updb
+  echo "Update database."
+  time drush updb -y
 fi
 
-#== Warm up caches.
 echo
-echo 'Run cron.'
+echo "Run cron."
 time drush cron
-echo
-echo 'Populate caches.'
-time drush cache:warm &> /dev/null || :
-time .devpanel/warm
 
-#== Finish measuring script time.
+echo
+echo "Warm caches."
+time drush cache:warm &> /dev/null || :
+time .devpanel/warm || :
+time .devpanel/warm /user/login || :
+
+# Timer
 INIT_DURATION=$SECONDS
-INIT_HOURS=$(($INIT_DURATION / 3600))
-INIT_MINUTES=$(($INIT_DURATION % 3600 / 60))
-INIT_SECONDS=$(($INIT_DURATION % 60))
-printf "\nTotal elapsed time: %d:%02d:%02d\n" $INIT_HOURS $INIT_MINUTES $INIT_SECONDS
+printf "\nTotal elapsed time: %02d:%02d:%02d\n" \
+  $(($INIT_DURATION/3600)) \
+  $(($INIT_DURATION%3600/60)) \
+  $(($INIT_DURATION%60))
