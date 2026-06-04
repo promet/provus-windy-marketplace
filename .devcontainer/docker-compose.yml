@@ -3,7 +3,7 @@ include:
 
 services:
   app:
-    image: devpanel/php:8.4-base-rc
+    image: devpanel/php:8.5-base
     environment:
       DP_APP_ID: 'provus_edu'
       APP_ROOT: '/var/www/html'        
