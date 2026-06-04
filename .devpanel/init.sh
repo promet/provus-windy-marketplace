@@ -23,7 +23,7 @@ time sudo rm -rf lost+found || :
 echo
 echo "Composer install."
 if [ -f composer.json ]; then
-  if composer show --locked cweagans/composer-patches ^2 &> /dev/null; then
+  if composer show cweagans/composer-patches ^2 &> /dev/null; then
     echo 'Update patches.lock.json.'
     time composer prl
     echo
