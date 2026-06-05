@@ -35,7 +35,7 @@
         "drupal/bpmn_io": "^3.0.4",
         "drupal/byte_theme": "^1",
         "drupal/canvas": "^1.2.0",
-        "drupal/canvas_full_html": "1.0.4",
+        "drupal/canvas_full_html": "1.0.6",
         "drupal/captcha": "^2.0.10",
         "drupal/coffee": "^2.0.1",
         "drupal/core": "^11.3.5",
