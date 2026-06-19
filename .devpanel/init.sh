@@ -52,15 +52,6 @@ if [ -z "$(drush status --field=db-status)" ]; then
 
   drush en provus_site_alert -y
   drush pmu search -y || :
-
-  echo "Enable Automatic Updates."
-  drush cset --input-format=yaml package_manager.settings additional_trusted_composer_plugins '["cweagans/composer-patches","drupal/site_template_helper"]'
-  drush cset --input-format=yaml package_manager.settings include_unknown_files_in_project_root '["assets","patches.json","patches.lock.json"]'
-  drush cset --input-format=yaml automatic_updates.settings unattended '{"method":"console","level":"patch"}'
-
-  time drush ev '\Drupal::moduleHandler()->invoke("automatic_updates", "modules_installed", [[], FALSE])'
-  time php web/modules/contrib/automatic_updates/auto-update
-
   drush cr
 else
   echo "Update database."
