@@ -1,0 +1,26 @@
+name: Sync to DevPanel repo
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to DevPanel remote
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEVPANEL_SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git remote add devpanel git@github.com:drupalforge/provus-windy-marketplace.git
+          git push devpanel HEAD:${{ github.ref_name }}
