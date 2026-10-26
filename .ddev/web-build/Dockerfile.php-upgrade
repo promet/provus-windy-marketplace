@@ -1,0 +1,2 @@
+# Pull the latest PHP patch release (security fixes) on top of the DDEV webserver image.
+RUN apt-get update && apt-get install -y --only-upgrade 'php8.5-*' && rm -rf /var/lib/apt/lists/*
