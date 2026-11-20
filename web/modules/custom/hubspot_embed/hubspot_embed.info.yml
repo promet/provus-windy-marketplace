@@ -1,0 +1,5 @@
+name: 'HubSpot Embed'
+type: module
+description: 'Adds the HubSpot tracking embed code to front-end pages.'
+package: Custom
+core_version_requirement: ^11.1
